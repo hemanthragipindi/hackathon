@@ -301,7 +301,7 @@ export default function LiveRescues() {
               </span>
               <span className="text-slate-300">•</span>
               <span className="flex items-center gap-1 text-slate-600 font-medium">
-                <span>🚶 Arriving in 15 mins</span>
+                <span>Arriving in 15 mins</span>
               </span>
             </div>
           </div>

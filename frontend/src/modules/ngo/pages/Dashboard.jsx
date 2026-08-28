@@ -166,7 +166,7 @@ export default function NgoDashboard() {
             </h1>
             <div className="flex items-center gap-2 mt-1">
               <p className="text-base md:text-lg font-semibold text-gray-800">
-                Good morning, Helping Hands NGO <span className="inline-block">👏</span>
+                Good morning, Helping Hands NGO
               </p>
             </div>
             <p className="text-sm text-gray-500 mt-0.5">
@@ -195,7 +195,7 @@ export default function NgoDashboard() {
       {/* 4 Summary Stat Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Card 1: Food Rescued */}
-        <div className="bg-white rounded-2xl p-5 border border-gray-200/80 shadow-xs flex flex-col justify-between hover:shadow-md transition">
+        <div className="bg-white rounded-3xl p-5 border border-slate-100/90 shadow-xs flex flex-col justify-between hover:shadow-sm transition-all">
           <div className="flex items-start justify-between">
             <span className="text-sm font-semibold text-gray-600">Food Rescued</span>
             <div className="w-10 h-10 rounded-xl bg-[#dcfce7] flex items-center justify-center text-[#15803d]">
@@ -215,7 +215,7 @@ export default function NgoDashboard() {
         </div>
 
         {/* Card 2: Meals Distributed */}
-        <div className="bg-white rounded-2xl p-5 border border-gray-200/80 shadow-xs flex flex-col justify-between hover:shadow-md transition">
+        <div className="bg-white rounded-3xl p-5 border border-slate-100/90 shadow-xs flex flex-col justify-between hover:shadow-sm transition-all">
           <div className="flex items-start justify-between">
             <span className="text-sm font-semibold text-gray-600">Meals Distributed</span>
             <div className="w-10 h-10 rounded-xl bg-[#dcfce7] flex items-center justify-center text-[#15803d]">
@@ -232,7 +232,7 @@ export default function NgoDashboard() {
         </div>
 
         {/* Card 3: Active Pickups */}
-        <div className="bg-white rounded-2xl p-5 border border-gray-200/80 shadow-xs flex flex-col justify-between hover:shadow-md transition">
+        <div className="bg-white rounded-3xl p-5 border border-slate-100/90 shadow-xs flex flex-col justify-between hover:shadow-sm transition-all">
           <div className="flex items-start justify-between">
             <span className="text-sm font-semibold text-gray-600">Active Pickups</span>
             <div className="w-10 h-10 rounded-xl bg-[#dcfce7] flex items-center justify-center text-[#15803d]">
@@ -249,7 +249,7 @@ export default function NgoDashboard() {
         </div>
 
         {/* Card 4: People Served */}
-        <div className="bg-white rounded-2xl p-5 border border-gray-200/80 shadow-xs flex flex-col justify-between hover:shadow-md transition">
+        <div className="bg-white rounded-3xl p-5 border border-slate-100/90 shadow-xs flex flex-col justify-between hover:shadow-sm transition-all">
           <div className="flex items-start justify-between">
             <span className="text-sm font-semibold text-gray-600">People Served</span>
             <div className="w-10 h-10 rounded-xl bg-[#f1f5f9] flex items-center justify-center text-gray-600">
@@ -271,7 +271,7 @@ export default function NgoDashboard() {
         {/* Left Column (7 cols on lg, 58%) */}
         <div className="lg:col-span-7 space-y-6">
           {/* Today's Pickups Card */}
-          <div className="bg-white rounded-2xl p-6 border border-gray-200/80 shadow-xs">
+          <div className="bg-white rounded-3xl p-6 border border-slate-100/90 shadow-xs">
             <div className="flex items-center justify-between pb-4 border-b border-gray-100">
               <h2 className="text-lg font-bold text-gray-900">Today's Pickups</h2>
               <Link 
@@ -349,7 +349,7 @@ export default function NgoDashboard() {
           {/* Needs Attention Card on Left below Pickups for clean balance */}
           <div className="bg-[#fef2f2] border border-[#fee2e2] rounded-2xl p-6 shadow-xs">
             <div className="flex items-center gap-2 mb-3">
-              <span className="text-lg text-red-600">⚠</span>
+              <AlertTriangle size={18} className="text-red-600" />
               <h3 className="text-base font-bold text-[#b91c1c]">
                 Needs Attention
               </h3>
@@ -375,7 +375,7 @@ export default function NgoDashboard() {
         {/* Right Column (5 cols on lg, 42%) */}
         <div className="lg:col-span-5 space-y-6">
           {/* Available Food Near You Card */}
-          <div className="bg-white rounded-2xl p-6 border border-gray-200/80 shadow-xs">
+          <div className="bg-white rounded-3xl p-6 border border-slate-100/90 shadow-xs">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-lg font-bold text-gray-900">
                 Available Food Near You
@@ -392,7 +392,7 @@ export default function NgoDashboard() {
               {filteredFood.map((food) => (
                 <div
                   key={food.id}
-                  className="p-4 rounded-xl border border-gray-200/90 hover:border-green-300 transition-all bg-white"
+                  className="p-4 rounded-2xl border border-slate-100/90 hover:border-emerald-300 transition-all bg-white"
                 >
                   <div className="flex items-start justify-between gap-2">
                     <h3 className="font-bold text-gray-900 text-sm">{food.title}</h3>

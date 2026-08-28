@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Eye, Truck, User, Building2, MapPin, Package, Clock, XCircle, CheckCircle, Navigation } from 'lucide-react';
+import { Search, Eye, Truck, User, Building2, MapPin, Package, Clock, XCircle, CheckCircle, Navigation, Star } from 'lucide-react';
 import DataTable from '../../common/components/DataTable';
 import StatusBadge from '../../common/components/StatusBadge';
 import DetailDrawer from '../components/DetailDrawer';
@@ -327,7 +327,7 @@ export default function Pickups() {
                   <div className="space-y-2 text-sm">
                     <p className="font-medium">{selectedPickup.volunteer}</p>
                     <p className="text-gray-600">Vehicle: {getAssociatedVolunteer(selectedPickup.volunteer).vehicle}</p>
-                    <p className="text-gray-600">Rating: ⭐ {getAssociatedVolunteer(selectedPickup.volunteer).rating}</p>
+                    <p className="text-gray-600 flex items-center gap-1">Rating: <Star size={14} className="fill-yellow-400 text-yellow-400" /> {getAssociatedVolunteer(selectedPickup.volunteer).rating}</p>
                   </div>
                 ) : (
                   <p className="text-sm text-gray-900">{selectedPickup.volunteer}</p>

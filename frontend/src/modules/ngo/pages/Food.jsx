@@ -153,7 +153,7 @@ export default function Food() {
         {filteredItems.map((item) => (
           <div
             key={item.id}
-            className="bg-white rounded-2xl p-5 border border-gray-200 shadow-xs hover:shadow-md transition flex flex-col justify-between"
+            className="bg-white rounded-3xl p-5 sm:p-6 border border-slate-100/90 shadow-xs hover:shadow-sm transition-all duration-200 flex flex-col justify-between"
           >
             <div>
               <div className="flex items-start justify-between gap-2">

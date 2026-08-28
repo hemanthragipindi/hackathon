@@ -17,7 +17,7 @@ export default function MyClaims() {
         <p className="text-sm text-gray-500 mt-1">History of claims processed and fulfilled by Helping Hands NGO.</p>
       </div>
 
-      <div className="bg-white rounded-2xl border border-gray-200 shadow-xs overflow-hidden">
+      <div className="bg-white rounded-3xl border border-slate-100/90 shadow-xs overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>

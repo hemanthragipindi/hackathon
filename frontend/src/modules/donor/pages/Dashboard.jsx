@@ -15,6 +15,7 @@ import {
   Trophy,
   Bell
 } from 'lucide-react';
+import LiveRescueStepper from '../components/LiveRescueStepper';
 
 export default function DonorDashboard({ onMenuClick }) {
   const currentDate = 'SATURDAY, AUGUST 29';
@@ -28,7 +29,7 @@ export default function DonorDashboard({ onMenuClick }) {
             {currentDate}
           </p>
           <h1 className="text-2xl sm:text-[28px] font-bold text-slate-900 tracking-tight flex items-center gap-2">
-            Good morning, Spice Garden <span>👋</span>
+            Good morning, Spice Garden
           </h1>
         </div>
 
@@ -50,7 +51,7 @@ export default function DonorDashboard({ onMenuClick }) {
       </div>
 
       {/* Hero Banner with textured plus grid pattern */}
-      <div className="relative rounded-3xl bg-gradient-to-r from-[#064e3b] via-[#085540] to-[#0a634b] p-8 sm:p-10 text-white shadow-sm overflow-hidden">
+      <div className="relative rounded-3xl bg-gradient-to-r from-emerald-600 via-emerald-700 to-emerald-900 p-8 sm:p-10 text-white shadow-sm overflow-hidden">
         {/* Subtle Decorative Pattern Background */}
         <div 
           className="absolute inset-0 opacity-[0.07] pointer-events-none"
@@ -219,70 +220,7 @@ export default function DonorDashboard({ onMenuClick }) {
             </div>
           </div>
 
-          {/* Stepper Progress Bar matching screenshot */}
-          <div className="pt-2">
-            <div className="relative flex items-center justify-between">
-              {/* Connecting Background Line Bar */}
-              <div className="absolute left-4 right-4 top-1/2 -translate-y-1/2 h-1 bg-slate-100 z-0">
-                {/* Completed green segment from Listed to Claimed */}
-                <div className="absolute left-0 w-1/4 h-full bg-[#059669]" />
-                {/* In-progress orange segment from Claimed to On the way */}
-                <div className="absolute left-1/4 w-1/4 h-full bg-[#ea580c]" />
-              </div>
-
-              {/* Step 1: Listed */}
-              <div className="relative z-10 flex flex-col items-center">
-                <div className="w-8 h-8 rounded-full bg-[#059669] text-white flex items-center justify-center shadow-xs">
-                  <Check size={16} className="stroke-[3]" />
-                </div>
-                <span className="text-[11.5px] font-bold text-slate-900 mt-2">
-                  Listed
-                </span>
-              </div>
-
-              {/* Step 2: Claimed */}
-              <div className="relative z-10 flex flex-col items-center">
-                <div className="w-8 h-8 rounded-full bg-[#059669] text-white flex items-center justify-center shadow-xs">
-                  <Check size={16} className="stroke-[3]" />
-                </div>
-                <span className="text-[11.5px] font-bold text-slate-900 mt-2">
-                  Claimed
-                </span>
-              </div>
-
-              {/* Step 3: On the way (Active) */}
-              <div className="relative z-10 flex flex-col items-center">
-                <div className="relative w-9 h-9 rounded-full bg-[#f97316] text-white flex items-center justify-center shadow-md shadow-orange-500/25 ring-4 ring-orange-100">
-                  <Truck size={17} className="stroke-[2.4]" />
-                  {/* Ping dot */}
-                  <span className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-orange-500 ring-2 ring-white animate-pulse" />
-                </div>
-                <span className="text-[11.5px] font-extrabold text-[#ea580c] mt-2">
-                  On the way
-                </span>
-              </div>
-
-              {/* Step 4: Picked up */}
-              <div className="relative z-10 flex flex-col items-center">
-                <div className="w-8 h-8 rounded-full bg-slate-50 border-2 border-slate-200 text-slate-400 flex items-center justify-center">
-                  <Package size={15} className="stroke-[2]" />
-                </div>
-                <span className="text-[11.5px] font-semibold text-slate-400 mt-2">
-                  Picked up
-                </span>
-              </div>
-
-              {/* Step 5: Delivered */}
-              <div className="relative z-10 flex flex-col items-center">
-                <div className="w-8 h-8 rounded-full bg-slate-50 border-2 border-slate-200 text-slate-400 flex items-center justify-center">
-                  <Home size={15} className="stroke-[2]" />
-                </div>
-                <span className="text-[11.5px] font-semibold text-slate-400 mt-2">
-                  Delivered
-                </span>
-              </div>
-            </div>
-          </div>
+          <LiveRescueStepper currentStep="on_the_way" />
         </div>
 
         {/* Right Column: Recent Activity Card (5 cols on lg) */}

@@ -8,11 +8,11 @@ export default function DonationCard({ donation }) {
   const isCompleted = donation.status === 'Delivered';
   
   return (
-    <div className={`bg-white rounded-xl border shadow-sm overflow-hidden flex flex-col transition-shadow hover:shadow-md ${
-      isActive ? 'border-green-200' : 'border-gray-200'
+    <div className={`bg-white rounded-3xl border shadow-xs overflow-hidden flex flex-col transition-all duration-200 hover:shadow-sm ${
+      isActive ? 'border-emerald-200/80 shadow-emerald-900/5' : 'border-slate-100/90'
     }`}>
       {/* Header */}
-      <div className="p-4 border-b border-gray-100 flex justify-between items-start bg-gray-50/50">
+      <div className="p-5 sm:p-6 border-b border-slate-100 flex justify-between items-start bg-slate-50/30">
         <div>
           <h3 className="font-semibold text-gray-900 text-lg">{donation.name}</h3>
           <p className="text-sm text-gray-500 mt-1 flex items-center gap-2">
@@ -25,7 +25,7 @@ export default function DonationCard({ donation }) {
       </div>
 
       {/* Body */}
-      <div className="p-4 flex-1 space-y-3">
+      <div className="p-5 sm:p-6 flex-1 space-y-4">
         <div className="flex items-start gap-3">
           <Package size={16} className="text-gray-400 mt-0.5 shrink-0" />
           <p className="text-sm text-gray-700"><span className="font-medium">Quantity:</span> {donation.quantity}</p>
@@ -55,7 +55,7 @@ export default function DonationCard({ donation }) {
       </div>
 
       {/* Footer Actions */}
-      <div className="p-4 border-t border-gray-100 flex justify-end gap-3 bg-white">
+      <div className="p-5 sm:px-6 sm:py-4 border-t border-slate-100 flex justify-end gap-3 bg-white">
         <button className="text-sm font-medium text-gray-600 hover:text-gray-900 px-3 py-1.5 transition-colors">
           View Details
         </button>

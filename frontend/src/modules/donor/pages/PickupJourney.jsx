@@ -378,7 +378,7 @@ export default function PickupJourney() {
         {/* Inspiring Footer Quote */}
         <div className="text-center pt-4">
           <p className="text-xs sm:text-[13px] text-slate-500 italic font-medium">
-            💖 Every successful pickup brings good food closer to someone who needs it.
+            Every successful pickup brings good food closer to someone who needs it.
           </p>
         </div>
       </div>

@@ -1,4 +1,11 @@
 import { Routes, Route, Navigate, Link } from 'react-router-dom';
+import VolunteerLayout from './modules/volunteer/VolunteerLayout';
+import VolunteerDashboard from './modules/volunteer/pages/Dashboard';
+import VolunteerPickups from './modules/volunteer/pages/AvailablePickups';
+import VolunteerActivePickup from './modules/volunteer/pages/ActivePickup';
+import VolunteerPickupHistory from './modules/volunteer/pages/PickupHistory';
+import VolunteerNotifications from './modules/volunteer/pages/Notifications';
+import VolunteerSettings from './modules/volunteer/pages/Settings';
 import AdminLayout from './modules/admin/AdminLayout';
 import AdminDashboard from './modules/admin/pages/Dashboard';
 import Users from './modules/admin/pages/Users';
@@ -47,7 +54,7 @@ function Landing() {
         Connecting surplus food with community shelters and those in need. Choose a portal to continue.
       </p>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-4xl">
         <Link 
           to="/ngo/dashboard" 
           className="p-6 bg-white rounded-2xl border-2 border-emerald-500 shadow-md hover:shadow-lg transition-all font-bold text-gray-900 flex flex-col items-center gap-2 group"
@@ -78,13 +85,6 @@ function Landing() {
           <span>Admin Portal</span>
           <span className="text-xs font-normal text-gray-500">Platform Management</span>
         </Link>
-        <div className="p-6 bg-gray-50 rounded-2xl border border-gray-200 font-semibold text-gray-400 cursor-not-allowed flex flex-col items-center gap-2">
-          <span className="w-10 h-10 rounded-xl bg-gray-200 text-gray-400 flex items-center justify-center font-black">
-            VL
-          </span>
-          <span>Volunteer Portal</span>
-          <span className="text-xs font-normal text-gray-400">(Coming Soon)</span>
-        </div>
       </div>
     </div>
   );
@@ -139,6 +139,17 @@ function App() {
         <Route path="analytics" element={<Analytics />} />
         <Route path="notifications" element={<AdminNotifications />} />
         <Route path="settings" element={<AdminSettings />} />
+      </Route>
+
+      {/* Volunteer Routes */}
+      <Route path="/volunteer" element={<VolunteerLayout />}>
+        <Route index element={<Navigate to="/volunteer/dashboard" replace />} />
+        <Route path="dashboard" element={<VolunteerDashboard />} />
+        <Route path="pickups" element={<VolunteerPickups />} />
+        <Route path="active-pickup" element={<VolunteerActivePickup />} />
+        <Route path="history" element={<VolunteerPickupHistory />} />
+        <Route path="notifications" element={<VolunteerNotifications />} />
+        <Route path="settings" element={<VolunteerSettings />} />
       </Route>
 
       <Route path="*" element={<div className="flex h-screen items-center justify-center bg-gray-50 text-gray-500 font-bold">404 Not Found</div>} />

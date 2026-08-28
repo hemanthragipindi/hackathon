@@ -250,7 +250,7 @@ export default function MyImpact() {
             {/* Partner 1: Hope Foundation */}
             <div className="bg-[#f8fafc] border border-slate-100 rounded-2xl p-3.5 flex items-center gap-3.5 hover:bg-slate-50 transition-colors">
               <div className="w-10 h-10 rounded-xl bg-white border border-slate-200/80 flex items-center justify-center text-xs font-bold text-sky-600 shadow-2xs shrink-0">
-                <span className="text-base">🤝</span>
+                <span className="text-base"></span>
               </div>
               <div className="min-w-0 flex-1">
                 <h4 className="text-sm font-bold text-slate-900 truncate">
@@ -273,7 +273,7 @@ export default function MyImpact() {
             {/* Partner 2: Food For All */}
             <div className="bg-[#f8fafc] border border-slate-100 rounded-2xl p-3.5 flex items-center gap-3.5 hover:bg-slate-50 transition-colors">
               <div className="w-10 h-10 rounded-xl bg-white border border-slate-200/80 flex items-center justify-center text-xs font-bold text-amber-600 shadow-2xs shrink-0">
-                <span className="text-base">🍲</span>
+                <span className="text-base"></span>
               </div>
               <div className="min-w-0 flex-1">
                 <h4 className="text-sm font-bold text-slate-900 truncate">
@@ -296,7 +296,7 @@ export default function MyImpact() {
             {/* Partner 3: Community Kitchen */}
             <div className="bg-[#f8fafc] border border-slate-100 rounded-2xl p-3.5 flex items-center gap-3.5 hover:bg-slate-50 transition-colors">
               <div className="w-10 h-10 rounded-xl bg-white border border-slate-200/80 flex items-center justify-center text-xs font-bold text-emerald-600 shadow-2xs shrink-0">
-                <span className="text-base">🥗</span>
+                <span className="text-base"></span>
               </div>
               <div className="min-w-0 flex-1">
                 <h4 className="text-sm font-bold text-slate-900 truncate">
@@ -329,35 +329,7 @@ export default function MyImpact() {
         </div>
       </div>
 
-      {/* Row 3: 1,000 Meals Milestone Card */}
-      <div className="bg-gradient-to-r from-[#e6f7ef] via-[#f2faf5] to-[#e8f5ee] border border-emerald-100/90 rounded-3xl p-6 sm:p-7 shadow-xs flex flex-col md:flex-row items-center gap-6">
-        {/* Medal Circle */}
-        <div className="w-16 h-16 rounded-full bg-[#064e3b] text-white flex items-center justify-center shadow-md shadow-emerald-950/20 shrink-0">
-          <Award size={30} className="stroke-[2.2]" />
-        </div>
 
-        {/* Content & Progress */}
-        <div className="min-w-0 flex-1 w-full space-y-2">
-          <h3 className="text-lg sm:text-xl font-extrabold text-[#064e3b] tracking-tight">
-            1,000 Meals Milestone
-          </h3>
-          <p className="text-xs sm:text-[13.5px] text-slate-600 leading-relaxed max-w-3xl">
-            Your restaurant has helped provide over 1,000 meals through the Food Rescue network. Thank you for your continued dedication to reducing waste and feeding the community.
-          </p>
-
-          {/* Full Progress Bar */}
-          <div className="pt-2">
-            <div className="w-full h-2.5 rounded-full bg-emerald-200/80 overflow-hidden">
-              <div className="w-full h-full bg-[#059669] rounded-full" />
-            </div>
-            <div className="flex justify-end pt-1">
-              <span className="text-xs font-bold text-[#064e3b]">
-                Unlocked!
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

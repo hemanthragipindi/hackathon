@@ -354,7 +354,7 @@ export default function CreateDonation() {
             {/* Dish Info */}
             <div className="space-y-1.5">
               <div className="flex items-center gap-2">
-                <span className="text-lg">🍲</span>
+                <span className="text-lg"></span>
                 <h5 className="text-base font-bold text-slate-900 tracking-tight">
                   {foodName || 'Vegetable Biryani'}
                 </h5>
@@ -388,7 +388,7 @@ export default function CreateDonation() {
           <div className="bg-gradient-to-b from-[#f8fafc] via-[#fbfdff] to-[#f0fdf4] rounded-3xl border border-slate-100/90 shadow-xs p-6 text-center space-y-4">
             {/* Encouragement note */}
             <p className="text-xs text-slate-600 leading-relaxed max-w-[260px] mx-auto font-medium">
-              💖 Your food could make a difference today. Nearby verified partners will be notified.
+              Your food could make a difference today. Nearby verified partners will be notified.
             </p>
 
             {/* Main Action Button */}
