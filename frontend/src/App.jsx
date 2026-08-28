@@ -38,33 +38,7 @@ import CommonSettings from './modules/common/pages/Settings';
 // Landing Page
 function Landing() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-emerald-50/50 flex flex-col items-center justify-center text-center p-6 font-sans">
-      <div className="w-16 h-16 rounded-3xl bg-emerald-600 text-white font-black text-3xl flex items-center justify-center mb-6 shadow-md shadow-emerald-600/20">
-        F
-      </div>
-      <h1 className="text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Welcome to FoodBridge</h1>
-      <p className="text-lg text-slate-600 max-w-xl mb-8 leading-relaxed">
-        Connecting surplus food with those in need. Choose a portal to continue.
-      </p>
-      
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl">
-        <Link to="/donor" className="p-6 bg-white rounded-2xl border border-emerald-200 shadow-sm hover:shadow-md hover:border-emerald-400 transition-all font-bold text-emerald-900 flex flex-col items-center gap-2">
-          <span className="text-2xl">🥗</span>
-          <span>Donor Portal</span>
-        </Link>
-        <Link to="/admin" className="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-slate-400 transition-all font-bold text-slate-800 flex flex-col items-center gap-2">
-          <span className="text-2xl">⚡</span>
-          <span>Admin Portal</span>
-        </Link>
-        <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200 font-semibold text-slate-400 cursor-not-allowed flex flex-col items-center gap-2">
-          <span className="text-2xl opacity-50">🤝</span>
-          <span>NGO Portal (WIP)</span>
-        </div>
-        <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200 font-semibold text-slate-400 cursor-not-allowed flex flex-col items-center gap-2">
-          <span className="text-2xl opacity-50">🚚</span>
-=======
-    <div className="min-h-screen bg-green-50/60 flex flex-col items-center justify-center text-center p-6">
+    <div className="min-h-screen bg-green-50/60 flex flex-col items-center justify-center text-center p-6 font-sans">
       <div className="w-16 h-16 rounded-2xl bg-[#064e3b] text-white font-bold text-4xl flex items-center justify-center mb-6 shadow-md">
         F
       </div>
@@ -85,15 +59,6 @@ function Landing() {
           <span className="text-xs font-normal text-emerald-700">Helping Hands NGO</span>
         </Link>
         <Link 
-          to="/admin" 
-          className="p-6 bg-white rounded-2xl border border-gray-200 shadow-xs hover:shadow-md transition font-semibold text-gray-800 flex flex-col items-center gap-2"
-        >
-          <span className="w-10 h-10 rounded-xl bg-gray-100 text-gray-700 flex items-center justify-center font-black">
-            AD
-          </span>
-          <span>Admin Portal</span>
-        </Link>
-        <Link 
           to="/donor" 
           className="p-6 bg-white rounded-2xl border border-gray-200 shadow-xs hover:shadow-md transition font-semibold text-gray-800 flex flex-col items-center gap-2"
         >
@@ -101,13 +66,24 @@ function Landing() {
             DN
           </span>
           <span>Donor Portal</span>
+          <span className="text-xs font-normal text-green-700">Spice Garden Bistro</span>
+        </Link>
+        <Link 
+          to="/admin" 
+          className="p-6 bg-white rounded-2xl border border-gray-200 shadow-xs hover:shadow-md transition font-semibold text-gray-800 flex flex-col items-center gap-2"
+        >
+          <span className="w-10 h-10 rounded-xl bg-gray-100 text-gray-700 flex items-center justify-center font-black">
+            AD
+          </span>
+          <span>Admin Portal</span>
+          <span className="text-xs font-normal text-gray-500">Platform Management</span>
         </Link>
         <div className="p-6 bg-gray-50 rounded-2xl border border-gray-200 font-semibold text-gray-400 cursor-not-allowed flex flex-col items-center gap-2">
           <span className="w-10 h-10 rounded-xl bg-gray-200 text-gray-400 flex items-center justify-center font-black">
             VL
           </span>
->>>>>>> b7be43e9d6c8673f829e312d809262b55f54c917
-          <span>Volunteer Portal (WIP)</span>
+          <span>Volunteer Portal</span>
+          <span className="text-xs font-normal text-gray-400">(Coming Soon)</span>
         </div>
       </div>
     </div>
@@ -117,9 +93,6 @@ function Landing() {
 function App() {
   return (
     <Routes>
-<<<<<<< HEAD
-      <Route path="/" element={<Navigate to="/donor" replace />} />
-=======
       <Route path="/" element={<Landing />} />
 
       {/* NGO Routes */}
@@ -135,7 +108,6 @@ function App() {
         <Route path="notifications" element={<CommonNotifications />} />
         <Route path="settings" element={<CommonSettings />} />
       </Route>
->>>>>>> b7be43e9d6c8673f829e312d809262b55f54c917
       
       {/* Donor Routes */}
       <Route path="/donor" element={<DonorLayout />}>
@@ -151,7 +123,7 @@ function App() {
         <Route path="help" element={<HelpSupport />} />
         <Route path="my-donations" element={<MyDonations />} />
         <Route path="donation-history" element={<MyDonations />} />
-        <Route path="notifications" element={<Notifications />} />
+        <Route path="notifications" element={<CommonNotifications />} />
       </Route>
 
       {/* Admin Routes */}
@@ -169,21 +141,7 @@ function App() {
         <Route path="settings" element={<AdminSettings />} />
       </Route>
 
-<<<<<<< HEAD
-      <Route path="*" element={<div className="flex h-screen items-center justify-center bg-slate-50 text-slate-500 font-bold">404 Not Found</div>} />
-=======
-      {/* Donor Routes */}
-      <Route path="/donor" element={<DonorLayout />}>
-        <Route index element={<Navigate to="/donor/dashboard" replace />} />
-        <Route path="dashboard" element={<DonorDashboard />} />
-        <Route path="create" element={<CreateDonation />} />
-        <Route path="my-donations" element={<MyDonations />} />
-        <Route path="notifications" element={<CommonNotifications />} />
-        <Route path="settings" element={<CommonSettings />} />
-      </Route>
-
-      <Route path="*" element={<div className="flex h-screen items-center justify-center bg-gray-50 text-gray-500">404 Not Found</div>} />
->>>>>>> b7be43e9d6c8673f829e312d809262b55f54c917
+      <Route path="*" element={<div className="flex h-screen items-center justify-center bg-gray-50 text-gray-500 font-bold">404 Not Found</div>} />
     </Routes>
   );
 }
