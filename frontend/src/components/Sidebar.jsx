@@ -36,7 +36,7 @@ export default function Sidebar({ onClose }) {
           <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-green-600 text-white font-bold text-xl">
             F
           </div>
-          <span className="text-xl font-bold text-gray-900 tracking-tight">FoodBridge</span>
+          <span className="text-xl font-bold text-gray-900 tracking-tight">FoodResque</span>
         </div>
         <button onClick={onClose} className="lg:hidden text-gray-400 hover:text-gray-600">
           <X size={20} />

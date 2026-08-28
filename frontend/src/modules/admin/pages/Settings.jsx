@@ -12,7 +12,7 @@ export default function Settings() {
   // Form States (Local State for editing)
   const [profileForm, setProfileForm] = useState({
     fullName: 'Admin User',
-    email: 'admin@foodbridge.org',
+    email: 'admin@foodresque.org',
     phone: '+91 98765 43210'
   });
 
@@ -33,8 +33,8 @@ export default function Settings() {
   });
 
   const [platformForm, setPlatformForm] = useState({
-    platformName: 'FoodBridge',
-    supportEmail: 'support@foodbridge.org',
+    platformName: 'FoodResque',
+    supportEmail: 'support@foodresque.org',
     defaultLocation: 'Mumbai, India',
     timezone: 'Asia/Kolkata'
   });

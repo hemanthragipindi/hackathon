@@ -142,7 +142,7 @@ export default function Analytics() {
   // Export CSV
   const handleExport = () => {
     let csvContent = "data:text/csv;charset=utf-8,";
-    csvContent += "FoodBridge Analytics Report\r\n";
+    csvContent += "FoodResque Analytics Report\r\n";
     csvContent += `Date Range: ${dateRange}\r\n\r\n`;
     
     csvContent += "Metric,Value\r\n";
@@ -162,7 +162,7 @@ export default function Analytics() {
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement("a");
     link.setAttribute("href", encodedUri);
-    link.setAttribute("download", `foodbridge_analytics_${dateRange.replace(/ /g, '_').toLowerCase()}.csv`);
+    link.setAttribute("download", `foodresque_analytics_${dateRange.replace(/ /g, '_').toLowerCase()}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -174,7 +174,7 @@ export default function Analytics() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <h2 className="text-2xl font-bold text-gray-900">Analytics Dashboard</h2>
-          <p className="text-gray-500 mt-1">Measure the real-world impact of FoodBridge.</p>
+          <p className="text-gray-500 mt-1">Measure the real-world impact of FoodResque.</p>
         </div>
         <div className="flex items-center gap-3">
           <select 
