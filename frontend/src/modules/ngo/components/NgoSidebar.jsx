@@ -27,15 +27,17 @@ export default function NgoSidebar({ onClose }) {
       {/* Brand Header */}
       <div className="px-6 pt-6 pb-4">
         <div className="flex items-start justify-between">
-          <Link to="/ngo/dashboard" className="block group">
-            <h1 className="text-[22px] font-black text-[#064e3b] leading-tight tracking-tight">
-              Helping Hands
-            </h1>
-            <div className="text-[17px] font-extrabold text-[#064e3b] tracking-tight">
-              NGO
+          <Link to="/ngo/dashboard" className="flex items-center gap-2.5 group">
+            <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#064e3b] text-white font-black text-lg shadow-xs">
+              F
             </div>
-            <div className="text-xs font-semibold text-gray-500 mt-1">
-              FoodRescue
+            <div>
+              <h1 className="text-[20px] font-black text-[#064e3b] leading-tight tracking-tight">
+                FoodRescue
+              </h1>
+              <div className="text-xs font-semibold text-gray-500">
+                NGO Portal
+              </div>
             </div>
           </Link>
           {onClose && (
