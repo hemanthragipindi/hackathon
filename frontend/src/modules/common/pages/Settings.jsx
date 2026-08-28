@@ -5,7 +5,7 @@ export default function Settings() {
     <div className="space-y-6 max-w-4xl mx-auto pb-12">
       <div>
         <h2 className="text-2xl font-bold text-gray-900">Platform Settings</h2>
-        <p className="text-gray-500 mt-1">Manage global configuration for FoodBridge.</p>
+        <p className="text-gray-500 mt-1">Manage global configuration for FoodResque.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
@@ -20,7 +20,7 @@ export default function Settings() {
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-              <input type="email" defaultValue="admin@foodbridge.org" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-green-500" />
+              <input type="email" defaultValue="admin@foodresque.org" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-green-500" />
             </div>
           </div>
           <button className="px-4 py-2 bg-green-600 text-white rounded-md font-medium text-sm hover:bg-green-700 transition-colors">

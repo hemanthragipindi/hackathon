@@ -39,7 +39,11 @@ export default function DonorSidebar({ onClose }) {
             </svg>
             <span className="text-[6.5px] font-bold text-emerald-800 tracking-tighter leading-none mt-0.5">GoodFood</span>
           </div>
+<<<<<<< HEAD
           <span className="text-lg font-bold text-slate-900 tracking-tight">GoodFood</span>
+=======
+          <span className="text-xl font-bold text-gray-900 tracking-tight">FoodResque</span>
+>>>>>>> b7be43e9d6c8673f829e312d809262b55f54c917
         </div>
         <button 
           onClick={onClose} 

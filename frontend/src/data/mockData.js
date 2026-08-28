@@ -1,5 +1,5 @@
 export const usersData = [
-  { id: 'USR-001', name: 'John Doe', role: 'Admin', email: 'admin@foodbridge.org', phone: '+91 9876543210', location: 'Delhi', status: 'Active', joinedDate: '2023-01-15' },
+  { id: 'USR-001', name: 'John Doe', role: 'Admin', email: 'admin@foodresque.org', phone: '+91 9876543210', location: 'Delhi', status: 'Active', joinedDate: '2023-01-15' },
   { id: 'USR-002', name: 'Green Leaf Restaurant', role: 'Donor', email: 'contact@greenleaf.com', phone: '+91 9876543211', location: 'Mumbai', status: 'Active', joinedDate: '2023-03-22' },
   { id: 'USR-003', name: 'Hope Foundation', role: 'NGO', email: 'hello@hopefoundation.in', phone: '+91 9876543212', location: 'Delhi', status: 'Active', joinedDate: '2023-04-10' },
   { id: 'USR-004', name: 'Rahul Kumar', role: 'Volunteer', email: 'rahul.k@example.com', phone: '+91 9876543213', location: 'Delhi', status: 'Active', joinedDate: '2023-05-05' },
@@ -40,11 +40,13 @@ export const volunteersData = [
 ];
 
 export const notificationsData = [
-  { id: 'NOT-1', title: 'New Food Listing', description: 'Green Leaf Restaurant added a new food listing.', timestamp: '2 minutes ago', read: false },
-  { id: 'NOT-2', title: 'Food Claimed', description: 'Hope Foundation claimed 40 meal packages.', timestamp: '15 minutes ago', read: false },
-  { id: 'NOT-3', title: 'Pickup Completed', description: 'Volunteer Rahul completed pickup #PK1024.', timestamp: '1 hour ago', read: true },
-  { id: 'NOT-4', title: 'NGO Verified', description: 'Care Foundation verification was approved.', timestamp: '3 hours ago', read: true },
-  { id: 'NOT-5', title: 'Listing Expired', description: 'A food listing (FD-992) expired without being claimed.', timestamp: 'Yesterday', read: true },
+  { id: 'NOT-1', title: 'New Food Listing', description: 'Green Leaf Restaurant added a new food listing.', timestamp: '2 minutes ago', read: false, category: 'Food', type: 'Information', relatedEntity: '/admin/food' },
+  { id: 'NOT-2', title: 'Food Claimed', description: 'Hope Foundation claimed 40 meal packages.', timestamp: '15 minutes ago', read: false, category: 'Claims', type: 'Success', relatedEntity: '/admin/claims' },
+  { id: 'NOT-3', title: 'Pickup Completed', description: 'Volunteer Rahul completed pickup #PK1024.', timestamp: '1 hour ago', read: true, category: 'Pickups', type: 'Success', relatedEntity: '/admin/pickups' },
+  { id: 'NOT-4', title: 'NGO Verified', description: 'Care Foundation verification was approved.', timestamp: '3 hours ago', read: true, category: 'NGOs', type: 'Success', relatedEntity: '/admin/ngos' },
+  { id: 'NOT-5', title: 'Listing Expired', description: 'A food listing (FD-992) expired without being claimed.', timestamp: 'Yesterday', read: true, category: 'Food', type: 'Warning', relatedEntity: '/admin/food' },
+  { id: 'NOT-6', title: 'Pickup Delayed', description: 'Pickup #PK102 is running 15 minutes late.', timestamp: '2 hours ago', read: false, category: 'Pickups', type: 'Warning', relatedEntity: '/admin/pickups' },
+  { id: 'NOT-7', title: 'System Error', description: 'Failed to send daily summary email to NGOs.', timestamp: '1 day ago', read: true, category: 'System', type: 'Error', relatedEntity: null }
 ];
 
 export const chartData = [
