@@ -8,13 +8,14 @@ import Pickups from './modules/admin/pages/Pickups';
 import NGOs from './modules/admin/pages/NGOs';
 import Volunteers from './modules/admin/pages/Volunteers';
 import Analytics from './modules/admin/pages/Analytics';
+import AdminNotifications from './modules/admin/pages/Notifications';
+import AdminSettings from './modules/admin/pages/Settings';
 
 import DonorLayout from './modules/donor/DonorLayout';
 import DonorDashboard from './modules/donor/pages/Dashboard';
 import CreateDonation from './modules/donor/pages/CreateDonation';
 import MyDonations from './modules/donor/pages/MyDonations';
 
-<<<<<<< HEAD
 import NgoLayout from './modules/ngo/NgoLayout';
 import NgoDashboard from './modules/ngo/pages/Dashboard';
 import NgoFood from './modules/ngo/pages/Food';
@@ -24,15 +25,8 @@ import NgoImpact from './modules/ngo/pages/Impact';
 import NgoWallet from './modules/ngo/pages/Wallet';
 import NgoOrganization from './modules/ngo/pages/Organization';
 
-import Notifications from './modules/common/pages/Notifications';
-import Settings from './modules/common/pages/Settings';
-=======
-import AdminNotifications from './modules/admin/pages/Notifications';
-import AdminSettings from './modules/admin/pages/Settings';
-
-import DonorNotifications from './modules/common/pages/Notifications';
-import DonorSettings from './modules/common/pages/Settings';
->>>>>>> 68cc7c5e975628d23e2e4d5f1417fe8fe9152f8b
+import CommonNotifications from './modules/common/pages/Notifications';
+import CommonSettings from './modules/common/pages/Settings';
 
 // Landing Page
 function Landing() {
@@ -101,8 +95,8 @@ function App() {
         <Route path="impact" element={<NgoImpact />} />
         <Route path="wallet" element={<NgoWallet />} />
         <Route path="organization" element={<NgoOrganization />} />
-        <Route path="notifications" element={<Notifications />} />
-        <Route path="settings" element={<Settings />} />
+        <Route path="notifications" element={<CommonNotifications />} />
+        <Route path="settings" element={<CommonSettings />} />
       </Route>
       
       {/* Admin Routes */}
@@ -126,8 +120,8 @@ function App() {
         <Route path="dashboard" element={<DonorDashboard />} />
         <Route path="create" element={<CreateDonation />} />
         <Route path="my-donations" element={<MyDonations />} />
-        <Route path="notifications" element={<DonorNotifications />} />
-        <Route path="settings" element={<DonorSettings />} />
+        <Route path="notifications" element={<CommonNotifications />} />
+        <Route path="settings" element={<CommonSettings />} />
       </Route>
 
       <Route path="*" element={<div className="flex h-screen items-center justify-center bg-gray-50 text-gray-500">404 Not Found</div>} />
