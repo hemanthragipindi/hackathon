@@ -14,8 +14,11 @@ import DonorDashboard from './modules/donor/pages/Dashboard';
 import CreateDonation from './modules/donor/pages/CreateDonation';
 import MyDonations from './modules/donor/pages/MyDonations';
 
-import Notifications from './modules/common/pages/Notifications';
-import Settings from './modules/common/pages/Settings';
+import AdminNotifications from './modules/admin/pages/Notifications';
+import AdminSettings from './modules/admin/pages/Settings';
+
+import DonorNotifications from './modules/common/pages/Notifications';
+import DonorSettings from './modules/common/pages/Settings';
 
 // Temporary Landing Page
 function Landing() {
@@ -51,8 +54,8 @@ function App() {
         <Route path="ngos" element={<NGOs />} />
         <Route path="volunteers" element={<Volunteers />} />
         <Route path="analytics" element={<Analytics />} />
-        <Route path="notifications" element={<Notifications />} />
-        <Route path="settings" element={<Settings />} />
+        <Route path="notifications" element={<AdminNotifications />} />
+        <Route path="settings" element={<AdminSettings />} />
       </Route>
 
       {/* Donor Routes */}
@@ -61,8 +64,8 @@ function App() {
         <Route path="dashboard" element={<DonorDashboard />} />
         <Route path="create" element={<CreateDonation />} />
         <Route path="my-donations" element={<MyDonations />} />
-        <Route path="notifications" element={<Notifications />} />
-        <Route path="settings" element={<Settings />} />
+        <Route path="notifications" element={<DonorNotifications />} />
+        <Route path="settings" element={<DonorSettings />} />
       </Route>
 
       <Route path="*" element={<div className="flex h-screen items-center justify-center bg-gray-50 text-gray-500">404 Not Found</div>} />
