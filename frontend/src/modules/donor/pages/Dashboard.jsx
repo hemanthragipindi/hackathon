@@ -342,46 +342,7 @@ export default function DonorDashboard({ onMenuClick }) {
         </div>
       </div>
 
-      {/* Bottom Section: Community Champion Gamification / Level Progress Card */}
-      <div className="rounded-3xl border border-emerald-50/90 p-6 sm:p-7 shadow-xs bg-gradient-to-r from-[#f4fcf6] via-[#fbfdff] to-[#f3f8fe] flex flex-col md:flex-row items-center justify-between gap-6">
-        {/* Left Badge + Text */}
-        <div className="flex items-center gap-5 w-full md:w-auto">
-          {/* Trophy Coin Badge */}
-          <div className="w-14 h-14 rounded-full bg-gradient-to-br from-amber-400 via-amber-500 to-orange-600 flex items-center justify-center text-white shadow-md shadow-amber-500/20 shrink-0 select-none">
-            <Trophy size={26} className="stroke-[2.2]" />
-          </div>
-
-          <div className="min-w-0 flex-1">
-            <h3 className="text-lg font-extrabold text-slate-900 tracking-tight">
-              Community Champion
-            </h3>
-            <p className="text-xs font-extrabold text-emerald-600 tracking-wider uppercase mt-0.5">
-              LEVEL 4 CONTRIBUTOR
-            </p>
-          </div>
-        </div>
-
-        {/* Center Progress Bar + Subtitle */}
-        <div className="flex-1 w-full max-w-xl">
-          {/* Progress track */}
-          <div className="w-full h-3 rounded-full bg-emerald-100/70 overflow-hidden relative">
-            <div 
-              className="h-full rounded-full bg-gradient-to-r from-emerald-500 via-emerald-400 to-teal-500 transition-all duration-700" 
-              style={{ width: '88%' }}
-            />
-          </div>
-          <p className="text-xs sm:text-[13px] text-slate-600 mt-2.5 leading-snug">
-            Just <strong className="font-bold text-slate-900">12 more successful rescues</strong> to reach Level 5 and unlock priority NGO matching.
-          </p>
-        </div>
-
-        {/* Right Percentage */}
-        <div className="shrink-0 text-right self-end md:self-center">
-          <span className="text-3xl sm:text-4xl font-extrabold text-[#059669] tracking-tight">
-            88%
-          </span>
-        </div>
-      </div>
     </div>
   );
 }
+

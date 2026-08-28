@@ -39,7 +39,7 @@ export default function DonorLayout() {
                 <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 14a4 4 0 1 1 4-4 4 4 0 0 1-4 4z" />
               </svg>
             </div>
-            <span className="font-bold text-slate-900 text-base">GoodFood</span>
+            <span className="font-bold text-slate-900 text-base">Food Rescue</span>
           </div>
 
           <div className="w-8 h-8 rounded-full bg-[#064e3b] text-white font-bold text-xs flex items-center justify-center">

@@ -342,7 +342,7 @@ export default function MyImpact() {
             1,000 Meals Milestone
           </h3>
           <p className="text-xs sm:text-[13.5px] text-slate-600 leading-relaxed max-w-3xl">
-            Your restaurant has helped provide over 1,000 meals through the GoodFood Rescue network. Thank you for your continued dedication to reducing waste and feeding the community.
+            Your restaurant has helped provide over 1,000 meals through the Food Rescue network. Thank you for your continued dedication to reducing waste and feeding the community.
           </p>
 
           {/* Full Progress Bar */}

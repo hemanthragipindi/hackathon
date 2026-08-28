@@ -238,7 +238,7 @@ export default function Achievements() {
             Latest Achievement
           </span>
           <p className="text-xs sm:text-sm text-slate-700 mt-1 leading-snug">
-            Your restaurant recently reached <strong className="font-bold text-slate-900">100 Meals Shared</strong> through GoodFood Rescue.
+            Your restaurant recently reached <strong className="font-bold text-slate-900">100 Meals Shared</strong> through Food Rescue.
           </p>
           <p className="text-[11px] text-slate-400 font-medium mt-1">
             Earned on Oct 12, 2023

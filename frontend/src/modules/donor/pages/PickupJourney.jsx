@@ -293,26 +293,29 @@ export default function PickupJourney() {
             </button>
           </div>
 
-          {/* Widget 3: Live Radar Map Card */}
-          <div className="rounded-3xl border border-slate-100/90 shadow-xs p-4 h-36 relative overflow-hidden bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#ede9fe] flex flex-col justify-between">
-            {/* Radar Waves Visual */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40">
-              <div className="w-24 h-24 rounded-full border border-emerald-400 animate-ping absolute" />
-              <div className="w-16 h-16 rounded-full border border-emerald-500 animate-pulse absolute" />
-              <div className="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[9px] font-bold shadow-md">
-                📍
-              </div>
-            </div>
-
-            <div className="flex justify-end">
-              <span className="text-[10px] font-bold text-slate-400 bg-white/80 px-2 py-0.5 rounded-md">
-                GPS Live
+          {/* Widget 3: Live Transit Status Card */}
+          <div className="rounded-3xl border border-slate-100/90 shadow-xs p-5 bg-white flex flex-col justify-between space-y-3">
+            <div className="flex items-center justify-between">
+              <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+                Transit Info
+              </span>
+              <span className="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10.5px] font-bold">
+                ETA 12 mins
               </span>
             </div>
 
-            <div className="flex items-center gap-1.5 text-xs font-bold text-slate-700 relative z-10">
-              <Radio size={14} className="text-emerald-600 animate-pulse" />
-              <span>Tracking Active</span>
+            <div>
+              <p className="text-xs font-bold text-slate-800">
+                Driver Route #2 • West Corridor
+              </p>
+              <p className="text-[11px] text-slate-500 mt-0.5">
+                Vehicle: White Eco-Van (DL-04-A-8921)
+              </p>
+            </div>
+
+            <div className="pt-1 flex items-center gap-1.5 text-xs font-bold text-emerald-700">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span>Live dispatch in progress</span>
             </div>
           </div>
 

@@ -32,14 +32,10 @@ export default function DonorSidebar({ onClose }) {
       {/* Brand Header */}
       <div className="flex items-center justify-between h-20 px-6 pt-2">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100/80 flex flex-col items-center justify-center p-1.5 shadow-xs">
-            <svg viewBox="0 0 24 24" className="w-6 h-6 text-emerald-600 fill-none stroke-current stroke-[2.2] stroke-linecap-round stroke-linejoin-round">
-              <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 14a4 4 0 1 1 4-4 4 4 0 0 1-4 4z" />
-              <path d="M12 6v2m0 8v2M6 12H4m16 0h-2" />
-            </svg>
-            <span className="text-[6.5px] font-bold text-emerald-800 tracking-tighter leading-none mt-0.5">GoodFood</span>
+          <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100/80 flex items-center justify-center shadow-xs text-emerald-700 font-extrabold text-xl">
+            F
           </div>
-          <span className="text-xl font-bold text-slate-900 tracking-tight">GoodFood</span>
+          <span className="text-xl font-bold text-slate-900 tracking-tight">Food Rescue</span>
         </div>
         <button 
           onClick={onClose} 
