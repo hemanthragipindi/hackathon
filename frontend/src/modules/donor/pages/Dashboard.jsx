@@ -13,7 +13,8 @@ import {
   Home, 
   Heart, 
   Trophy,
-  Bell
+  Bell,
+  Target
 } from 'lucide-react';
 import LiveRescueStepper from '../components/LiveRescueStepper';
 import { useReputation } from '../../../context/ReputationContext';
@@ -298,6 +299,42 @@ export default function DonorDashboard({ onMenuClick }) {
                     YESTERDAY, 1:15 PM
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Smart Matches Summary */}
+      <div className="bg-white rounded-3xl border border-slate-100/90 shadow-xs p-6 sm:p-7">
+        <div className="flex items-center justify-between mb-5">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center">
+              <Target size={20} className="stroke-[2.5]" />
+            </div>
+            <div>
+              <h3 className="text-lg font-extrabold text-slate-900 tracking-tight">Smart Matches</h3>
+              <p className="text-xs font-medium text-slate-500">Your available donations have suitable NGO matches.</p>
+            </div>
+          </div>
+          <Link to="/donor/smart-match" className="px-4 py-2 bg-slate-50 text-slate-700 hover:bg-slate-100 hover:text-slate-900 font-bold text-sm rounded-xl border border-slate-200 transition-colors">
+            View Matches
+          </Link>
+        </div>
+        
+        <div className="bg-slate-50 rounded-2xl p-4 sm:p-5 border border-slate-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <div className="px-3 py-1.5 bg-emerald-100 text-emerald-700 rounded-lg text-xs font-black uppercase tracking-wider">
+              Best Match
+            </div>
+            <div>
+              <p className="font-bold text-slate-900">Hope Foundation</p>
+              <div className="flex items-center gap-3 text-xs font-medium text-slate-500 mt-1">
+                <span>94% Match</span>
+                <span className="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span>2.1 km away</span>
+                <span className="w-1 h-1 rounded-full bg-slate-300"></span>
+                <span>Trust Score 96/100</span>
               </div>
             </div>
           </div>

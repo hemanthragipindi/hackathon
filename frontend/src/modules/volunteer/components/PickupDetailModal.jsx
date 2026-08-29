@@ -23,8 +23,11 @@ export default function PickupDetailModal({ pickup, isOpen, onClose, onAccept, a
         <div className="p-5 space-y-6">
           
           <div className="bg-emerald-50 text-emerald-800 p-4 rounded-xl border border-emerald-100">
-            <h3 className="font-bold text-xl flex items-center gap-2 mb-1">
-              <Utensils size={24} className="text-emerald-600" /> {pickup.food}
+            <h3 className="font-bold text-xl flex items-center gap-3 mb-2">
+              <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center shrink-0 border border-emerald-200 shadow-sm">
+                <Utensils size={20} className="text-emerald-600" />
+              </div>
+              {pickup.food}
             </h3>
             <p className="text-emerald-700 font-medium flex items-center gap-2 text-sm">
               <Clock size={16} /> Pickup Window: {pickup.timeWindow}

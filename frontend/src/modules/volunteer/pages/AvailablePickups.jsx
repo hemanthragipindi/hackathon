@@ -74,8 +74,11 @@ export default function AvailablePickups() {
             <div key={pickup.id} className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden hover:border-emerald-300 transition-colors group">
               <div className="p-4 border-b border-gray-50">
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="font-bold text-gray-900 text-lg flex items-center gap-2">
-                    <Utensils className="text-emerald-600" size={20} /> {pickup.food}
+                  <h3 className="font-bold text-gray-900 text-lg flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 border border-emerald-200 shadow-sm">
+                      <Utensils className="text-emerald-600" size={16} />
+                    </div>
+                    {pickup.food}
                   </h3>
                   <span className="bg-blue-50 text-blue-700 text-xs font-bold px-2 py-1 rounded-lg">
                     {pickup.distance}

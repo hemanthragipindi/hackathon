@@ -10,12 +10,14 @@ import {
   Settings,
   HelpCircle,
   X,
-  Globe
+  Globe,
+  Target
 } from 'lucide-react';
 
 const mainNavItems = [
   { name: 'Overview', icon: LayoutGrid, path: '/donor/dashboard' },
   { name: 'Share Surplus', icon: PlusCircle, path: '/donor/create' },
+  { name: 'Smart Match', icon: Target, path: '/donor/smart-match' },
   { name: 'Live Rescues', icon: Truck, path: '/donor/live-rescues' },
   { name: 'Pickup Journey', icon: RouteIcon, path: '/donor/pickup-journey' },
   { name: 'My Impact', icon: TrendingUp, path: '/donor/my-impact' },

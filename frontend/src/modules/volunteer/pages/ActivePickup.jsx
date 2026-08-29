@@ -92,8 +92,11 @@ export default function ActivePickup() {
               <span className="inline-block px-2.5 py-1 rounded bg-white text-emerald-800 text-xs font-black uppercase tracking-wider mb-3 shadow-sm">
                 Pickup #{activePickup.id}
               </span>
-              <h2 className="text-2xl font-black text-gray-900 flex items-center gap-2">
-                <Utensils size={32} className="text-emerald-600" /> {activePickup.food}
+              <h2 className="text-2xl font-black text-gray-900 flex items-center gap-3">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center shrink-0 border-2 border-emerald-200 shadow-sm">
+                  <Utensils size={24} className="text-emerald-600" />
+                </div>
+                {activePickup.food}
               </h2>
             </div>
           </div>

@@ -80,7 +80,7 @@ const partnersData = [
     verified: true,
     active: true,
     recentPickup: 'Last week',
-    rating: '4.9 â˜…'
+    rating: '4.9'
   }
 ];
 

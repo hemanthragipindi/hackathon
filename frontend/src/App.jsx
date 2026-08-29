@@ -8,6 +8,9 @@ import VolunteerNotifications from './modules/volunteer/pages/Notifications';
 import VolunteerSettings from './modules/volunteer/pages/Settings';
 import VolunteerReputation from './modules/volunteer/pages/Reputation';
 
+import Login from './modules/auth/pages/Login';
+import Register from './modules/auth/pages/Register';
+
 import AdminLayout from './modules/admin/AdminLayout';
 import AdminDashboard from './modules/admin/pages/Dashboard';
 import Users from './modules/admin/pages/Users';
@@ -31,6 +34,7 @@ import CommunityPartners from './modules/donor/pages/CommunityPartners';
 import DonorSettings from './modules/donor/pages/Settings';
 import HelpSupport from './modules/donor/pages/HelpSupport';
 import MyDonations from './modules/donor/pages/MyDonations';
+import SmartMatch from './modules/donor/pages/SmartMatch';
 import DonorReputation from './modules/donor/pages/Reputation';
 
 import NgoLayout from './modules/ngo/NgoLayout';
@@ -100,6 +104,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Landing />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
 
       {/* NGO Routes */}
       <Route path="/ngo" element={<NgoLayout />}>
@@ -123,6 +129,7 @@ function App() {
         <Route index element={<Navigate to="/donor/dashboard" replace />} />
         <Route path="dashboard" element={<DonorDashboard />} />
         <Route path="create" element={<CreateDonation />} />
+        <Route path="smart-match" element={<SmartMatch />} />
         <Route path="live-rescues" element={<LiveRescues />} />
         <Route path="pickup-journey" element={<PickupJourney />} />
         <Route path="my-impact" element={<MyImpact />} />

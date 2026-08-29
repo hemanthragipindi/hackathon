@@ -1,10 +1,10 @@
-﻿import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import { 
   LineChart, Line, AreaChart, Area, BarChart, Bar, PieChart, Pie, Cell,
   XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend 
 } from 'recharts';
 import { useAdminData } from '../context/AdminDataContext';
-import { Download, TrendingUp, Package, HeartHandshake, CheckCircle2, Truck, Activity } from 'lucide-react';
+import { Download, TrendingUp, Package, HeartHandshake, CheckCircle2, Truck, Activity, Star } from 'lucide-react';
 
 export default function Analytics() {
   const { foodListings, claims, pickups, ngos, volunteers } = useAdminData();
@@ -429,7 +429,7 @@ export default function Analytics() {
                       {vol.failedPickups > 0 && <span className="text-red-500 ml-1">({vol.failedPickups} failed)</span>}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm">
-                      <span className="text-yellow-400">â˜…</span> <span className="font-medium text-gray-900">{vol.rating}</span>
+                      <Star size={14} className="inline text-yellow-400 fill-yellow-400 mr-1" /> <span className="font-medium text-gray-900">{vol.rating}</span>
                     </td>
                   </tr>
                 )) : (

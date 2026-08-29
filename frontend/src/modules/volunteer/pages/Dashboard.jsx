@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useVolunteerData } from '../context/VolunteerDataContext';
-import { Truck, MapPin, Clock, ArrowRight, Package, CheckCircle2, Utensils } from 'lucide-react';
+import { Truck, MapPin, Clock, ArrowRight, Package, CheckCircle2, Utensils, Sun } from 'lucide-react';
 import { useReputation } from '../../../context/ReputationContext';
 import TrustBadge from '../../common/components/TrustBadge';
 import VerificationBadge from '../../common/components/VerificationBadge';
@@ -26,7 +26,12 @@ export default function Dashboard() {
       {/* Header */}
       <div>
         <div className="flex items-center gap-3">
-          <h1 className="text-2xl font-bold text-gray-900">Good morning, {profile?.name.split(' ')[0] || volunteerProfile.name.split(' ')[0]}</h1>
+          <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
+            Good morning, {profile?.name.split(' ')[0] || volunteerProfile.name.split(' ')[0]}
+            <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-amber-100 text-amber-500">
+              <Sun size={20} className="fill-amber-400" />
+            </span>
+          </h1>
           {profile?.verification && (
             <VerificationBadge verified={profile.verification.verified} verifiedAt={profile.verification.verifiedAt} />
           )}
@@ -120,8 +125,11 @@ export default function Dashboard() {
               <div key={pickup.id} className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden hover:border-emerald-300 transition-colors">
                 <div className="p-4 border-b border-gray-50">
                   <div className="flex justify-between items-start mb-2">
-                    <h3 className="font-bold text-gray-900 text-lg flex items-center gap-2">
-                      <Utensils className="text-emerald-600" size={20} /> {pickup.food}
+                    <h3 className="font-bold text-gray-900 text-lg flex items-center gap-2.5">
+                      <div className="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center shrink-0 border border-emerald-200 shadow-sm">
+                        <Utensils className="text-emerald-600" size={16} />
+                      </div>
+                      {pickup.food}
                     </h3>
                     <span className="bg-blue-50 text-blue-700 text-xs font-bold px-2 py-1 rounded-lg">
                       {pickup.distance}
