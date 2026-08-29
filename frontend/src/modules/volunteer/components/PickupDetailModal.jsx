@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Clock, Package, Building2, User, X } from 'lucide-react';
+import { MapPin, Clock, Package, Building2, User, X, Utensils } from 'lucide-react';
 
 export default function PickupDetailModal({ pickup, isOpen, onClose, onAccept, activePickupExists }) {
   if (!isOpen || !pickup) return null;
@@ -24,7 +24,7 @@ export default function PickupDetailModal({ pickup, isOpen, onClose, onAccept, a
           
           <div className="bg-emerald-50 text-emerald-800 p-4 rounded-xl border border-emerald-100">
             <h3 className="font-bold text-xl flex items-center gap-2 mb-1">
-              <span className="text-2xl">🍱</span> {pickup.food}
+              <Utensils size={24} className="text-emerald-600" /> {pickup.food}
             </h3>
             <p className="text-emerald-700 font-medium flex items-center gap-2 text-sm">
               <Clock size={16} /> Pickup Window: {pickup.timeWindow}

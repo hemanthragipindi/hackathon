@@ -6,7 +6,8 @@ import {
   Truck, 
   Clock, 
   Bell, 
-  Settings 
+  Settings,
+  Trophy
 } from 'lucide-react';
 import { useVolunteerData } from '../context/VolunteerDataContext';
 
@@ -19,6 +20,7 @@ export default function VolunteerSidebar() {
     { name: 'Available Pickups', path: '/volunteer/pickups', icon: Package },
     { name: 'Active Pickup', path: '/volunteer/active-pickup', icon: Truck },
     { name: 'Pickup History', path: '/volunteer/history', icon: Clock },
+    { name: 'Reputation', path: '/volunteer/reputation', icon: Trophy },
     { name: 'Notifications', path: '/volunteer/notifications', icon: Bell },
     { name: 'Settings', path: '/volunteer/settings', icon: Settings },
   ];

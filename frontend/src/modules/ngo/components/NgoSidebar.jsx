@@ -9,7 +9,8 @@ import {
   Wallet,
   Building2,
   X,
-  Globe
+  Globe,
+  Trophy
 } from 'lucide-react';
 
 const navItems = [
@@ -18,6 +19,7 @@ const navItems = [
   { name: 'Pickup', icon: Truck, path: '/ngo/operations' },
   { name: 'Beneficiaries', icon: Users, path: '/ngo/beneficiaries' },
   { name: 'Impact', icon: BarChart3, path: '/ngo/impact' },
+  { name: 'Reputation', icon: Trophy, path: '/ngo/reputation' },
   { name: 'Community Hub', icon: Globe, path: '/ngo/hub' },
   { name: 'Wallet', icon: Wallet, path: '/ngo/wallet' },
   { name: 'Organization', icon: Building2, path: '/ngo/organization' },

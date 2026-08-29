@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate, useOutletContext } from 'react-router-dom';
 import { 
   TrendingUp, 
@@ -15,11 +15,17 @@ import {
 import ClaimFoodModal from '../components/ClaimFoodModal';
 import AssignPickupModal from '../components/AssignPickupModal';
 import TrackPickupModal from '../components/TrackPickupModal';
+import { useReputation } from '../../../context/ReputationContext';
+import TrustBadge from '../../common/components/TrustBadge';
+import VerificationBadge from '../../common/components/VerificationBadge';
 
 export default function NgoDashboard() {
   const navigate = useNavigate();
   const outletContext = useOutletContext() || {};
   const searchTerm = (outletContext.searchTerm || '').toLowerCase();
+  
+  const { getProfile, calculateTrustScore } = useReputation();
+  const profile = getProfile("NGO-1");
 
   // State for Pickups
   const [pickups, setPickups] = useState([
@@ -164,17 +170,32 @@ export default function NgoDashboard() {
             <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
               Dashboard
             </h1>
-            <div className="flex items-center gap-2 mt-1">
+            <div className="flex items-center gap-3 mt-2">
               <p className="text-base md:text-lg font-semibold text-gray-800">
-                Good morning, Helping Hands NGO
+                Good morning, {profile?.name || 'Helping Hands NGO'}
               </p>
+              {profile?.verification && (
+                <VerificationBadge verified={profile.verification.verified} verifiedAt={profile.verification.verifiedAt} />
+              )}
+              {profile?.trust?.metrics && (
+                <TrustBadge 
+                  trustScore={calculateTrustScore(profile.trust.metrics)} 
+                  metrics={profile.trust.metrics} 
+                />
+              )}
             </div>
-            <p className="text-sm text-gray-500 mt-0.5">
+            <p className="text-sm text-gray-500 mt-1">
               Here's what's happening with your food rescue operations today.
             </p>
           </div>
 
           <div className="flex items-center gap-3">
+            <button
+              onClick={() => addRewardTransaction("NGO-1", "Claimed Food", 20)}
+              className="px-4 py-3 rounded-lg text-sm font-semibold bg-indigo-100 hover:bg-indigo-200 text-indigo-700 transition-all shadow-xs active:scale-95 cursor-pointer"
+            >
+              Simulate +20 Pts
+            </button>
             <button
               onClick={() => navigate('/ngo/operations')}
               className="px-4 py-3 rounded-lg text-sm font-semibold bg-[#86efac] hover:bg-[#6ee7b7] text-[#064e3b] transition-all shadow-xs active:scale-95 cursor-pointer"
@@ -193,7 +214,7 @@ export default function NgoDashboard() {
       </div>
 
       {/* 4 Summary Stat Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
         {/* Card 1: Food Rescued */}
         <div className="bg-white rounded-3xl p-5 border border-slate-100/90 shadow-xs flex flex-col justify-between hover:shadow-sm transition-all">
           <div className="flex items-start justify-between">

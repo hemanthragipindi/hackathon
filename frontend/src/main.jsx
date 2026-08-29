@@ -30,12 +30,16 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+import { ReputationProvider } from './context/ReputationContext';
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ErrorBoundary>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <ReputationProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ReputationProvider>
     </ErrorBoundary>
   </StrictMode>,
 )

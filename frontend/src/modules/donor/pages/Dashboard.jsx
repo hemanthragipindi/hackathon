@@ -16,9 +16,14 @@ import {
   Bell
 } from 'lucide-react';
 import LiveRescueStepper from '../components/LiveRescueStepper';
+import { useReputation } from '../../../context/ReputationContext';
+import TrustBadge from '../../common/components/TrustBadge';
+import VerificationBadge from '../../common/components/VerificationBadge';
 
 export default function DonorDashboard({ onMenuClick }) {
   const currentDate = 'SATURDAY, AUGUST 29';
+  const { getCurrentProfile, calculateTrustScore, addRewardTransaction } = useReputation();
+  const profile = getCurrentProfile();
 
   return (
     <div className="space-y-7 pb-10 max-w-[1340px] mx-auto">
@@ -28,9 +33,20 @@ export default function DonorDashboard({ onMenuClick }) {
           <p className="text-[11.5px] font-bold text-slate-400 tracking-wider uppercase mb-1">
             {currentDate}
           </p>
-          <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
-            Good morning, Spice Garden
-          </h1>
+          <div className="flex items-center gap-3">
+            <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
+              Good morning, {profile?.name || 'Spice Garden'}
+            </h1>
+            {profile?.verification && (
+              <VerificationBadge verified={profile.verification.verified} verifiedAt={profile.verification.verifiedAt} />
+            )}
+            {profile?.trust?.metrics && (
+              <TrustBadge 
+                trustScore={calculateTrustScore(profile.trust.metrics)} 
+                metrics={profile.trust.metrics} 
+              />
+            )}
+          </div>
         </div>
 
         <div className="flex items-center gap-3">
@@ -47,6 +63,14 @@ export default function DonorDashboard({ onMenuClick }) {
           <div className="w-11 h-11 rounded-full bg-[#064e3b] text-white font-bold text-sm flex items-center justify-center shadow-xs select-none">
             SG
           </div>
+
+          {/* Simulate Action Trigger */}
+          <button
+            onClick={() => addRewardTransaction("DONOR-1", "Donation Created", 50)}
+            className="px-3 py-1.5 text-xs font-bold bg-indigo-100 text-indigo-700 rounded-lg hover:bg-indigo-200 transition-colors shadow-sm cursor-pointer"
+          >
+            Simulate +50 Pts
+          </button>
         </div>
       </div>
 

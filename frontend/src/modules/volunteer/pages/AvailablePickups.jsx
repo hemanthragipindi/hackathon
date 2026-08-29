@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, MapPin, Clock, ArrowRight, Package, SlidersHorizontal } from 'lucide-react';
+import { Search, MapPin, Clock, ArrowRight, Package, SlidersHorizontal, Utensils } from 'lucide-react';
 import { useVolunteerData } from '../context/VolunteerDataContext';
 import PickupDetailModal from '../components/PickupDetailModal';
 
@@ -75,7 +75,7 @@ export default function AvailablePickups() {
               <div className="p-4 border-b border-gray-50">
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="font-bold text-gray-900 text-lg flex items-center gap-2">
-                    <span className="text-xl">🍱</span> {pickup.food}
+                    <Utensils className="text-emerald-600" size={20} /> {pickup.food}
                   </h3>
                   <span className="bg-blue-50 text-blue-700 text-xs font-bold px-2 py-1 rounded-lg">
                     {pickup.distance}

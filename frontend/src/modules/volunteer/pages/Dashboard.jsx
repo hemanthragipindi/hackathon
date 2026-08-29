@@ -1,17 +1,23 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useVolunteerData } from '../context/VolunteerDataContext';
-import { Truck, MapPin, Clock, ArrowRight, Package, CheckCircle2 } from 'lucide-react';
+import { Truck, MapPin, Clock, ArrowRight, Package, CheckCircle2, Utensils } from 'lucide-react';
+import { useReputation } from '../../../context/ReputationContext';
+import TrustBadge from '../../common/components/TrustBadge';
+import VerificationBadge from '../../common/components/VerificationBadge';
 
 export default function Dashboard() {
   const navigate = useNavigate();
   const { 
-    profile, 
+    profile: volunteerProfile, // renamed to avoid conflict
     availablePickups, 
     activePickup, 
     pickupHistory,
     acceptPickup
   } = useVolunteerData();
+
+  const { getProfile, calculateTrustScore, addRewardTransaction } = useReputation();
+  const profile = getProfile("VOL-1");
 
   const completedToday = pickupHistory.filter(p => p.date.includes('Aug 28') && p.status === 'Completed').length; // Mock logic for today
 
@@ -19,12 +25,23 @@ export default function Dashboard() {
     <div className="space-y-6">
       {/* Header */}
       <div>
-        <h1 className="text-2xl font-bold text-gray-900">Good morning, {profile.name.split(' ')[0]} 👋</h1>
+        <div className="flex items-center gap-3">
+          <h1 className="text-2xl font-bold text-gray-900">Good morning, {profile?.name.split(' ')[0] || volunteerProfile.name.split(' ')[0]}</h1>
+          {profile?.verification && (
+            <VerificationBadge verified={profile.verification.verified} verifiedAt={profile.verification.verifiedAt} />
+          )}
+          {profile?.trust?.metrics && (
+            <TrustBadge 
+              trustScore={calculateTrustScore(profile.trust.metrics)} 
+              metrics={profile.trust.metrics} 
+            />
+          )}
+        </div>
         <p className="text-gray-500 mt-1">Ready to make an impact today?</p>
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-3 gap-3 mt-6">
         <div className="bg-white p-3 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-center items-center text-center">
           <span className="text-2xl font-black text-gray-900">{availablePickups.length + (activePickup ? 1 : 0) + completedToday}</span>
           <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-1">Today</span>
@@ -104,7 +121,7 @@ export default function Dashboard() {
                 <div className="p-4 border-b border-gray-50">
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="font-bold text-gray-900 text-lg flex items-center gap-2">
-                      <span className="text-xl">🍱</span> {pickup.food}
+                      <Utensils className="text-emerald-600" size={20} /> {pickup.food}
                     </h3>
                     <span className="bg-blue-50 text-blue-700 text-xs font-bold px-2 py-1 rounded-lg">
                       {pickup.distance}
@@ -125,11 +142,17 @@ export default function Dashboard() {
                     </p>
                   </div>
                 </div>
-                <div className="p-3 bg-gray-50">
+                <div className="p-3 bg-gray-50 flex items-center gap-2">
+                  <button 
+                    onClick={() => addRewardTransaction("VOL-1", "Completed Pickup", 40)}
+                    className="px-3 py-2.5 rounded-xl text-xs font-bold bg-indigo-100 hover:bg-indigo-200 text-indigo-700 shadow-sm transition-all active:scale-95 cursor-pointer whitespace-nowrap"
+                  >
+                    Simulate +40
+                  </button>
                   <button 
                     onClick={() => acceptPickup(pickup.id)}
                     disabled={activePickup !== null}
-                    className={`w-full py-2.5 rounded-xl font-bold shadow-sm transition-all active:scale-95 ${
+                    className={`flex-1 py-2.5 rounded-xl font-bold shadow-sm transition-all active:scale-95 ${
                       activePickup 
                         ? 'bg-gray-200 text-gray-400 cursor-not-allowed' 
                         : 'bg-gray-900 hover:bg-gray-800 text-white'

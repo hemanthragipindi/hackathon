@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { 
   Search, 
   Bell, 
@@ -13,6 +13,8 @@ import {
   PartyPopper,
   Sparkles
 } from 'lucide-react';
+import { useReputation } from '../../../context/ReputationContext';
+import RewardProgress from '../../common/components/RewardProgress';
 
 const completedAchievements = [
   {
@@ -51,6 +53,8 @@ const completedAchievements = [
 
 export default function Achievements() {
   const [searchQuery, setSearchQuery] = useState('');
+  const { getCurrentProfile } = useReputation();
+  const profile = getCurrentProfile();
 
   const filteredCompleted = completedAchievements.filter(item => 
     item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -96,48 +100,10 @@ export default function Achievements() {
         </p>
       </div>
 
-      {/* Top Hero Card: Current Rescues Milestone */}
-      <div className="bg-white rounded-3xl border border-slate-100/90 shadow-xs p-6 sm:p-7 space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          {/* Left Title & Star Badge */}
-          <div className="flex items-center gap-3.5">
-            <div className="w-12 h-12 rounded-full bg-emerald-100/80 text-[#059669] flex items-center justify-center shrink-0">
-              <Star size={22} className="fill-[#059669] stroke-[1.5]" />
-            </div>
-            <div>
-              <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight">
-                42 Successful Food Rescues
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-500 font-medium mt-0.5">
-                Active Community Contributor
-              </p>
-            </div>
-          </div>
-
-          {/* Right Next Milestone target */}
-          <div className="sm:text-right self-start sm:self-auto">
-            <p className="text-xs font-semibold text-slate-400">
-              Next Milestone
-            </p>
-            <p className="text-sm sm:text-base font-extrabold text-slate-900 mt-0.5">
-              50 Rescues
-            </p>
-          </div>
-        </div>
-
-        {/* Progress bar (42/50 = 84%) */}
-        <div className="pt-2">
-          <div className="w-full h-2.5 rounded-full bg-slate-100 overflow-hidden">
-            <div 
-              className="h-full rounded-full bg-[#064e3b] transition-all duration-700"
-              style={{ width: '84%' }}
-            />
-          </div>
-          <p className="text-[11.5px] text-slate-400 font-medium text-right mt-2">
-            You are 8 donations away from your next milestone
-          </p>
-        </div>
-      </div>
+      {/* Reward Points Progress */}
+      {profile && (
+        <RewardProgress points={profile.rewards.points} tier={profile.rewards.tier} />
+      )}
 
       {/* Section 1: Completed Badges */}
       <div className="space-y-4 pt-1">

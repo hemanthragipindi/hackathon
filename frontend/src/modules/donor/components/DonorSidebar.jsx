@@ -20,6 +20,7 @@ const mainNavItems = [
   { name: 'Pickup Journey', icon: RouteIcon, path: '/donor/pickup-journey' },
   { name: 'My Impact', icon: TrendingUp, path: '/donor/my-impact' },
   { name: 'Achievements', icon: Trophy, path: '/donor/achievements' },
+  { name: 'Reputation', icon: Trophy, path: '/donor/reputation' },
 ];
 
 const secondaryNavItems = [

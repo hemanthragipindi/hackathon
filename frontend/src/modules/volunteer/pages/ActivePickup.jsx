@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useVolunteerData } from '../context/VolunteerDataContext';
-import { ArrowLeft, MapPin, Building2, Package, CheckCircle2, Navigation, Clock, Truck, ShieldAlert } from 'lucide-react';
+import { ArrowLeft, MapPin, Building2, Package, CheckCircle2, Navigation, Clock, Truck, ShieldAlert, Utensils } from 'lucide-react';
 
 export default function ActivePickup() {
   const { activePickup, updatePickupStatus, completeActivePickup } = useVolunteerData();
@@ -36,7 +36,7 @@ export default function ActivePickup() {
       case 'picked_up': return { text: 'Start Delivery', next: 'delivering', color: 'bg-purple-600 hover:bg-purple-700' };
       case 'delivering': return { text: "I've Arrived at NGO", next: 'arrived_ngo', color: 'bg-blue-600 hover:bg-blue-700' };
       case 'arrived_ngo': return { text: 'Mark Delivered', next: 'delivered', color: 'bg-emerald-600 hover:bg-emerald-700', requireConfirm: true };
-      case 'delivered': return { text: '🎉 Finish & Go Home', next: 'complete', color: 'bg-gray-900 hover:bg-gray-800' };
+      case 'delivered': return { text: 'Finish & Go Home', next: 'complete', color: 'bg-gray-900 hover:bg-gray-800' };
       default: return { text: 'Start Pickup', next: 'en_route', color: 'bg-emerald-600 hover:bg-emerald-700' };
     }
   };
@@ -93,7 +93,7 @@ export default function ActivePickup() {
                 Pickup #{activePickup.id}
               </span>
               <h2 className="text-2xl font-black text-gray-900 flex items-center gap-2">
-                <span className="text-3xl">🍱</span> {activePickup.food}
+                <Utensils size={32} className="text-emerald-600" /> {activePickup.food}
               </h2>
             </div>
           </div>

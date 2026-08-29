@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { 
   Search, 
   Bell, 
@@ -13,7 +13,8 @@ import {
   ExternalLink,
   ChevronDown,
   Sparkles,
-  Heart
+  Heart,
+  Star
 } from 'lucide-react';
 
 const partnersData = [
@@ -31,7 +32,7 @@ const partnersData = [
     verified: true,
     active: true,
     recentPickup: 'Today, 2:30 PM',
-    rating: '4.9 â˜…'
+    rating: '4.9'
   },
   {
     id: 2,
@@ -47,7 +48,7 @@ const partnersData = [
     verified: true,
     active: true,
     recentPickup: 'Yesterday',
-    rating: '5.0 â˜…'
+    rating: '5.0'
   },
   {
     id: 3,
@@ -62,8 +63,8 @@ const partnersData = [
     email: 'elena@communitykitchen.org',
     verified: true,
     active: true,
-    recentPickup: '2 days ago',
-    rating: '4.8 â˜…'
+    recentPickup: 'Oct 24, 2023',
+    rating: '4.8'
   },
   {
     id: 4,
@@ -201,8 +202,8 @@ export default function CommunityPartners() {
                 </div>
               </div>
 
-              <span className="text-xs font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-lg">
-                {partner.rating}
+              <span className="flex items-center text-xs font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-lg">
+                {partner.rating} <Star size={12} className="ml-1 fill-current" />
               </span>
             </div>
 

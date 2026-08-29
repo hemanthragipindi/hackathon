@@ -6,6 +6,8 @@ import VolunteerActivePickup from './modules/volunteer/pages/ActivePickup';
 import VolunteerPickupHistory from './modules/volunteer/pages/PickupHistory';
 import VolunteerNotifications from './modules/volunteer/pages/Notifications';
 import VolunteerSettings from './modules/volunteer/pages/Settings';
+import VolunteerReputation from './modules/volunteer/pages/Reputation';
+
 import AdminLayout from './modules/admin/AdminLayout';
 import AdminDashboard from './modules/admin/pages/Dashboard';
 import Users from './modules/admin/pages/Users';
@@ -29,6 +31,7 @@ import CommunityPartners from './modules/donor/pages/CommunityPartners';
 import DonorSettings from './modules/donor/pages/Settings';
 import HelpSupport from './modules/donor/pages/HelpSupport';
 import MyDonations from './modules/donor/pages/MyDonations';
+import DonorReputation from './modules/donor/pages/Reputation';
 
 import NgoLayout from './modules/ngo/NgoLayout';
 import NgoDashboard from './modules/ngo/pages/Dashboard';
@@ -38,6 +41,7 @@ import NgoBeneficiaries from './modules/ngo/pages/Beneficiaries';
 import NgoImpact from './modules/ngo/pages/Impact';
 import NgoWallet from './modules/ngo/pages/Wallet';
 import NgoOrganization from './modules/ngo/pages/Organization';
+import NgoReputation from './modules/ngo/pages/Reputation';
 
 import CommonNotifications from './modules/common/pages/Notifications';
 import CommonSettings from './modules/common/pages/Settings';
@@ -107,6 +111,7 @@ function App() {
         <Route path="impact" element={<NgoImpact />} />
         <Route path="wallet" element={<NgoWallet />} />
         <Route path="organization" element={<NgoOrganization />} />
+        <Route path="reputation" element={<NgoReputation />} />
         <Route path="notifications" element={<CommonNotifications />} />
         <Route path="settings" element={<CommonSettings />} />
         <Route path="hub" element={<CommonHub />} />
@@ -122,6 +127,7 @@ function App() {
         <Route path="pickup-journey" element={<PickupJourney />} />
         <Route path="my-impact" element={<MyImpact />} />
         <Route path="achievements" element={<Achievements />} />
+        <Route path="reputation" element={<DonorReputation />} />
         <Route path="community-partners" element={<CommunityPartners />} />
         <Route path="settings" element={<DonorSettings />} />
         <Route path="help" element={<HelpSupport />} />
@@ -156,6 +162,7 @@ function App() {
         <Route path="history" element={<VolunteerPickupHistory />} />
         <Route path="notifications" element={<VolunteerNotifications />} />
         <Route path="settings" element={<VolunteerSettings />} />
+        <Route path="reputation" element={<VolunteerReputation />} />
       </Route>
 
       <Route path="*" element={<div className="flex h-screen items-center justify-center bg-gray-50 text-gray-500 font-bold">404 Not Found</div>} />
