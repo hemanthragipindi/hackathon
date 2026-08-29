@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Users, Building, MapPin, Phone, Heart, Plus, Search, CheckCircle } from 'lucide-react';
 
 const sheltersData = [
@@ -126,7 +126,7 @@ export default function Beneficiaries() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={15} className="text-gray-400 shrink-0" />
-                <span>{s.contactPerson} â€¢ {s.phone}</span>
+                <span>{s.contactPerson} • {s.phone}</span>
               </div>
             </div>
           </div>

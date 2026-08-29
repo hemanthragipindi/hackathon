@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { 
   Search, 
   Bell, 
@@ -306,7 +306,7 @@ export default function PickupJourney() {
 
             <div>
               <p className="text-xs font-bold text-slate-800">
-                Driver Route #2 â€¢ West Corridor
+                Driver Route #2 • West Corridor
               </p>
               <p className="text-xs text-slate-500 mt-0.5">
                 Vehicle: White Eco-Van (DL-04-A-8921)

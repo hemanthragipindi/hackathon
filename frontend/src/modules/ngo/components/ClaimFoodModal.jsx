@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { X, CheckCircle, Clock, MapPin, AlertCircle, Sparkles } from 'lucide-react';
 
 export default function ClaimFoodModal({ item, isOpen, onClose, onConfirm }) {
@@ -52,7 +52,7 @@ export default function ClaimFoodModal({ item, isOpen, onClose, onConfirm }) {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-gray-900">Claim Food Donation</h3>
-                <p className="text-xs text-gray-500">Helping Hands NGO â€¢ Instant Claim</p>
+                <p className="text-xs text-gray-500">Helping Hands NGO • Instant Claim</p>
               </div>
             </div>
 
@@ -65,7 +65,7 @@ export default function ClaimFoodModal({ item, isOpen, onClose, onConfirm }) {
                 </span>
               </div>
               <p className="text-sm text-gray-700 font-medium mt-1">
-                {item.quantity ? `${item.quantity} â€¢ ` : ''}{item.donor}
+                {item.quantity ? `${item.quantity} • ` : ''}{item.donor}
               </p>
               <div className="flex items-center gap-2 text-xs text-gray-600 mt-2 font-medium">
                 <Clock size={14} className="text-green-700" />

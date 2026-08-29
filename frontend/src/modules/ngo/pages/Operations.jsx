@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Truck, MapPin, Clock, User, Phone, CheckCircle2, AlertCircle, Plus, Search, Navigation, ShieldCheck } from 'lucide-react';
 import AssignPickupModal from '../components/AssignPickupModal';
 import TrackPickupModal from '../components/TrackPickupModal';
@@ -6,7 +6,7 @@ import TrackPickupModal from '../components/TrackPickupModal';
 const initialOperations = [
   {
     id: 'PK-101',
-    title: '75 meals â€¢ Vegetarian Biryani',
+    title: '75 meals • Vegetarian Biryani',
     donor: 'ABC Restaurant',
     ngoDestination: 'Sunshine Community Shelter',
     time: '10:30 AM',
@@ -19,7 +19,7 @@ const initialOperations = [
   },
   {
     id: 'PK-102',
-    title: '50 meals â€¢ Sandwiches & Snacks',
+    title: '50 meals • Sandwiches & Snacks',
     donor: 'Green Hotel',
     ngoDestination: 'North District Orphanage',
     time: '12:00 PM',
@@ -32,7 +32,7 @@ const initialOperations = [
   },
   {
     id: 'PK-103',
-    title: '100 meals â€¢ Buffet Lunch',
+    title: '100 meals • Buffet Lunch',
     donor: 'City Event Hall',
     ngoDestination: 'Hope Care Elderly Home',
     time: '2:30 PM',
@@ -45,7 +45,7 @@ const initialOperations = [
   },
   {
     id: 'PK-104',
-    title: '60 kg â€¢ Fresh Vegetables',
+    title: '60 kg • Fresh Vegetables',
     donor: 'Fresh Mart Supermarket',
     ngoDestination: 'Community Kitchen Hub',
     time: '4:00 PM',
@@ -106,7 +106,7 @@ export default function Operations() {
           <div>
             <p className="text-xs font-bold text-gray-500 uppercase">Active En Route</p>
             <p className="text-2xl font-black text-emerald-700 mt-1">1 Vehicle</p>
-            <p className="text-xs text-gray-500 mt-0.5">Route #2 â€¢ ETA 8 mins</p>
+            <p className="text-xs text-gray-500 mt-0.5">Route #2 • ETA 8 mins</p>
           </div>
           <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center">
             <Truck size={24} />
@@ -117,7 +117,7 @@ export default function Operations() {
           <div>
             <p className="text-xs font-bold text-gray-500 uppercase">Needs Driver</p>
             <p className="text-2xl font-black text-amber-600 mt-1">1 Pickup</p>
-            <p className="text-xs text-gray-500 mt-0.5">Green Hotel â€¢ 12:00 PM</p>
+            <p className="text-xs text-gray-500 mt-0.5">Green Hotel • 12:00 PM</p>
           </div>
           <div className="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center">
             <AlertCircle size={24} />

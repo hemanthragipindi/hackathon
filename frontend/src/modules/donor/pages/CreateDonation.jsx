@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { 
   Bookmark, 
   Clock, 
@@ -360,7 +360,7 @@ export default function CreateDonation() {
                 </h5>
               </div>
               <p className="text-xs text-slate-500 font-medium leading-relaxed pl-7">
-                {quantity || '40'} Meals â€¢ {foodType} â€¢ {category}
+                {quantity || '40'} Meals • {foodType} • {category}
               </p>
             </div>
 

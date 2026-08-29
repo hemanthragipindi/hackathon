@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Building2, ShieldCheck, Mail, Phone, MapPin, Users, Award, FileText } from 'lucide-react';
 
 export default function Organization() {
@@ -29,7 +29,7 @@ export default function Organization() {
                   <ShieldCheck size={14} /> Verified Non-Profit
                 </span>
               </div>
-              <p className="text-xs text-gray-500 mt-0.5">Registration No: NGO-DL-2018-847291 â€¢ Food Safety Licensed</p>
+              <p className="text-xs text-gray-500 mt-0.5">Registration No: NGO-DL-2018-847291 • Food Safety Licensed</p>
             </div>
           </div>
 
@@ -55,7 +55,7 @@ export default function Organization() {
 
           <div className="space-y-1">
             <span className="text-xs font-bold text-gray-400 uppercase">Active Logistics Capacity</span>
-            <p className="text-sm font-bold text-gray-900">4 Refrigerated Vans â€¢ 12 Volunteers</p>
+            <p className="text-sm font-bold text-gray-900">4 Refrigerated Vans • 12 Volunteers</p>
             <p className="text-xs text-emerald-700 font-semibold">Capacity: ~1,500 kg / day</p>
           </div>
         </div>

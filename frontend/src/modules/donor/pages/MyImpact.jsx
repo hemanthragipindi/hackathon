@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { 
   Utensils, 
   CheckCircle2, 
@@ -129,7 +129,7 @@ export default function MyImpact() {
                   <Truck size={14} className="text-slate-400" />
                   <span>12 donations</span>
                 </span>
-                <span>â€¢</span>
+                <span>•</span>
                 <span className="flex items-center gap-1">
                   <Utensils size={14} className="text-slate-400" />
                   <span>420 meals</span>
@@ -152,7 +152,7 @@ export default function MyImpact() {
                   <Truck size={14} className="text-slate-400" />
                   <span>8 donations</span>
                 </span>
-                <span>â€¢</span>
+                <span>•</span>
                 <span className="flex items-center gap-1">
                   <Utensils size={14} className="text-slate-400" />
                   <span>280 meals</span>
@@ -175,7 +175,7 @@ export default function MyImpact() {
                   <Truck size={14} className="text-slate-400" />
                   <span>6 donations</span>
                 </span>
-                <span>â€¢</span>
+                <span>•</span>
                 <span className="flex items-center gap-1">
                   <Utensils size={14} className="text-slate-400" />
                   <span>190 meals</span>

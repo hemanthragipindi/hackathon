@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { 
   Search, 
   Bell, 
@@ -254,7 +254,7 @@ export default function LiveRescues() {
                 <Clock size={13} className="text-slate-400" />
                 <span>Posted 30 mins ago</span>
               </span>
-              <span className="text-slate-300">â€¢</span>
+              <span className="text-slate-300">•</span>
               <span className="flex items-center gap-1 text-orange-600 font-semibold">
                 <Clock size={13} />
                 <span>Expires in 3.5h</span>
@@ -299,7 +299,7 @@ export default function LiveRescues() {
                 <Building2 size={13} className="text-slate-400" />
                 <span>City Mission</span>
               </span>
-              <span className="text-slate-300">â€¢</span>
+              <span className="text-slate-300">•</span>
               <span className="flex items-center gap-1 text-slate-600 font-medium">
                 <span>Arriving in 15 mins</span>
               </span>

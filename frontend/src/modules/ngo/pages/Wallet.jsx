@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Wallet as WalletIcon, ArrowDownLeft, ArrowUpRight, Plus, Download, ShieldCheck } from 'lucide-react';
 
 export default function Wallet() {
@@ -87,7 +87,7 @@ export default function Wallet() {
                 </div>
                 <div>
                   <p className="text-sm font-bold text-gray-900">{tx.description}</p>
-                  <p className="text-xs text-gray-500">{tx.id} â€¢ {tx.date}</p>
+                  <p className="text-xs text-gray-500">{tx.id} • {tx.date}</p>
                 </div>
               </div>
               <div className="text-right">

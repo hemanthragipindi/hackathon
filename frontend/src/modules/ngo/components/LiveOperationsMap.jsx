@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Utensils, Building2, Truck, Heart, MapPin, Navigation, Info } from 'lucide-react';
 
 export default function LiveOperationsMap() {
@@ -34,7 +34,7 @@ export default function LiveOperationsMap() {
       type: 'truck',
       title: 'Active Truck #3 (Route #2)',
       location: 'En Route to ABC Restaurant',
-      details: 'Driver: Rahul Kumar â€¢ ETA: 8 mins',
+      details: 'Driver: Rahul Kumar • ETA: 8 mins',
       x: '58%',
       y: '50%',
       color: 'bg-amber-500 text-white',

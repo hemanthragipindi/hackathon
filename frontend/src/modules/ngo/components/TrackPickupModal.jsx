@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { X, Truck, CheckCircle2, Clock, MapPin, Phone, User, ShieldCheck } from 'lucide-react';
 
 export default function TrackPickupModal({ pickup, isOpen, onClose }) {
@@ -20,7 +20,7 @@ export default function TrackPickupModal({ pickup, isOpen, onClose }) {
           </div>
           <div>
             <h3 className="text-lg font-bold text-gray-900">Live Pickup Tracking</h3>
-            <p className="text-xs text-gray-500">Route #{pickup.id || 'PK-1024'} â€¢ Status: <span className="font-semibold text-green-700">{pickup.status}</span></p>
+            <p className="text-xs text-gray-500">Route #{pickup.id || 'PK-1024'} • Status: <span className="font-semibold text-green-700">{pickup.status}</span></p>
           </div>
         </div>
 
@@ -30,7 +30,7 @@ export default function TrackPickupModal({ pickup, isOpen, onClose }) {
             <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider">Estimated Delivery</span>
             <span className="text-sm font-bold text-emerald-800">8 mins remaining</span>
           </div>
-          <p className="text-base font-bold text-gray-900 mt-1">{pickup.title} â€¢ {pickup.donor}</p>
+          <p className="text-base font-bold text-gray-900 mt-1">{pickup.title} • {pickup.donor}</p>
           <p className="text-xs text-gray-600 mt-0.5">Scheduled for: {pickup.time}</p>
         </div>
 

@@ -316,7 +316,7 @@ export default function NgoDashboard() {
                   {/* Middle: Details & Badge */}
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-bold text-gray-900 truncate">
-                      {pickup.meals} â€¢ {pickup.donor}
+                      {pickup.meals} • {pickup.donor}
                     </p>
                     <div className="mt-1">
                       {pickup.statusType === 'success' && (
@@ -469,7 +469,7 @@ export default function NgoDashboard() {
                   </div>
 
                   <p className="text-xs text-gray-600 mt-1 font-medium">
-                    {food.quantity ? `${food.quantity} â€¢ ` : ''}{food.donor}
+                    {food.quantity ? `${food.quantity} • ` : ''}{food.donor}
                   </p>
                   
                   <p className="text-xs text-gray-500 mt-0.5">
@@ -500,7 +500,7 @@ export default function NgoDashboard() {
 
       {/* Footer */}
       <footer className="pt-8 text-center text-xs font-medium text-gray-500 select-none">
-        Â© 2024 FoodRescue Platform. <span className="hover:underline text-gray-700 cursor-pointer">Support</span> â€¢ <span className="hover:underline text-gray-700 cursor-pointer">Terms</span>
+        © 2024 FoodRescue Platform. <span className="hover:underline text-gray-700 cursor-pointer">Support</span> • <span className="hover:underline text-gray-700 cursor-pointer">Terms</span>
       </footer>
 
       {/* Modals */}
