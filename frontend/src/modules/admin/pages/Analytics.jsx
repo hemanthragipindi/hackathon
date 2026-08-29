@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+﻿import React, { useState, useMemo } from 'react';
 import { 
   LineChart, Line, AreaChart, Area, BarChart, Bar, PieChart, Pie, Cell,
   XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend 
@@ -390,7 +390,7 @@ export default function Analytics() {
                       {ngo.successfulClaims} / {ngo.claims}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right">
-                      <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                      <span className={`inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium ${
                         ngo.successRate >= 80 ? 'bg-green-100 text-green-800' : 
                         ngo.successRate >= 50 ? 'bg-yellow-100 text-yellow-800' : 'bg-red-100 text-red-800'
                       }`}>
@@ -429,7 +429,7 @@ export default function Analytics() {
                       {vol.failedPickups > 0 && <span className="text-red-500 ml-1">({vol.failedPickups} failed)</span>}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm">
-                      <span className="text-yellow-400">★</span> <span className="font-medium text-gray-900">{vol.rating}</span>
+                      <span className="text-yellow-400">â˜…</span> <span className="font-medium text-gray-900">{vol.rating}</span>
                     </td>
                   </tr>
                 )) : (

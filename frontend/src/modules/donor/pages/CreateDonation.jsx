@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { 
   Bookmark, 
   Clock, 
@@ -54,7 +54,7 @@ export default function CreateDonation() {
       {/* Top Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-1">
         <div>
-          <h1 className="text-2xl sm:text-[26px] font-extrabold text-slate-900 tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             Share Surplus Food
           </h1>
           <p className="text-xs sm:text-[13.5px] text-slate-500 font-medium mt-0.5">
@@ -64,7 +64,7 @@ export default function CreateDonation() {
 
         <button 
           onClick={() => alert('Draft saved successfully!')}
-          className="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-bold text-emerald-700 hover:text-emerald-800 transition-colors self-start sm:self-auto cursor-pointer"
+          className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-emerald-700 hover:text-emerald-800 transition-colors self-start sm:self-auto cursor-pointer"
         >
           <Bookmark size={15} className="stroke-[2.2]" />
           <span>Save as Draft</span>
@@ -75,7 +75,7 @@ export default function CreateDonation() {
       <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-[13.5px] overflow-x-auto pb-1">
         {/* Step 1 */}
         <div className="flex items-center gap-2 shrink-0">
-          <div className="w-5 h-5 rounded-full bg-[#064e3b] text-white font-bold text-[11px] flex items-center justify-center">
+          <div className="w-5 h-5 rounded-full bg-[#064e3b] text-white font-bold text-xs flex items-center justify-center">
             1
           </div>
           <span className="font-bold text-[#064e3b]">Food Details</span>
@@ -86,7 +86,7 @@ export default function CreateDonation() {
 
         {/* Step 2 */}
         <div className="flex items-center gap-2 shrink-0">
-          <div className="w-5 h-5 rounded-full bg-slate-100 text-slate-400 font-semibold text-[11px] flex items-center justify-center">
+          <div className="w-5 h-5 rounded-full bg-slate-100 text-slate-400 font-semibold text-xs flex items-center justify-center">
             2
           </div>
           <span className="font-medium text-slate-400">Pickup Details</span>
@@ -97,7 +97,7 @@ export default function CreateDonation() {
 
         {/* Step 3 */}
         <div className="flex items-center gap-2 shrink-0">
-          <div className="w-5 h-5 rounded-full bg-slate-100 text-slate-400 font-semibold text-[11px] flex items-center justify-center">
+          <div className="w-5 h-5 rounded-full bg-slate-100 text-slate-400 font-semibold text-xs flex items-center justify-center">
             3
           </div>
           <span className="font-medium text-slate-400">Review & Share</span>
@@ -111,13 +111,13 @@ export default function CreateDonation() {
           
           {/* Card 1: What food are you sharing? */}
           <div className="bg-white rounded-3xl border border-slate-100/90 shadow-xs p-6 sm:p-7 space-y-5">
-            <h3 className="text-base sm:text-[17px] font-bold text-slate-900 tracking-tight">
+            <h3 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
               What food are you sharing?
             </h3>
 
             {/* Food Name */}
             <div>
-              <label className="block text-[12.5px] font-semibold text-slate-700 mb-1.5">
+              <label className="block text-[12.5px] font-semibold text-slate-700 mb-2">
                 Food Name
               </label>
               <input 
@@ -125,7 +125,7 @@ export default function CreateDonation() {
                 value={foodName}
                 onChange={(e) => setFoodName(e.target.value)}
                 placeholder="e.g., Vegetable Biryani" 
-                className="w-full px-4 py-2.5 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
+                className="w-full px-4 py-3 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
                 required
               />
             </div>
@@ -133,14 +133,14 @@ export default function CreateDonation() {
             {/* Category & Quantity Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-[12.5px] font-semibold text-slate-700 mb-1.5">
+                <label className="block text-[12.5px] font-semibold text-slate-700 mb-2">
                   Category
                 </label>
                 <div className="relative">
                   <select 
                     value={category}
                     onChange={(e) => setCategory(e.target.value)}
-                    className="w-full px-4 py-2.5 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 appearance-none focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all pr-10 cursor-pointer"
+                    className="w-full px-4 py-3 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 appearance-none focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all pr-10 cursor-pointer"
                   >
                     <option>Cooked Meals</option>
                     <option>Raw Produce</option>
@@ -153,7 +153,7 @@ export default function CreateDonation() {
               </div>
 
               <div>
-                <label className="block text-[12.5px] font-semibold text-slate-700 mb-1.5">
+                <label className="block text-[12.5px] font-semibold text-slate-700 mb-2">
                   Quantity (Meals/Servings)
                 </label>
                 <input 
@@ -161,7 +161,7 @@ export default function CreateDonation() {
                   value={quantity}
                   onChange={(e) => setQuantity(e.target.value)}
                   placeholder="40" 
-                  className="w-full px-4 py-2.5 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
+                  className="w-full px-4 py-3 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
                   required
                 />
               </div>
@@ -173,7 +173,7 @@ export default function CreateDonation() {
                 Food Type
               </label>
               <div className="flex items-center gap-6">
-                <label className="flex items-center gap-2.5 cursor-pointer select-none">
+                <label className="flex items-center gap-3 cursor-pointer select-none">
                   <input 
                     type="radio" 
                     name="foodType" 
@@ -185,7 +185,7 @@ export default function CreateDonation() {
                   <span className="text-sm font-medium text-slate-700">Vegetarian</span>
                 </label>
 
-                <label className="flex items-center gap-2.5 cursor-pointer select-none">
+                <label className="flex items-center gap-3 cursor-pointer select-none">
                   <input 
                     type="radio" 
                     name="foodType" 
@@ -201,7 +201,7 @@ export default function CreateDonation() {
 
             {/* Short Description */}
             <div>
-              <label className="block text-[12.5px] font-semibold text-slate-700 mb-1.5">
+              <label className="block text-[12.5px] font-semibold text-slate-700 mb-2">
                 Short Description (Optional)
               </label>
               <input 
@@ -209,21 +209,21 @@ export default function CreateDonation() {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="Any specific details about ingredients or allergens?" 
-                className="w-full px-4 py-2.5 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
+                className="w-full px-4 py-3 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
               />
             </div>
           </div>
 
           {/* Card 2: Food Freshness */}
           <div className="bg-white rounded-3xl border border-slate-100/90 shadow-xs p-6 sm:p-7 space-y-5">
-            <h3 className="text-base sm:text-[17px] font-bold text-slate-900 tracking-tight">
+            <h3 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
               Food Freshness
             </h3>
 
             {/* Timing Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-[12.5px] font-semibold text-slate-700 mb-1.5">
+                <label className="block text-[12.5px] font-semibold text-slate-700 mb-2">
                   Prepared Time
                 </label>
                 <div className="relative">
@@ -231,14 +231,14 @@ export default function CreateDonation() {
                     type="text" 
                     value={preparedTime}
                     onChange={(e) => setPreparedTime(e.target.value)}
-                    className="w-full px-4 py-2.5 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all pr-10"
+                    className="w-full px-4 py-3 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all pr-10"
                   />
                   <Clock size={16} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[12.5px] font-semibold text-slate-700 mb-1.5">
+                <label className="block text-[12.5px] font-semibold text-slate-700 mb-2">
                   Available Until
                 </label>
                 <div className="relative">
@@ -246,7 +246,7 @@ export default function CreateDonation() {
                     type="text" 
                     value={availableUntil}
                     onChange={(e) => setAvailableUntil(e.target.value)}
-                    className="w-full px-4 py-2.5 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all pr-10"
+                    className="w-full px-4 py-3 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all pr-10"
                   />
                   <Clock size={16} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
                 </div>
@@ -262,7 +262,7 @@ export default function CreateDonation() {
                 <button
                   type="button"
                   onClick={() => setStorageCondition('Room Temperature')}
-                  className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                  className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                     storageCondition === 'Room Temperature'
                       ? 'border-2 border-emerald-600 bg-white text-emerald-800 shadow-xs'
                       : 'border border-slate-200 text-slate-600 hover:border-slate-300'
@@ -274,7 +274,7 @@ export default function CreateDonation() {
                 <button
                   type="button"
                   onClick={() => setStorageCondition('Refrigerated')}
-                  className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                  className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                     storageCondition === 'Refrigerated'
                       ? 'border-2 border-emerald-600 bg-white text-emerald-800 shadow-xs'
                       : 'border border-slate-200 text-slate-600 hover:border-slate-300'
@@ -286,7 +286,7 @@ export default function CreateDonation() {
             </div>
 
             {/* Info Callout Box */}
-            <div className="bg-[#f0f7ff] border border-sky-100 rounded-2xl p-3.5 flex items-start gap-2.5 text-[12px] text-slate-600 leading-snug">
+            <div className="bg-[#f0f7ff] border border-sky-100 rounded-2xl p-3.5 flex items-start gap-3 text-xs text-slate-600 leading-snug">
               <Info size={16} className="text-sky-600 shrink-0 mt-0.5" />
               <span>
                 Accurate information helps us safely connect your food with the right community partner.
@@ -296,7 +296,7 @@ export default function CreateDonation() {
 
           {/* Card 3: Pickup Details */}
           <div className="bg-white rounded-3xl border border-slate-100/90 shadow-xs p-6 sm:p-7 space-y-4">
-            <h3 className="text-base sm:text-[17px] font-bold text-slate-900 tracking-tight">
+            <h3 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
               Pickup Details
             </h3>
 
@@ -327,7 +327,7 @@ export default function CreateDonation() {
 
             {/* Special Pickup Instructions */}
             <div>
-              <label className="block text-[12.5px] font-semibold text-slate-700 mb-1.5">
+              <label className="block text-[12.5px] font-semibold text-slate-700 mb-2">
                 Special Pickup Instructions
               </label>
               <input 
@@ -335,7 +335,7 @@ export default function CreateDonation() {
                 value={specialInstructions}
                 onChange={(e) => setSpecialInstructions(e.target.value)}
                 placeholder="e.g., Ask for John at the back kitchen door." 
-                className="w-full px-4 py-2.5 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
+                className="w-full px-4 py-3 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
               />
             </div>
           </div>
@@ -347,7 +347,7 @@ export default function CreateDonation() {
           
           {/* Card 1: DONATION PREVIEW */}
           <div className="bg-white rounded-3xl border border-slate-100/90 shadow-xs p-6 space-y-4">
-            <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
               DONATION PREVIEW
             </h4>
 
@@ -360,7 +360,7 @@ export default function CreateDonation() {
                 </h5>
               </div>
               <p className="text-xs text-slate-500 font-medium leading-relaxed pl-7">
-                {quantity || '40'} Meals • {foodType} • {category}
+                {quantity || '40'} Meals â€¢ {foodType} â€¢ {category}
               </p>
             </div>
 
@@ -395,7 +395,7 @@ export default function CreateDonation() {
             <button
               type="submit"
               disabled={isSubmitted}
-              className="w-full py-3.5 px-5 rounded-2xl bg-[#064e3b] hover:bg-[#085a44] text-white font-bold text-sm shadow-sm transition-all duration-200 active:scale-[0.99] flex items-center justify-center gap-2 cursor-pointer group"
+              className="w-full py-4 px-5 rounded-2xl bg-[#064e3b] hover:bg-[#085a44] text-white font-bold text-sm shadow-sm transition-all duration-200 active:scale-[0.99] flex items-center justify-center gap-2 cursor-pointer group"
             >
               {isSubmitted ? (
                 <>

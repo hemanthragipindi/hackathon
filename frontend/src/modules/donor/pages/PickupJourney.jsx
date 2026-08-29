@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { 
   Search, 
   Bell, 
@@ -28,7 +28,7 @@ export default function PickupJourney() {
       {/* Top Header & Search Bar Row */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pt-1">
         <div>
-          <h1 className="text-2xl sm:text-[28px] font-extrabold text-slate-900 tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             Pickup Journey
           </h1>
           <p className="text-xs sm:text-[13.5px] text-slate-500 font-medium mt-0.5">
@@ -78,7 +78,7 @@ export default function PickupJourney() {
 
       {/* Header Status Indicator */}
       <div className="flex items-center justify-end">
-        <div className="px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-800 text-xs font-bold flex items-center gap-2 shadow-2xs">
+        <div className="px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-800 text-xs font-bold flex items-center gap-2 shadow-2xs">
           <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
           <span>1 Pickup in Progress</span>
         </div>
@@ -92,10 +92,10 @@ export default function PickupJourney() {
           {/* Header & Urgent Tag */}
           <div className="flex items-start justify-between gap-3">
             <div>
-              <h3 className="text-xl sm:text-[22px] font-extrabold text-slate-900 tracking-tight">
+              <h3 className="text-xl sm:text-xl font-extrabold text-slate-900 tracking-tight">
                 Vegetable Biryani <span className="text-emerald-700 font-bold text-lg sm:text-xl">(40 Meals)</span>
               </h3>
-              <p className="text-xs sm:text-[13px] text-slate-600 font-medium mt-1">
+              <p className="text-xs sm:text-sm text-slate-600 font-medium mt-1">
                 Claimed by: <strong className="text-slate-900 font-bold">Hope Foundation</strong> | Pickup Volunteer: <strong className="text-slate-900 font-bold">Rahul</strong>
               </p>
             </div>
@@ -211,7 +211,7 @@ export default function PickupJourney() {
           
           {/* Widget 1: PICKUP DETAILS */}
           <div className="bg-white rounded-3xl border border-slate-100/90 shadow-xs p-6 space-y-4">
-            <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
               PICKUP DETAILS
             </h4>
 
@@ -222,7 +222,7 @@ export default function PickupJourney() {
                   <MapPin size={15} />
                 </div>
                 <div>
-                  <h5 className="font-bold text-slate-900 text-xs sm:text-[13px]">
+                  <h5 className="font-bold text-slate-900 text-xs sm:text-sm">
                     Spice Garden Restaurant
                   </h5>
                   <p className="text-slate-500 mt-0.5">123 Culinary Ave, Floor 1</p>
@@ -235,7 +235,7 @@ export default function PickupJourney() {
                   <Clock size={15} />
                 </div>
                 <div>
-                  <h5 className="font-bold text-slate-900 text-xs sm:text-[13px]">
+                  <h5 className="font-bold text-slate-900 text-xs sm:text-sm">
                     Pickup Window
                   </h5>
                   <p className="text-slate-500 mt-0.5">7:30 PM - 8:30 PM (Today)</p>
@@ -248,7 +248,7 @@ export default function PickupJourney() {
                   <Utensils size={15} />
                 </div>
                 <div>
-                  <h5 className="font-bold text-slate-900 text-xs sm:text-[13px]">
+                  <h5 className="font-bold text-slate-900 text-xs sm:text-sm">
                     Quantity
                   </h5>
                   <p className="text-slate-500 mt-0.5">40 Meals</p>
@@ -274,19 +274,19 @@ export default function PickupJourney() {
 
             <div>
               <h4 className="text-base font-extrabold text-slate-900">Rahul</h4>
-              <span className="px-3 py-0.5 rounded-full bg-slate-100 text-slate-600 text-[11px] font-bold inline-block mt-1">
+              <span className="px-3 py-0.5 rounded-full bg-slate-100 text-slate-600 text-xs font-bold inline-block mt-1">
                 Pickup Volunteer
               </span>
             </div>
 
-            <div className="text-xs font-bold text-emerald-600 flex items-center justify-center gap-1.5">
+            <div className="text-xs font-bold text-emerald-600 flex items-center justify-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald-500" />
               <span>On the way</span>
             </div>
 
             <button 
               onClick={() => alert('Calling Rahul (Pickup Volunteer): +1 (555) 234-5678')}
-              className="w-full py-2.5 px-4 rounded-xl bg-[#064e3b] hover:bg-[#085a44] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm transition-all duration-200 active:scale-[0.99] cursor-pointer"
+              className="w-full py-3 px-4 rounded-xl bg-[#064e3b] hover:bg-[#085a44] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm transition-all duration-200 active:scale-[0.99] cursor-pointer"
             >
               <Phone size={15} />
               <span>Contact Volunteer</span>
@@ -296,7 +296,7 @@ export default function PickupJourney() {
           {/* Widget 3: Live Transit Status Card */}
           <div className="rounded-3xl border border-slate-100/90 shadow-xs p-5 bg-white flex flex-col justify-between space-y-3">
             <div className="flex items-center justify-between">
-              <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
                 Transit Info
               </span>
               <span className="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10.5px] font-bold">
@@ -306,14 +306,14 @@ export default function PickupJourney() {
 
             <div>
               <p className="text-xs font-bold text-slate-800">
-                Driver Route #2 • West Corridor
+                Driver Route #2 â€¢ West Corridor
               </p>
-              <p className="text-[11px] text-slate-500 mt-0.5">
+              <p className="text-xs text-slate-500 mt-0.5">
                 Vehicle: White Eco-Van (DL-04-A-8921)
               </p>
             </div>
 
-            <div className="pt-1 flex items-center gap-1.5 text-xs font-bold text-emerald-700">
+            <div className="pt-1 flex items-center gap-2 text-xs font-bold text-emerald-700">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               <span>Live dispatch in progress</span>
             </div>
@@ -344,7 +344,7 @@ export default function PickupJourney() {
               <Gift size={18} className="stroke-[2.2]" />
             </div>
             <div>
-              <h4 className="text-sm sm:text-[15px] font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
+              <h4 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
                 Mixed Vegetable Meals (60 meals)
               </h4>
               <p className="text-xs text-slate-500 font-medium mt-0.5 flex items-center gap-1">
@@ -363,7 +363,7 @@ export default function PickupJourney() {
               <Package size={18} className="stroke-[2.2]" />
             </div>
             <div>
-              <h4 className="text-sm sm:text-[15px] font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
+              <h4 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
                 Fresh Bread & Bakery Items (25 portions)
               </h4>
               <p className="text-xs text-slate-500 font-medium mt-0.5 flex items-center gap-1">
@@ -377,7 +377,7 @@ export default function PickupJourney() {
 
         {/* Inspiring Footer Quote */}
         <div className="text-center pt-4">
-          <p className="text-xs sm:text-[13px] text-slate-500 italic font-medium">
+          <p className="text-xs sm:text-sm text-slate-500 italic font-medium">
             Every successful pickup brings good food closer to someone who needs it.
           </p>
         </div>

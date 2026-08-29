@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { 
   LayoutDashboard, 
@@ -50,7 +50,7 @@ export default function Sidebar({ onClose }) {
             to={item.path}
             onClick={onClose}
             className={({ isActive }) =>
-              `flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${
+              `flex items-center gap-3 px-3 py-3 rounded-md text-sm font-medium transition-colors ${
                 isActive 
                   ? 'bg-green-50 text-green-700' 
                   : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'

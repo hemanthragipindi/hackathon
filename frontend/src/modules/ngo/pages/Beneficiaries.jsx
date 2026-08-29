@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Users, Building, MapPin, Phone, Heart, Plus, Search, CheckCircle } from 'lucide-react';
 
 const sheltersData = [
@@ -16,7 +16,7 @@ const sheltersData = [
   },
   {
     id: 'BEN-02',
-    name: 'North District Children’s Home',
+    name: 'North District Childrenâ€™s Home',
     category: 'Orphanage & Youth Center',
     capacity: '65 Children',
     mealsServedToday: 130,
@@ -87,7 +87,7 @@ export default function Beneficiaries() {
         <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs">
           <p className="text-xs font-bold text-gray-500 uppercase">People Served Today</p>
           <p className="text-3xl font-black text-gray-900 mt-2">8,420</p>
-          <p className="text-xs text-emerald-600 font-semibold mt-1">↗ 16.8% increase vs last month</p>
+          <p className="text-xs text-emerald-600 font-semibold mt-1">â†— 16.8% increase vs last month</p>
         </div>
         <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs">
           <p className="text-xs font-bold text-gray-500 uppercase">Emergency Hotspots</p>
@@ -106,7 +106,7 @@ export default function Beneficiaries() {
                 <h3 className="text-lg font-bold text-gray-900 mt-0.5">{s.name}</h3>
                 <p className="text-xs text-gray-500 font-medium">{s.category}</p>
               </div>
-              <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${s.statusColor}`}>
+              <span className={`text-xs font-bold px-3 py-1 rounded-full ${s.statusColor}`}>
                 {s.status}
               </span>
             </div>
@@ -126,7 +126,7 @@ export default function Beneficiaries() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={15} className="text-gray-400 shrink-0" />
-                <span>{s.contactPerson} • {s.phone}</span>
+                <span>{s.contactPerson} â€¢ {s.phone}</span>
               </div>
             </div>
           </div>

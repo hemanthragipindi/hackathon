@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Utensils, Building2, Truck, Heart, MapPin, Navigation, Info } from 'lucide-react';
 
 export default function LiveOperationsMap() {
@@ -34,7 +34,7 @@ export default function LiveOperationsMap() {
       type: 'truck',
       title: 'Active Truck #3 (Route #2)',
       location: 'En Route to ABC Restaurant',
-      details: 'Driver: Rahul Kumar • ETA: 8 mins',
+      details: 'Driver: Rahul Kumar â€¢ ETA: 8 mins',
       x: '58%',
       y: '50%',
       color: 'bg-amber-500 text-white',
@@ -198,8 +198,8 @@ export default function LiveOperationsMap() {
             {isHovered && (
               <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-52 p-2.5 bg-gray-900/95 text-white text-xs rounded-xl shadow-xl backdrop-blur-xs z-30 pointer-events-none animate-fadeIn">
                 <div className="font-bold text-sm text-white mb-0.5">{marker.title}</div>
-                <div className="text-gray-300 font-medium text-[11px] mb-1">{marker.location}</div>
-                <div className="text-emerald-400 font-medium text-[11px]">{marker.details}</div>
+                <div className="text-gray-300 font-medium text-xs mb-1">{marker.location}</div>
+                <div className="text-emerald-400 font-medium text-xs">{marker.details}</div>
                 <div className="absolute bottom-[-5px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-gray-900/95 rotate-45"></div>
               </div>
             )}
@@ -208,23 +208,23 @@ export default function LiveOperationsMap() {
       })}
 
       {/* Bottom Right Floating Legend Card */}
-      <div className="absolute bottom-3 right-3 z-10 bg-white/95 backdrop-blur-md rounded-xl py-2 px-3.5 shadow-md border border-gray-200/80 text-xs font-medium text-gray-700 select-none">
+      <div className="absolute bottom-3 right-3 z-10 bg-white/95 backdrop-blur-md rounded-xl py-2 px-4 shadow-md border border-gray-200/80 text-xs font-medium text-gray-700 select-none">
         <div className="space-y-1.5">
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-700 ring-1 ring-emerald-600/30"></span>
-            <span className="text-[11px] font-semibold text-gray-800">Available Food</span>
+            <span className="text-xs font-semibold text-gray-800">Available Food</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-blue-600 ring-1 ring-blue-500/30"></span>
-            <span className="text-[11px] font-semibold text-gray-800">NGO Center</span>
+            <span className="text-xs font-semibold text-gray-800">NGO Center</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-amber-500 ring-1 ring-amber-400/30"></span>
-            <span className="text-[11px] font-semibold text-gray-800">Active Truck</span>
+            <span className="text-xs font-semibold text-gray-800">Active Truck</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-pink-500 ring-1 ring-pink-400/30"></span>
-            <span className="text-[11px] font-semibold text-gray-800">Beneficiary</span>
+            <span className="text-xs font-semibold text-gray-800">Beneficiary</span>
           </div>
         </div>
       </div>

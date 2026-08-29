@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { 
   Bell, 
   User, 
@@ -50,7 +50,7 @@ export default function HelpSupport() {
       {/* Top Header Row */}
       <div className="flex items-center justify-between gap-4 pt-1">
         <div>
-          <h1 className="text-2xl sm:text-[26px] font-extrabold text-slate-900 tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             Help & Support
           </h1>
           <p className="text-xs sm:text-[13.5px] text-slate-500 font-medium mt-0.5">
@@ -101,7 +101,7 @@ export default function HelpSupport() {
                   </button>
 
                   {isOpen && (
-                    <div className="pt-3 pr-6 text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal animate-fadeIn">
+                    <div className="pt-3 pr-6 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal animate-fadeIn">
                       {faq.answer}
                     </div>
                   )}
@@ -142,10 +142,10 @@ export default function HelpSupport() {
 
           {/* Widget 2: Food Sharing Guidelines */}
           <div className="bg-gradient-to-r from-[#f0f7ff] via-[#f7faff] to-[#f4f9ff] border border-sky-100/90 rounded-2xl p-5 shadow-2xs space-y-2">
-            <div className="flex items-start gap-2.5">
+            <div className="flex items-start gap-3">
               <ShieldCheck size={18} className="text-emerald-700 shrink-0 mt-0.5" />
               <div>
-                <h4 className="text-xs sm:text-[13px] font-bold text-slate-900">
+                <h4 className="text-xs sm:text-sm font-bold text-slate-900">
                   Food Sharing Guidelines
                 </h4>
                 <p className="text-[11.5px] text-slate-500 leading-snug mt-0.5">
@@ -174,7 +174,7 @@ export default function HelpSupport() {
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-xs flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-xl space-y-5 animate-fadeIn">
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center">
                   <Headphones size={20} />
                 </div>
@@ -215,7 +215,7 @@ export default function HelpSupport() {
 
             <button
               onClick={() => setShowSupportModal(false)}
-              className="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs transition-colors"
+              className="w-full py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs transition-colors"
             >
               Close
             </button>
@@ -228,7 +228,7 @@ export default function HelpSupport() {
         <div className="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-xs flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-xl space-y-5 animate-fadeIn">
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center">
                   <ShieldCheck size={20} />
                 </div>
@@ -242,7 +242,7 @@ export default function HelpSupport() {
             <div className="space-y-3 text-xs sm:text-sm text-slate-600">
               <div className="p-3 bg-emerald-50/60 rounded-2xl border border-emerald-100/80">
                 <strong className="text-emerald-900 block font-bold mb-0.5">1. Temperature Control</strong>
-                Hot cooked food must be kept above 60°C (140°F) or rapidly cooled to below 4°C (40°F) before handover.
+                Hot cooked food must be kept above 60Â°C (140Â°F) or rapidly cooled to below 4Â°C (40Â°F) before handover.
               </div>
               <div className="p-3 bg-slate-50 rounded-2xl border border-slate-100">
                 <strong className="text-slate-900 block font-bold mb-0.5">2. Packaging & Labeling</strong>
@@ -256,7 +256,7 @@ export default function HelpSupport() {
 
             <button
               onClick={() => setShowGuidelinesModal(false)}
-              className="w-full py-2.5 bg-[#059669] hover:bg-[#047857] text-white font-bold rounded-xl text-xs transition-colors"
+              className="w-full py-3 bg-[#059669] hover:bg-[#047857] text-white font-bold rounded-xl text-xs transition-colors"
             >
               I Understand
             </button>

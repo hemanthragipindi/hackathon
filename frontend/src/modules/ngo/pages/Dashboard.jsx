@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link, useNavigate, useOutletContext } from 'react-router-dom';
 import { 
   TrendingUp, 
@@ -177,13 +177,13 @@ export default function NgoDashboard() {
           <div className="flex items-center gap-3">
             <button
               onClick={() => navigate('/ngo/operations')}
-              className="px-4 py-2.5 rounded-lg text-sm font-semibold bg-[#86efac] hover:bg-[#6ee7b7] text-[#064e3b] transition-all shadow-xs active:scale-95 cursor-pointer"
+              className="px-4 py-3 rounded-lg text-sm font-semibold bg-[#86efac] hover:bg-[#6ee7b7] text-[#064e3b] transition-all shadow-xs active:scale-95 cursor-pointer"
             >
               View Pickups
             </button>
             <button
               onClick={() => navigate('/ngo/food')}
-              className="px-4 py-2.5 rounded-lg text-sm font-semibold bg-[#064e3b] hover:bg-[#043d2c] text-white transition-all shadow-xs flex items-center gap-1.5 active:scale-95 cursor-pointer"
+              className="px-4 py-3 rounded-lg text-sm font-semibold bg-[#064e3b] hover:bg-[#043d2c] text-white transition-all shadow-xs flex items-center gap-2 active:scale-95 cursor-pointer"
             >
               <Plus size={16} className="stroke-[3]" />
               <span>Find Food</span>
@@ -241,7 +241,7 @@ export default function NgoDashboard() {
           </div>
           <div className="mt-4">
             <div className="text-3xl font-black text-gray-900 tracking-tight">{pickups.length}</div>
-            <div className="flex items-center gap-1.5 text-xs font-semibold text-gray-600 mt-2">
+            <div className="flex items-center gap-2 text-xs font-semibold text-gray-600 mt-2">
               <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
               <span>4 scheduled today</span>
             </div>
@@ -293,21 +293,21 @@ export default function NgoDashboard() {
                   {/* Middle: Details & Badge */}
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-bold text-gray-900 truncate">
-                      {pickup.meals} • {pickup.donor}
+                      {pickup.meals} â€¢ {pickup.donor}
                     </p>
                     <div className="mt-1">
                       {pickup.statusType === 'success' && (
-                        <span className="inline-block text-[11px] font-black px-2 py-0.5 rounded bg-[#dcfce7] text-[#15803d] tracking-wide">
+                        <span className="inline-block text-xs font-black px-2 py-0.5 rounded bg-[#dcfce7] text-[#15803d] tracking-wide">
                           {pickup.status}
                         </span>
                       )}
                       {pickup.statusType === 'warning' && (
-                        <span className="inline-block text-[11px] font-black px-2 py-0.5 rounded bg-[#fef9c3] text-[#854d0e] tracking-wide">
+                        <span className="inline-block text-xs font-black px-2 py-0.5 rounded bg-[#fef9c3] text-[#854d0e] tracking-wide">
                           {pickup.status}
                         </span>
                       )}
                       {pickup.statusType === 'neutral' && (
-                        <span className="inline-block text-[11px] font-black px-2 py-0.5 rounded bg-[#f1f5f9] text-gray-700 tracking-wide">
+                        <span className="inline-block text-xs font-black px-2 py-0.5 rounded bg-[#f1f5f9] text-gray-700 tracking-wide">
                           {pickup.status}
                         </span>
                       )}
@@ -319,7 +319,7 @@ export default function NgoDashboard() {
                     {pickup.status === 'EN ROUTE' && (
                       <button
                         onClick={() => setTrackPickupItem(pickup)}
-                        className="px-4 py-1.5 text-xs font-bold rounded-lg border border-gray-300 text-gray-700 bg-white hover:bg-gray-50 shadow-xs transition cursor-pointer"
+                        className="px-4 py-2 text-xs font-bold rounded-lg border border-gray-300 text-gray-700 bg-white hover:bg-gray-50 shadow-xs transition cursor-pointer"
                       >
                         Track
                       </button>
@@ -327,7 +327,7 @@ export default function NgoDashboard() {
                     {pickup.status === 'NEEDS ASSIGNMENT' && (
                       <button
                         onClick={() => setAssignPickupItem(pickup)}
-                        className="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-[#064e3b] text-white hover:bg-[#043d2c] shadow-xs transition cursor-pointer"
+                        className="px-4 py-2 text-xs font-bold rounded-lg bg-[#064e3b] text-white hover:bg-[#043d2c] shadow-xs transition cursor-pointer"
                       >
                         Assign Pickup
                       </button>
@@ -335,7 +335,7 @@ export default function NgoDashboard() {
                     {pickup.status === 'SCHEDULED' && (
                       <button
                         onClick={() => setTrackPickupItem(pickup)}
-                        className="px-4 py-1.5 text-xs font-bold rounded-lg border border-gray-300 text-gray-700 bg-white hover:bg-gray-50 shadow-xs transition cursor-pointer"
+                        className="px-4 py-2 text-xs font-bold rounded-lg border border-gray-300 text-gray-700 bg-white hover:bg-gray-50 shadow-xs transition cursor-pointer"
                       >
                         View
                       </button>
@@ -356,15 +356,15 @@ export default function NgoDashboard() {
             </div>
 
             <ul className="space-y-2.5 text-xs font-semibold text-gray-800">
-              <li className="flex items-start gap-2.5">
+              <li className="flex items-start gap-3">
                 <span className="w-2 h-2 rounded-full bg-red-500 mt-1 shrink-0"></span>
                 <span>2 food listings expiring soon in your area.</span>
               </li>
-              <li className="flex items-start gap-2.5">
+              <li className="flex items-start gap-3">
                 <span className="w-2 h-2 rounded-full bg-amber-500 mt-1 shrink-0"></span>
                 <span>3 pickups need volunteer assignment.</span>
               </li>
-              <li className="flex items-start gap-2.5">
+              <li className="flex items-start gap-3">
                 <span className="w-2 h-2 rounded-full bg-red-500 mt-1 shrink-0"></span>
                 <span>1 pickup delayed (Route #4).</span>
               </li>
@@ -402,7 +402,7 @@ export default function NgoDashboard() {
                   </div>
 
                   <p className="text-xs text-gray-600 mt-1 font-medium">
-                    {food.quantity ? `${food.quantity} • ` : ''}{food.donor}
+                    {food.quantity ? `${food.quantity} â€¢ ` : ''}{food.donor}
                   </p>
                   
                   <p className="text-xs text-gray-500 mt-0.5">
@@ -433,7 +433,7 @@ export default function NgoDashboard() {
 
       {/* Footer */}
       <footer className="pt-8 text-center text-xs font-medium text-gray-500 select-none">
-        © 2024 FoodRescue Platform. <span className="hover:underline text-gray-700 cursor-pointer">Support</span> • <span className="hover:underline text-gray-700 cursor-pointer">Terms</span>
+        Â© 2024 FoodRescue Platform. <span className="hover:underline text-gray-700 cursor-pointer">Support</span> â€¢ <span className="hover:underline text-gray-700 cursor-pointer">Terms</span>
       </footer>
 
       {/* Modals */}

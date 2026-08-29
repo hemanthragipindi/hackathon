@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Building2, ShieldCheck, Mail, Phone, MapPin, Users, Award, FileText } from 'lucide-react';
 
 export default function Organization() {
@@ -25,11 +25,11 @@ export default function Organization() {
             <div>
               <div className="flex items-center gap-2">
                 <h2 className="text-2xl font-bold text-gray-900">Helping Hands NGO</h2>
-                <span className="flex items-center gap-1 text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
+                <span className="flex items-center gap-1 text-xs font-bold px-3 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
                   <ShieldCheck size={14} /> Verified Non-Profit
                 </span>
               </div>
-              <p className="text-xs text-gray-500 mt-0.5">Registration No: NGO-DL-2018-847291 • Food Safety Licensed</p>
+              <p className="text-xs text-gray-500 mt-0.5">Registration No: NGO-DL-2018-847291 â€¢ Food Safety Licensed</p>
             </div>
           </div>
 
@@ -43,19 +43,19 @@ export default function Organization() {
           <div className="space-y-1">
             <span className="text-xs font-bold text-gray-400 uppercase">Primary Contact</span>
             <p className="text-sm font-bold text-gray-900">Amit Shah (Director of Operations)</p>
-            <p className="text-xs text-gray-600 flex items-center gap-1.5"><Mail size={13} /> contact@helpinghands.ngo</p>
-            <p className="text-xs text-gray-600 flex items-center gap-1.5"><Phone size={13} /> +91 9876543210</p>
+            <p className="text-xs text-gray-600 flex items-center gap-2"><Mail size={13} /> contact@helpinghands.ngo</p>
+            <p className="text-xs text-gray-600 flex items-center gap-2"><Phone size={13} /> +91 9876543210</p>
           </div>
 
           <div className="space-y-1">
             <span className="text-xs font-bold text-gray-400 uppercase">Operational Headquarters</span>
             <p className="text-sm font-bold text-gray-900">Central Food Bank & Logistics Base</p>
-            <p className="text-xs text-gray-600 flex items-center gap-1.5"><MapPin size={13} /> Plot 44, Okhla Industrial Area Phase III, New Delhi 110020</p>
+            <p className="text-xs text-gray-600 flex items-center gap-2"><MapPin size={13} /> Plot 44, Okhla Industrial Area Phase III, New Delhi 110020</p>
           </div>
 
           <div className="space-y-1">
             <span className="text-xs font-bold text-gray-400 uppercase">Active Logistics Capacity</span>
-            <p className="text-sm font-bold text-gray-900">4 Refrigerated Vans • 12 Volunteers</p>
+            <p className="text-sm font-bold text-gray-900">4 Refrigerated Vans â€¢ 12 Volunteers</p>
             <p className="text-xs text-emerald-700 font-semibold">Capacity: ~1,500 kg / day</p>
           </div>
         </div>

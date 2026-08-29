@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Utensils, Search, Filter, Clock, MapPin, Sparkles, CheckCircle } from 'lucide-react';
 import ClaimFoodModal from '../components/ClaimFoodModal';
 
@@ -136,7 +136,7 @@ export default function Food() {
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition ${
+              className={`px-4 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition ${
                 selectedCategory === cat
                   ? 'bg-[#064e3b] text-white shadow-xs'
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -157,7 +157,7 @@ export default function Food() {
           >
             <div>
               <div className="flex items-start justify-between gap-2">
-                <span className="text-xs font-bold px-2.5 py-1 rounded bg-[#dcfce7] text-[#15803d]">
+                <span className="text-xs font-bold px-3 py-1 rounded bg-[#dcfce7] text-[#15803d]">
                   {item.distance}
                 </span>
                 <span className="text-xs font-semibold text-amber-700 bg-amber-50 border border-amber-100 px-2 py-0.5 rounded">
@@ -190,7 +190,7 @@ export default function Food() {
                   if (item.status === 'Available') setSelectedItem(item);
                 }}
                 disabled={item.status !== 'Available'}
-                className={`w-full py-2.5 px-4 rounded-xl text-xs font-bold transition shadow-xs flex items-center justify-center gap-2 ${
+                className={`w-full py-3 px-4 rounded-xl text-xs font-bold transition shadow-xs flex items-center justify-center gap-2 ${
                   item.status === 'Available'
                     ? 'bg-[#86efac] hover:bg-[#4ade80] text-[#064e3b] active:scale-98 cursor-pointer'
                     : 'bg-gray-100 text-gray-400 cursor-not-allowed'

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Filter, Search } from 'lucide-react';
 import DonationCard from '../components/DonationCard';
 
@@ -35,7 +35,7 @@ export default function MyDonations() {
             <button
               key={tab}
               onClick={() => setFilter(tab)}
-              className={`flex-1 sm:flex-none px-4 py-1.5 text-sm font-medium rounded-md transition-colors ${
+              className={`flex-1 sm:flex-none px-4 py-2 text-sm font-medium rounded-md transition-colors ${
                 filter === tab ? 'bg-white text-green-700 shadow-sm' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
@@ -49,7 +49,7 @@ export default function MyDonations() {
           <input 
             type="text" 
             placeholder="Search donations..." 
-            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-green-500 text-sm"
+            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-green-500 text-sm"
           />
         </div>
       </div>

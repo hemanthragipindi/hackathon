@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { FileText, Clock, CheckCircle2, Truck, AlertCircle } from 'lucide-react';
 import { claimsData } from '../../../data/mockData';
 
@@ -21,7 +21,7 @@ export default function MyClaims() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-gray-50/80 text-[11px] font-bold text-gray-500 uppercase tracking-wider border-b border-gray-100">
+              <tr className="bg-gray-50/80 text-xs font-bold text-gray-500 uppercase tracking-wider border-b border-gray-100">
                 <th className="py-3 px-6">Claim ID</th>
                 <th className="py-3 px-6">Donor</th>
                 <th className="py-3 px-6">Food ID</th>
@@ -36,12 +36,12 @@ export default function MyClaims() {
                   <td className="py-4 px-6 font-semibold text-gray-800">{c.donor}</td>
                   <td className="py-4 px-6 text-gray-600 font-mono text-xs">{c.foodId}</td>
                   <td className="py-4 px-6">
-                    <span className="inline-block text-xs font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
+                    <span className="inline-block text-xs font-bold px-3 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
                       {c.pickupStatus}
                     </span>
                   </td>
                   <td className="py-4 px-6">
-                    <span className="inline-block text-xs font-bold px-2.5 py-0.5 rounded-full bg-gray-100 text-gray-700">
+                    <span className="inline-block text-xs font-bold px-3 py-0.5 rounded-full bg-gray-100 text-gray-700">
                       {c.claimStatus}
                     </span>
                   </td>

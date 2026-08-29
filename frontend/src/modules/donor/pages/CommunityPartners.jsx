@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { 
   Search, 
   Bell, 
@@ -31,7 +31,7 @@ const partnersData = [
     verified: true,
     active: true,
     recentPickup: 'Today, 2:30 PM',
-    rating: '4.9 ★'
+    rating: '4.9 â˜…'
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ const partnersData = [
     verified: true,
     active: true,
     recentPickup: 'Yesterday',
-    rating: '5.0 ★'
+    rating: '5.0 â˜…'
   },
   {
     id: 3,
@@ -63,7 +63,7 @@ const partnersData = [
     verified: true,
     active: true,
     recentPickup: '2 days ago',
-    rating: '4.8 ★'
+    rating: '4.8 â˜…'
   },
   {
     id: 4,
@@ -79,7 +79,7 @@ const partnersData = [
     verified: true,
     active: true,
     recentPickup: 'Last week',
-    rating: '4.9 ★'
+    rating: '4.9 â˜…'
   }
 ];
 
@@ -99,7 +99,7 @@ export default function CommunityPartners() {
       {/* Header Row */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-1">
         <div>
-          <h1 className="text-2xl sm:text-[26px] font-extrabold text-slate-900 tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             Community Partners
           </h1>
           <p className="text-xs sm:text-[13.5px] text-slate-500 font-medium mt-0.5">
@@ -146,7 +146,7 @@ export default function CommunityPartners() {
             <Building2 size={22} className="stroke-[2.2]" />
           </div>
           <div>
-            <p className="text-[11px] font-bold uppercase text-slate-400">Total Partners</p>
+            <p className="text-xs font-bold uppercase text-slate-400">Total Partners</p>
             <h3 className="text-2xl font-extrabold text-slate-900">18 NGOs</h3>
           </div>
         </div>
@@ -156,7 +156,7 @@ export default function CommunityPartners() {
             <Truck size={22} className="stroke-[2.2]" />
           </div>
           <div>
-            <p className="text-[11px] font-bold uppercase text-slate-400">Total Deliveries</p>
+            <p className="text-xs font-bold uppercase text-slate-400">Total Deliveries</p>
             <h3 className="text-2xl font-extrabold text-slate-900">42 Rescues</h3>
           </div>
         </div>
@@ -166,7 +166,7 @@ export default function CommunityPartners() {
             <Utensils size={22} className="stroke-[2.2]" />
           </div>
           <div>
-            <p className="text-[11px] font-bold uppercase text-slate-400">Meals Distributed</p>
+            <p className="text-xs font-bold uppercase text-slate-400">Meals Distributed</p>
             <h3 className="text-2xl font-extrabold text-slate-900">1,250 Meals</h3>
           </div>
         </div>
@@ -201,7 +201,7 @@ export default function CommunityPartners() {
                 </div>
               </div>
 
-              <span className="text-xs font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-lg">
+              <span className="text-xs font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-lg">
                 {partner.rating}
               </span>
             </div>
@@ -209,20 +209,20 @@ export default function CommunityPartners() {
             {/* Address & Logistics Info */}
             <div className="space-y-2 py-1 text-xs text-slate-600 border-y border-slate-100">
               <div className="flex items-center justify-between">
-                <span className="flex items-center gap-1.5 text-slate-500">
+                <span className="flex items-center gap-2 text-slate-500">
                   <MapPin size={14} className="text-slate-400" />
                   <span>{partner.address}</span>
                 </span>
-                <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50/80 px-2 py-0.5 rounded-md">
+                <span className="text-xs font-semibold text-emerald-700 bg-emerald-50/80 px-2 py-0.5 rounded-md">
                   {partner.distance}
                 </span>
               </div>
               <div className="flex items-center justify-between text-slate-500">
-                <span className="flex items-center gap-1.5">
+                <span className="flex items-center gap-2">
                   <Phone size={14} className="text-slate-400" />
                   <span>{partner.phone}</span>
                 </span>
-                <span className="flex items-center gap-1.5">
+                <span className="flex items-center gap-2">
                   <Mail size={14} className="text-slate-400" />
                   <span>{partner.email}</span>
                 </span>
@@ -243,7 +243,7 @@ export default function CommunityPartners() {
 
             {/* Action Buttons */}
             <div className="flex items-center justify-between gap-3 pt-1">
-              <span className="text-[11px] text-slate-400 font-medium">
+              <span className="text-xs text-slate-400 font-medium">
                 Last rescue: <strong className="text-slate-600 font-bold">{partner.recentPickup}</strong>
               </span>
 

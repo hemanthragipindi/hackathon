@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { 
   LayoutGrid, 
@@ -84,7 +84,7 @@ export default function DonorSidebar({ onClose }) {
             to={item.path}
             onClick={onClose}
             className={({ isActive }) =>
-              `flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[13.5px] font-medium transition-colors ${
+              `flex items-center gap-3 px-4 py-3 rounded-xl text-[13.5px] font-medium transition-colors ${
                 isActive 
                   ? 'text-emerald-700 bg-emerald-50 font-bold' 
                   : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'

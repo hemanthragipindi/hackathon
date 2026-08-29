@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { X, Truck, CheckCircle2, Clock, MapPin, Phone, User, ShieldCheck } from 'lucide-react';
 
 export default function TrackPickupModal({ pickup, isOpen, onClose }) {
@@ -20,7 +20,7 @@ export default function TrackPickupModal({ pickup, isOpen, onClose }) {
           </div>
           <div>
             <h3 className="text-lg font-bold text-gray-900">Live Pickup Tracking</h3>
-            <p className="text-xs text-gray-500">Route #{pickup.id || 'PK-1024'} • Status: <span className="font-semibold text-green-700">{pickup.status}</span></p>
+            <p className="text-xs text-gray-500">Route #{pickup.id || 'PK-1024'} â€¢ Status: <span className="font-semibold text-green-700">{pickup.status}</span></p>
           </div>
         </div>
 
@@ -30,7 +30,7 @@ export default function TrackPickupModal({ pickup, isOpen, onClose }) {
             <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider">Estimated Delivery</span>
             <span className="text-sm font-bold text-emerald-800">8 mins remaining</span>
           </div>
-          <p className="text-base font-bold text-gray-900 mt-1">{pickup.title} • {pickup.donor}</p>
+          <p className="text-base font-bold text-gray-900 mt-1">{pickup.title} â€¢ {pickup.donor}</p>
           <p className="text-xs text-gray-600 mt-0.5">Scheduled for: {pickup.time}</p>
         </div>
 
@@ -39,22 +39,22 @@ export default function TrackPickupModal({ pickup, isOpen, onClose }) {
           <div className="relative">
             <div className="absolute -left-[31px] top-0.5 w-4 h-4 rounded-full bg-green-600 ring-4 ring-green-100"></div>
             <p className="text-xs font-bold text-gray-900">Claim Confirmed</p>
-            <p className="text-[11px] text-gray-500">Helping Hands NGO claimed food listing</p>
+            <p className="text-xs text-gray-500">Helping Hands NGO claimed food listing</p>
           </div>
           <div className="relative">
             <div className="absolute -left-[31px] top-0.5 w-4 h-4 rounded-full bg-green-600 ring-4 ring-green-100"></div>
             <p className="text-xs font-bold text-gray-900">Volunteer Dispatched</p>
-            <p className="text-[11px] text-gray-500">Rahul Kumar assigned to pickup vehicle #3</p>
+            <p className="text-xs text-gray-500">Rahul Kumar assigned to pickup vehicle #3</p>
           </div>
           <div className="relative">
             <div className="absolute -left-[31px] top-0.5 w-4 h-4 rounded-full bg-amber-500 ring-4 ring-amber-100 animate-pulse"></div>
             <p className="text-xs font-bold text-gray-900">En Route to Donor</p>
-            <p className="text-[11px] text-gray-500">Heading towards ABC Restaurant (ETA 8 mins)</p>
+            <p className="text-xs text-gray-500">Heading towards ABC Restaurant (ETA 8 mins)</p>
           </div>
           <div className="relative opacity-50">
             <div className="absolute -left-[31px] top-0.5 w-4 h-4 rounded-full bg-gray-300"></div>
             <p className="text-xs font-bold text-gray-600">Distribution at Shelter</p>
-            <p className="text-[11px] text-gray-400">Scheduled arrival at Sunshine Community Shelter</p>
+            <p className="text-xs text-gray-400">Scheduled arrival at Sunshine Community Shelter</p>
           </div>
         </div>
 
@@ -71,7 +71,7 @@ export default function TrackPickupModal({ pickup, isOpen, onClose }) {
           </div>
           <a
             href="tel:+919876543213"
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold shadow-xs"
+            className="flex items-center gap-2 px-3 py-2 bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 rounded-lg text-xs font-semibold shadow-xs"
           >
             <Phone size={13} className="text-green-700" />
             Call

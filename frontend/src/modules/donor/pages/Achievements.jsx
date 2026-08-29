@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { 
   Search, 
   Bell, 
@@ -88,7 +88,7 @@ export default function Achievements() {
 
       {/* Page Title & Subtitle */}
       <div>
-        <h1 className="text-2xl sm:text-[26px] font-extrabold text-slate-900 tracking-tight">
+        <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
           Achievements
         </h1>
         <p className="text-xs sm:text-[13.5px] text-slate-500 font-medium mt-0.5 max-w-xl leading-relaxed">
@@ -108,7 +108,7 @@ export default function Achievements() {
               <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight">
                 42 Successful Food Rescues
               </h3>
-              <p className="text-xs sm:text-[13px] text-slate-500 font-medium mt-0.5">
+              <p className="text-xs sm:text-sm text-slate-500 font-medium mt-0.5">
                 Active Community Contributor
               </p>
             </div>
@@ -116,7 +116,7 @@ export default function Achievements() {
 
           {/* Right Next Milestone target */}
           <div className="sm:text-right self-start sm:self-auto">
-            <p className="text-[11px] font-semibold text-slate-400">
+            <p className="text-xs font-semibold text-slate-400">
               Next Milestone
             </p>
             <p className="text-sm sm:text-base font-extrabold text-slate-900 mt-0.5">
@@ -133,7 +133,7 @@ export default function Achievements() {
               style={{ width: '84%' }}
             />
           </div>
-          <p className="text-[11.5px] text-slate-400 font-medium text-right mt-1.5">
+          <p className="text-[11.5px] text-slate-400 font-medium text-right mt-2">
             You are 8 donations away from your next milestone
           </p>
         </div>
@@ -186,7 +186,7 @@ export default function Achievements() {
             </div>
 
             <div>
-              <div className="flex items-center justify-between text-[11px] mb-1.5 font-bold">
+              <div className="flex items-center justify-between text-xs mb-2 font-bold">
                 <span className="text-slate-400 font-semibold">Progress</span>
                 <span className="text-slate-600">750 / 1,000 meals</span>
               </div>
@@ -211,7 +211,7 @@ export default function Achievements() {
             </div>
 
             <div>
-              <div className="flex items-center justify-between text-[11px] mb-1.5 font-bold">
+              <div className="flex items-center justify-between text-xs mb-2 font-bold">
                 <span className="text-slate-400 font-semibold">Progress</span>
                 <span className="text-slate-600">42 / 50 rescues</span>
               </div>
@@ -234,13 +234,13 @@ export default function Achievements() {
         </div>
 
         <div className="min-w-0 flex-1">
-          <span className="text-[11px] font-extrabold text-[#064e3b] tracking-wider uppercase">
+          <span className="text-xs font-extrabold text-[#064e3b] tracking-wider uppercase">
             Latest Achievement
           </span>
           <p className="text-xs sm:text-sm text-slate-700 mt-1 leading-snug">
             Your restaurant recently reached <strong className="font-bold text-slate-900">100 Meals Shared</strong> through Food Rescue.
           </p>
-          <p className="text-[11px] text-slate-400 font-medium mt-1">
+          <p className="text-xs text-slate-400 font-medium mt-1">
             Earned on Oct 12, 2023
           </p>
         </div>

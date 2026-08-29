@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Search, Eye, XCircle, Trash2, Building2, User, Package, Clock, Truck, MapPin } from 'lucide-react';
 import DataTable from '../../common/components/DataTable';
 import StatusBadge from '../../common/components/StatusBadge';
@@ -286,7 +286,7 @@ export default function Claims() {
                   <div className="w-[calc(100%-2rem)] md:w-[calc(50%-1.5rem)] bg-white p-3 rounded-lg border border-gray-200 shadow-sm">
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-semibold text-gray-900 text-sm">Claim Initiated</div>
-                      <time className="text-[10px] font-medium text-gray-500 whitespace-nowrap ml-2">
+                      <time className="text-xs font-medium text-gray-500 whitespace-nowrap ml-2">
                         {new Date(selectedClaim.claimedTime).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
                       </time>
                     </div>

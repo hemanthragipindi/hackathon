@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import {
   LayoutGrid,
@@ -27,12 +27,12 @@ export default function NgoSidebar({ onClose }) {
       {/* Brand Header */}
       <div className="px-6 pt-6 pb-4">
         <div className="flex items-start justify-between">
-          <Link to="/ngo/dashboard" className="flex items-center gap-2.5 group">
+          <Link to="/ngo/dashboard" className="flex items-center gap-3 group">
             <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#064e3b] text-white font-black text-lg shadow-xs">
               F
             </div>
             <div>
-              <h1 className="text-[20px] font-black text-[#064e3b] leading-tight tracking-tight">
+              <h1 className="text-xl font-black text-[#064e3b] leading-tight tracking-tight">
                 FoodRescue
               </h1>
               <div className="text-xs font-semibold text-gray-500">
@@ -60,7 +60,7 @@ export default function NgoSidebar({ onClose }) {
             to={item.path}
             onClick={onClose}
             className={({ isActive }) =>
-              `group relative flex items-center gap-3 px-3.5 py-3 rounded-lg text-[15px] font-medium transition-all duration-150 ${isActive
+              `group relative flex items-center gap-3 px-4 py-3 rounded-lg text-base font-medium transition-all duration-150 ${isActive
                 ? 'bg-[#dcfce7] text-[#15803d] font-semibold'
                 : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
               }`

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { 
   User, Bell, Settings as SettingsIcon, Shield, Lock, 
   Smartphone, MapPin, Mail, Upload, Save
@@ -99,7 +99,7 @@ export default function Settings() {
                   <User size={40} />
                 </div>
                 <div>
-                  <button className="flex items-center gap-2 px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">
+                  <button className="flex items-center gap-2 px-3 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">
                     <Upload size={14} /> Change Photo
                   </button>
                   <p className="text-xs text-gray-500 mt-2">JPG, GIF or PNG. Max size of 800K</p>
@@ -113,7 +113,7 @@ export default function Settings() {
                 </div>
                 <div className="space-y-1">
                   <label className="text-sm font-medium text-gray-700">Role</label>
-                  <input type="text" value="Administrator" disabled className="w-full px-3 py-2 border border-gray-200 bg-gray-50 rounded-md text-gray-500 cursor-not-allowed" />
+                  <input type="text" value="Administrator" disabled className="w-full px-3 py-2 border border-gray-200 bg-gray-50 rounded-lg text-gray-500 cursor-not-allowed" />
                 </div>
                 <div className="space-y-1">
                   <label className="text-sm font-medium text-gray-700">Email Address</label>
@@ -260,9 +260,9 @@ export default function Settings() {
                 <div>
                   <h4 className="text-sm font-medium text-gray-900 flex items-center gap-2 mb-3"><Lock size={16} /> Change Password</h4>
                   <div className="space-y-3">
-                    <input type="password" placeholder="Current Password" className="w-full max-w-sm px-3 py-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500 text-sm" />
-                    <input type="password" placeholder="New Password" className="w-full max-w-sm px-3 py-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500 text-sm" />
-                    <input type="password" placeholder="Confirm New Password" className="w-full max-w-sm px-3 py-2 border border-gray-300 rounded-md focus:ring-green-500 focus:border-green-500 text-sm" />
+                    <input type="password" placeholder="Current Password" className="w-full max-w-sm px-3 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500 text-sm" />
+                    <input type="password" placeholder="New Password" className="w-full max-w-sm px-3 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500 text-sm" />
+                    <input type="password" placeholder="Confirm New Password" className="w-full max-w-sm px-3 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500 text-sm" />
                     <button onClick={() => handleSave('Password')} className="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 mt-1">Update Password</button>
                   </div>
                 </div>
@@ -289,14 +289,14 @@ export default function Settings() {
                   <div className="border border-gray-200 rounded-lg divide-y divide-gray-100">
                     <div className="p-3 flex items-center justify-between bg-gray-50">
                       <div>
-                        <p className="text-sm font-medium text-gray-900">Windows • Chrome</p>
+                        <p className="text-sm font-medium text-gray-900">Windows â€¢ Chrome</p>
                         <p className="text-xs text-gray-500">Mumbai, India (Current session)</p>
                       </div>
                       <span className="text-xs font-medium text-green-600 bg-green-100 px-2 py-1 rounded">Active Now</span>
                     </div>
                     <div className="p-3 flex items-center justify-between">
                       <div>
-                        <p className="text-sm font-medium text-gray-900">MacBook Pro • Safari</p>
+                        <p className="text-sm font-medium text-gray-900">MacBook Pro â€¢ Safari</p>
                         <p className="text-xs text-gray-500">Delhi, India (Last active: 2 hours ago)</p>
                       </div>
                       <button onClick={() => addToast('Session revoked', 'success')} className="text-sm text-red-600 hover:text-red-700 font-medium">Revoke</button>

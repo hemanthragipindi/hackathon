@@ -28,7 +28,7 @@ export default function DonorDashboard({ onMenuClick }) {
           <p className="text-[11.5px] font-bold text-slate-400 tracking-wider uppercase mb-1">
             {currentDate}
           </p>
-          <h1 className="text-2xl sm:text-[28px] font-bold text-slate-900 tracking-tight flex items-center gap-2">
+          <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight flex items-center gap-2">
             Good morning, Spice Garden
           </h1>
         </div>
@@ -67,17 +67,17 @@ export default function DonorDashboard({ onMenuClick }) {
         </div>
 
         <div className="relative z-10 max-w-2xl">
-          <h2 className="text-2xl sm:text-[34px] font-extrabold tracking-tight leading-[1.18] text-white">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight leading-[1.18] text-white">
             Turn today's surplus into someone's meal.
           </h2>
-          <p className="mt-3.5 text-sm sm:text-[15px] leading-relaxed text-emerald-100/90 max-w-xl font-normal">
+          <p className="mt-4 text-sm sm:text-base leading-relaxed text-emerald-100/90 max-w-xl font-normal">
             Every portion saved is a step towards a zero-waste community. Connect with local NGOs instantly and track your positive impact.
           </p>
 
           <div className="mt-7">
             <Link
               to="/donor/create"
-              className="inline-flex items-center gap-2.5 px-6 py-3 bg-white text-[#064e3b] hover:bg-emerald-50 rounded-2xl sm:rounded-full font-bold text-sm shadow-sm transition-all duration-200 hover:shadow active:scale-[0.99] group cursor-pointer"
+              className="inline-flex items-center gap-3 px-6 py-3 bg-white text-[#064e3b] hover:bg-emerald-50 rounded-2xl sm:rounded-full font-bold text-sm shadow-sm transition-all duration-200 hover:shadow active:scale-[0.99] group cursor-pointer"
             >
               <div className="w-5 h-5 rounded-full border-2 border-[#064e3b] flex items-center justify-center text-[#064e3b] font-bold text-xs">
                 +
@@ -99,10 +99,10 @@ export default function DonorDashboard({ onMenuClick }) {
             <div className="w-12 h-12 rounded-2xl bg-[#e8f7ee] text-[#16a34a] flex items-center justify-center mb-5">
               <Utensils size={22} className="stroke-[2.2]" />
             </div>
-            <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
               MEALS SHARED
             </p>
-            <h3 className="text-[34px] font-extrabold text-slate-900 tracking-tight mt-1">
+            <h3 className="text-3xl font-extrabold text-slate-900 tracking-tight mt-1">
               1,250
             </h3>
           </div>
@@ -117,11 +117,11 @@ export default function DonorDashboard({ onMenuClick }) {
             <div className="w-12 h-12 rounded-2xl bg-[#fff1e6] text-[#ea580c] flex items-center justify-center mb-5">
               <Leaf size={22} className="stroke-[2.2]" />
             </div>
-            <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
               WASTE PREVENTED
             </p>
             <div className="flex items-baseline gap-1 mt-1">
-              <h3 className="text-[34px] font-extrabold text-slate-900 tracking-tight">
+              <h3 className="text-3xl font-extrabold text-slate-900 tracking-tight">
                 320
               </h3>
               <span className="text-base font-bold text-slate-500">kg</span>
@@ -138,10 +138,10 @@ export default function DonorDashboard({ onMenuClick }) {
             <div className="w-12 h-12 rounded-2xl bg-[#f1f5f9] text-[#475569] flex items-center justify-center mb-5">
               <Handshake size={22} className="stroke-[2.2]" />
             </div>
-            <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
               COMMUNITY PARTNERS
             </p>
-            <h3 className="text-[34px] font-extrabold text-slate-900 tracking-tight mt-1">
+            <h3 className="text-3xl font-extrabold text-slate-900 tracking-tight mt-1">
               18
             </h3>
           </div>
@@ -156,10 +156,10 @@ export default function DonorDashboard({ onMenuClick }) {
             <div className="w-12 h-12 rounded-2xl bg-[#059669] text-white flex items-center justify-center mb-5 shadow-sm shadow-emerald-600/20">
               <Check size={22} className="stroke-[3]" />
             </div>
-            <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
               SUCCESSFUL RESCUES
             </p>
-            <h3 className="text-[34px] font-extrabold text-slate-900 tracking-tight mt-1">
+            <h3 className="text-3xl font-extrabold text-slate-900 tracking-tight mt-1">
               42
             </h3>
           </div>
@@ -172,7 +172,7 @@ export default function DonorDashboard({ onMenuClick }) {
         <div className="lg:col-span-7 bg-white rounded-3xl border border-slate-100/90 shadow-xs p-6 sm:p-7 flex flex-col justify-between space-y-7">
           {/* Header */}
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-3">
               <Radio size={20} className="text-orange-500 stroke-[2.5]" />
               <h3 className="text-lg font-extrabold text-slate-900 tracking-tight">
                 Live Rescue
@@ -201,19 +201,19 @@ export default function DonorDashboard({ onMenuClick }) {
 
             {/* Food Text & Badges */}
             <div className="min-w-0 flex-1">
-              <h4 className="text-base sm:text-[17px] font-bold text-slate-900 tracking-tight truncate">
+              <h4 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight truncate">
                 Vegetable Biryani (40 meals)
               </h4>
-              <p className="text-xs sm:text-[13px] text-slate-500 mt-1 leading-snug">
+              <p className="text-xs sm:text-sm text-slate-500 mt-1 leading-snug">
                 Prepared 2 hours ago. Needs pickup before 4:00 PM.
               </p>
 
               {/* Tags */}
-              <div className="flex items-center gap-2 mt-3.5">
-                <span className="px-2.5 py-1 rounded-lg bg-[#dcfce7] text-[#15803d] text-[11px] font-extrabold tracking-wider uppercase">
+              <div className="flex items-center gap-2 mt-4">
+                <span className="px-3 py-1 rounded-lg bg-[#dcfce7] text-[#15803d] text-xs font-extrabold tracking-wider uppercase">
                   VEGAN
                 </span>
-                <span className="px-2.5 py-1 rounded-lg bg-[#e2e8f0] text-[#475569] text-[11px] font-extrabold tracking-wider uppercase">
+                <span className="px-3 py-1 rounded-lg bg-[#e2e8f0] text-[#475569] text-xs font-extrabold tracking-wider uppercase">
                   BULK
                 </span>
               </div>
@@ -240,7 +240,7 @@ export default function DonorDashboard({ onMenuClick }) {
                   <p className="text-[13.5px] text-slate-700 leading-snug">
                     <strong className="font-bold text-slate-900">City Harvest NGO</strong> left a thank you note for yesterday's bakery surplus.
                   </p>
-                  <p className="text-[10.5px] font-bold text-slate-400 tracking-wide uppercase mt-1.5">
+                  <p className="text-[10.5px] font-bold text-slate-400 tracking-wide uppercase mt-2">
                     2 HOURS AGO
                   </p>
                 </div>
@@ -255,7 +255,7 @@ export default function DonorDashboard({ onMenuClick }) {
                   <p className="text-[13.5px] text-slate-700 leading-snug">
                     <strong className="font-bold text-slate-900">Volunteer Mark</strong> completed delivery of 15kg fresh produce to Downtown Shelter.
                   </p>
-                  <p className="text-[10.5px] font-bold text-slate-400 tracking-wide uppercase mt-1.5">
+                  <p className="text-[10.5px] font-bold text-slate-400 tracking-wide uppercase mt-2">
                     YESTERDAY, 4:30 PM
                   </p>
                 </div>
@@ -270,7 +270,7 @@ export default function DonorDashboard({ onMenuClick }) {
                   <p className="text-[13.5px] text-slate-700 leading-snug">
                     You successfully listed <strong className="font-bold text-slate-900">Roasted Chicken (20 portions)</strong>.
                   </p>
-                  <p className="text-[10.5px] font-bold text-slate-400 tracking-wide uppercase mt-1.5">
+                  <p className="text-[10.5px] font-bold text-slate-400 tracking-wide uppercase mt-2">
                     YESTERDAY, 1:15 PM
                   </p>
                 </div>

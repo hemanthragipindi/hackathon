@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Search, AlertTriangle, Eye, XCircle, Trash2, Clock, MapPin, Package, User, Building2, Truck } from 'lucide-react';
 import DataTable from '../../common/components/DataTable';
 import StatusBadge from '../../common/components/StatusBadge';
@@ -77,7 +77,7 @@ export default function FoodListings() {
       <div className="flex flex-col">
         <span className={isExpiringSoon(row) ? 'text-orange-600 font-semibold' : 'text-gray-700'}>{row.deadline}</span>
         {isExpiringSoon(row) && (
-          <span className="flex items-center gap-1 text-[10px] text-orange-600 font-bold uppercase tracking-wider mt-0.5">
+          <span className="flex items-center gap-1 text-xs text-orange-600 font-bold uppercase tracking-wider mt-0.5">
             <AlertTriangle size={10} /> Expires Soon
           </span>
         )}
@@ -275,7 +275,7 @@ export default function FoodListings() {
               <div className="flex justify-between items-start">
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 leading-tight">{selectedListing.name}</h3>
-                  <p className="text-sm text-gray-500 font-medium mt-1">{selectedListing.id} • {selectedListing.category || 'Prepared Meals'}</p>
+                  <p className="text-sm text-gray-500 font-medium mt-1">{selectedListing.id} â€¢ {selectedListing.category || 'Prepared Meals'}</p>
                 </div>
                 <StatusBadge status={selectedListing.status} />
               </div>

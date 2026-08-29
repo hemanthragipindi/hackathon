@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Wallet as WalletIcon, ArrowDownLeft, ArrowUpRight, Plus, Download, ShieldCheck } from 'lucide-react';
 
 export default function Wallet() {
   const transactions = [
-    { id: 'TX-901', description: 'Logistics Fuel Grant - Municipal Subsidy', type: 'Credit', amount: '+ ₹15,000', date: 'Oct 24, 2023', status: 'Completed' },
-    { id: 'TX-902', description: 'Volunteer Fuel Reimbursement - PK-1024', type: 'Debit', amount: '- ₹850', date: 'Oct 23, 2023', status: 'Completed' },
-    { id: 'TX-903', description: 'Food Storage & Insulated Crates Purchase', type: 'Debit', amount: '- ₹4,200', date: 'Oct 20, 2023', status: 'Completed' },
-    { id: 'TX-904', description: 'Corporate CSR FoodRescue Support', type: 'Credit', amount: '+ ₹50,000', date: 'Oct 15, 2023', status: 'Completed' },
+    { id: 'TX-901', description: 'Logistics Fuel Grant - Municipal Subsidy', type: 'Credit', amount: '+ â‚¹15,000', date: 'Oct 24, 2023', status: 'Completed' },
+    { id: 'TX-902', description: 'Volunteer Fuel Reimbursement - PK-1024', type: 'Debit', amount: '- â‚¹850', date: 'Oct 23, 2023', status: 'Completed' },
+    { id: 'TX-903', description: 'Food Storage & Insulated Crates Purchase', type: 'Debit', amount: '- â‚¹4,200', date: 'Oct 20, 2023', status: 'Completed' },
+    { id: 'TX-904', description: 'Corporate CSR FoodRescue Support', type: 'Credit', amount: '+ â‚¹50,000', date: 'Oct 15, 2023', status: 'Completed' },
   ];
 
   return (
@@ -32,14 +32,14 @@ export default function Wallet() {
               <span>Operational Balance</span>
               <WalletIcon size={18} />
             </div>
-            <p className="text-3xl font-black mt-3">₹59,950.00</p>
+            <p className="text-3xl font-black mt-3">â‚¹59,950.00</p>
             <p className="text-xs text-green-200 mt-1">Available for fleet fuel & volunteer allowances</p>
           </div>
           <div className="mt-6 flex items-center gap-2">
-            <button className="px-3.5 py-1.5 bg-white text-[#064e3b] font-bold text-xs rounded-lg hover:bg-gray-100 transition shadow-xs">
+            <button className="px-4 py-2 bg-white text-[#064e3b] font-bold text-xs rounded-lg hover:bg-gray-100 transition shadow-xs">
               + Add Funds
             </button>
-            <button className="px-3.5 py-1.5 bg-white/20 text-white font-bold text-xs rounded-lg hover:bg-white/30 transition">
+            <button className="px-4 py-2 bg-white/20 text-white font-bold text-xs rounded-lg hover:bg-white/30 transition">
               Disburse Fuel
             </button>
           </div>
@@ -51,7 +51,7 @@ export default function Wallet() {
             <p className="text-3xl font-black text-gray-900 mt-3">14,280 <span className="text-sm font-bold text-emerald-600">RC</span></p>
             <p className="text-xs text-gray-500 mt-1">Earned via 2,840 kg verified food rescues</p>
           </div>
-          <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-700">
+          <div className="flex items-center gap-2 text-xs font-semibold text-emerald-700">
             <ShieldCheck size={16} /> Verified Carbon & Hunger Credits
           </div>
         </div>
@@ -59,11 +59,11 @@ export default function Wallet() {
         <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-xs flex flex-col justify-between">
           <div>
             <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">Pending Reimbursals</span>
-            <p className="text-3xl font-black text-amber-600 mt-3">₹2,450.00</p>
+            <p className="text-3xl font-black text-amber-600 mt-3">â‚¹2,450.00</p>
             <p className="text-xs text-gray-500 mt-1">3 driver receipts submitted for verification</p>
           </div>
           <button className="text-left text-xs font-bold text-[#064e3b] hover:underline">
-            Review volunteer receipts →
+            Review volunteer receipts â†’
           </button>
         </div>
       </div>
@@ -72,7 +72,7 @@ export default function Wallet() {
       <div className="bg-white rounded-2xl border border-gray-200 shadow-xs overflow-hidden">
         <div className="p-6 border-b border-gray-100 flex items-center justify-between">
           <h2 className="text-lg font-bold text-gray-900">Transaction History</h2>
-          <button className="flex items-center gap-1.5 text-xs font-bold text-gray-600 hover:text-gray-900 border border-gray-200 px-3 py-1.5 rounded-lg shadow-xs">
+          <button className="flex items-center gap-2 text-xs font-bold text-gray-600 hover:text-gray-900 border border-gray-200 px-3 py-2 rounded-lg shadow-xs">
             <Download size={13} /> Export Statement
           </button>
         </div>
@@ -87,7 +87,7 @@ export default function Wallet() {
                 </div>
                 <div>
                   <p className="text-sm font-bold text-gray-900">{tx.description}</p>
-                  <p className="text-xs text-gray-500">{tx.id} • {tx.date}</p>
+                  <p className="text-xs text-gray-500">{tx.id} â€¢ {tx.date}</p>
                 </div>
               </div>
               <div className="text-right">
@@ -96,7 +96,7 @@ export default function Wallet() {
                 }`}>
                   {tx.amount}
                 </p>
-                <span className="text-[11px] font-semibold text-gray-400">{tx.status}</span>
+                <span className="text-xs font-semibold text-gray-400">{tx.status}</span>
               </div>
             </div>
           ))}

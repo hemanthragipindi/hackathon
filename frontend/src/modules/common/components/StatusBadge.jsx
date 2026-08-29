@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const getStatusColor = (status) => {
   const normalizedStatus = status.toLowerCase();
@@ -22,7 +22,7 @@ export default function StatusBadge({ status }) {
   const colorClasses = getStatusColor(status);
   
   return (
-    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${colorClasses}`}>
+    <span className={`inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium border ${colorClasses}`}>
       {status}
     </span>
   );

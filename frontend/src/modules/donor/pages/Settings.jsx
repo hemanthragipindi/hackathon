@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { 
   Bell, 
   Settings as SettingsIcon, 
@@ -38,7 +38,7 @@ export default function DonorSettings() {
       {/* Top Header Row */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-1">
         <div>
-          <h1 className="text-2xl sm:text-[26px] font-extrabold text-slate-900 tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             Restaurant Settings
           </h1>
           <p className="text-xs sm:text-[13.5px] text-slate-500 font-medium mt-0.5">
@@ -112,12 +112,12 @@ export default function DonorSettings() {
               </div>
 
               <div>
-                <label className="px-4 py-2 border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-bold text-xs rounded-xl shadow-2xs cursor-pointer inline-flex items-center gap-1.5 transition-colors">
+                <label className="px-4 py-2 border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-bold text-xs rounded-xl shadow-2xs cursor-pointer inline-flex items-center gap-2 transition-colors">
                   <Upload size={14} />
                   <span>Change Logo</span>
                   <input type="file" className="hidden" accept="image/*" />
                 </label>
-                <p className="text-[11.5px] text-slate-400 mt-1.5">
+                <p className="text-[11.5px] text-slate-400 mt-2">
                   JPG, GIF or PNG. 1MB max.
                 </p>
               </div>
@@ -125,14 +125,14 @@ export default function DonorSettings() {
 
             {/* Field: Restaurant Name */}
             <div>
-              <label className="block text-[12.5px] font-bold text-slate-700 mb-1.5">
+              <label className="block text-[12.5px] font-bold text-slate-700 mb-2">
                 Restaurant Name
               </label>
               <input 
                 type="text" 
                 value={restaurantName}
                 onChange={(e) => setRestaurantName(e.target.value)}
-                className="w-full px-4 py-2.5 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all shadow-2xs"
+                className="w-full px-4 py-3 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all shadow-2xs"
                 required
               />
             </div>
@@ -140,27 +140,27 @@ export default function DonorSettings() {
             {/* 2-Column Grid: Contact Person & Phone Number */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-[12.5px] font-bold text-slate-700 mb-1.5">
+                <label className="block text-[12.5px] font-bold text-slate-700 mb-2">
                   Contact Person
                 </label>
                 <input 
                   type="text" 
                   value={contactPerson}
                   onChange={(e) => setContactPerson(e.target.value)}
-                  className="w-full px-4 py-2.5 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all shadow-2xs"
+                  className="w-full px-4 py-3 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all shadow-2xs"
                   required
                 />
               </div>
 
               <div>
-                <label className="block text-[12.5px] font-bold text-slate-700 mb-1.5">
+                <label className="block text-[12.5px] font-bold text-slate-700 mb-2">
                   Phone Number
                 </label>
                 <input 
                   type="text" 
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className="w-full px-4 py-2.5 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all shadow-2xs"
+                  className="w-full px-4 py-3 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all shadow-2xs"
                   required
                 />
               </div>
@@ -168,28 +168,28 @@ export default function DonorSettings() {
 
             {/* Field: Email Address */}
             <div>
-              <label className="block text-[12.5px] font-bold text-slate-700 mb-1.5">
+              <label className="block text-[12.5px] font-bold text-slate-700 mb-2">
                 Email Address
               </label>
               <input 
                 type="email" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-2.5 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all shadow-2xs"
+                className="w-full px-4 py-3 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all shadow-2xs"
                 required
               />
             </div>
 
             {/* Field: Street Address */}
             <div>
-              <label className="block text-[12.5px] font-bold text-slate-700 mb-1.5">
+              <label className="block text-[12.5px] font-bold text-slate-700 mb-2">
                 Street Address
               </label>
               <input 
                 type="text" 
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
-                className="w-full px-4 py-2.5 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all shadow-2xs"
+                className="w-full px-4 py-3 bg-white border border-slate-200/90 rounded-2xl text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all shadow-2xs"
                 required
               />
             </div>
@@ -205,14 +205,14 @@ export default function DonorSettings() {
                   setEmail('hello@greentable.com');
                   setAddress('123 Culinary Lane, Suite 100');
                 }}
-                className="px-4 py-2.5 text-xs sm:text-sm font-bold text-slate-600 hover:text-slate-900 transition-colors cursor-pointer"
+                className="px-4 py-3 text-xs sm:text-sm font-bold text-slate-600 hover:text-slate-900 transition-colors cursor-pointer"
               >
                 Cancel
               </button>
 
               <button 
                 type="submit"
-                className="px-6 py-2.5 bg-[#059669] hover:bg-[#047857] text-white font-bold text-xs sm:text-sm rounded-xl shadow-xs transition-all duration-200 active:scale-[0.99] flex items-center gap-2 cursor-pointer"
+                className="px-6 py-3 bg-[#059669] hover:bg-[#047857] text-white font-bold text-xs sm:text-sm rounded-xl shadow-xs transition-all duration-200 active:scale-[0.99] flex items-center gap-2 cursor-pointer"
               >
                 {isSaved ? (
                   <>
@@ -236,7 +236,7 @@ export default function DonorSettings() {
             <ShieldCheck className="absolute -right-2 -top-2 w-28 h-28 text-slate-100/70 pointer-events-none stroke-[1.2]" />
 
             <div className="relative z-10 space-y-2">
-              <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
                 Account Status
               </h4>
               <p className="text-sm sm:text-base font-extrabold text-slate-900">
@@ -251,7 +251,7 @@ export default function DonorSettings() {
               <button 
                 type="button"
                 onClick={() => alert('Opening public donor profile preview...')}
-                className="w-full py-2.5 border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-bold text-xs sm:text-sm rounded-xl shadow-2xs text-center transition-colors cursor-pointer"
+                className="w-full py-3 border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-bold text-xs sm:text-sm rounded-xl shadow-2xs text-center transition-colors cursor-pointer"
               >
                 View Public Profile
               </button>

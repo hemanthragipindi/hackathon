@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Calendar, Clock, MapPin, Package } from 'lucide-react';
 import StatusBadge from '../../common/components/StatusBadge';
 
@@ -17,7 +17,7 @@ export default function DonationCard({ donation }) {
           <h3 className="font-semibold text-gray-900 text-lg">{donation.name}</h3>
           <p className="text-sm text-gray-500 mt-1 flex items-center gap-2">
             <span className="font-medium text-gray-700">{donation.category}</span>
-            <span>•</span>
+            <span>â€¢</span>
             <span className="text-gray-500">{donation.id}</span>
           </p>
         </div>
@@ -56,11 +56,11 @@ export default function DonationCard({ donation }) {
 
       {/* Footer Actions */}
       <div className="p-5 sm:px-6 sm:py-4 border-t border-slate-100 flex justify-end gap-3 bg-white">
-        <button className="text-sm font-medium text-gray-600 hover:text-gray-900 px-3 py-1.5 transition-colors">
+        <button className="text-sm font-medium text-gray-600 hover:text-gray-900 px-3 py-2 transition-colors">
           View Details
         </button>
         {isActive && !donation.assignedTo && (
-          <button className="text-sm font-medium text-white bg-green-600 hover:bg-green-700 px-4 py-1.5 rounded transition-colors">
+          <button className="text-sm font-medium text-white bg-green-600 hover:bg-green-700 px-4 py-2 rounded transition-colors">
             Edit
           </button>
         )}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { 
   Search, 
   Bell, 
@@ -26,7 +26,7 @@ export default function LiveRescues() {
       {/* Top Header & Search Bar Row */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pt-1">
         <div>
-          <h1 className="text-2xl sm:text-[26px] font-extrabold text-slate-900 tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             Live Rescues
           </h1>
           <p className="text-xs sm:text-[13.5px] text-slate-500 font-medium mt-0.5">
@@ -77,7 +77,7 @@ export default function LiveRescues() {
       {/* Filter and Status Counter Bar */}
       <div className="flex items-center justify-end gap-3 pt-1">
         {/* Active Rescues Pill */}
-        <div className="px-3.5 py-1.5 rounded-full bg-[#e6f4ea] text-[#15803d] text-xs font-bold flex items-center gap-1.5">
+        <div className="px-4 py-2 rounded-full bg-[#e6f4ea] text-[#15803d] text-xs font-bold flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
           <span>3 Active Rescues</span>
         </div>
@@ -87,7 +87,7 @@ export default function LiveRescues() {
           <select 
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="px-3.5 py-1.5 pr-8 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-700 appearance-none focus:outline-none focus:ring-2 focus:ring-emerald-500/20 cursor-pointer shadow-2xs"
+            className="px-4 py-2 pr-8 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-700 appearance-none focus:outline-none focus:ring-2 focus:ring-emerald-500/20 cursor-pointer shadow-2xs"
           >
             <option>All Statuses</option>
             <option>On the way</option>
@@ -114,7 +114,7 @@ export default function LiveRescues() {
             />
             {/* Tag Badge */}
             <div className="absolute top-4 left-4">
-              <span className="px-3 py-1 rounded-full bg-[#10b981] text-white text-[11.5px] font-extrabold flex items-center gap-1.5 shadow-sm">
+              <span className="px-3 py-1 rounded-full bg-[#10b981] text-white text-[11.5px] font-extrabold flex items-center gap-2 shadow-sm">
                 <Check size={13} className="stroke-[3]" />
                 <span>Ready for pickup</span>
               </span>
@@ -126,11 +126,11 @@ export default function LiveRescues() {
             {/* Header & Expiry */}
             <div className="flex items-start justify-between gap-3">
               <div>
-                <h3 className="text-lg sm:text-[20px] font-extrabold text-slate-900 tracking-tight">
+                <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight">
                   Vegetable Biryani <span className="text-slate-500 font-semibold text-base sm:text-lg">(40 meals)</span>
                 </h3>
               </div>
-              <span className="px-3 py-1 rounded-full bg-[#fff1e6] text-[#ea580c] border border-orange-200/70 text-[11px] font-extrabold flex items-center gap-1 shrink-0">
+              <span className="px-3 py-1 rounded-full bg-[#fff1e6] text-[#ea580c] border border-orange-200/70 text-xs font-extrabold flex items-center gap-1 shrink-0">
                 <Clock size={13} />
                 <span>Expires in 2h</span>
               </span>
@@ -138,12 +138,12 @@ export default function LiveRescues() {
 
             {/* NGO & Volunteer Info Row */}
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-semibold text-slate-600">
-              <div className="flex items-center gap-1.5 text-slate-700">
+              <div className="flex items-center gap-2 text-slate-700">
                 <Building2 size={15} className="text-slate-400" />
                 <span>Hope Foundation</span>
               </div>
               <span className="text-slate-300">|</span>
-              <div className="flex items-center gap-1.5 text-slate-700">
+              <div className="flex items-center gap-2 text-slate-700">
                 <User size={15} className="text-slate-400" />
                 <span>Volunteer: Rahul</span>
               </div>
@@ -169,7 +169,7 @@ export default function LiveRescues() {
                   <div className="w-6 h-6 rounded-full bg-[#059669] text-white flex items-center justify-center shadow-xs">
                     <Check size={13} className="stroke-[3]" />
                   </div>
-                  <span className="text-[10.5px] font-bold text-slate-700 mt-1.5">
+                  <span className="text-[10.5px] font-bold text-slate-700 mt-2">
                     Food Shared
                   </span>
                 </div>
@@ -179,7 +179,7 @@ export default function LiveRescues() {
                   <div className="w-6 h-6 rounded-full bg-[#059669] text-white flex items-center justify-center shadow-xs">
                     <Check size={13} className="stroke-[3]" />
                   </div>
-                  <span className="text-[10.5px] font-bold text-slate-700 mt-1.5">
+                  <span className="text-[10.5px] font-bold text-slate-700 mt-2">
                     NGO Claimed
                   </span>
                 </div>
@@ -189,7 +189,7 @@ export default function LiveRescues() {
                   <div className="w-7 h-7 rounded-full bg-white border-2 border-[#ea580c] flex items-center justify-center shadow-sm">
                     <div className="w-2.5 h-2.5 rounded-full bg-[#ea580c]" />
                   </div>
-                  <span className="text-[10.5px] font-bold text-[#ea580c] mt-1.5 text-center leading-tight">
+                  <span className="text-[10.5px] font-bold text-[#ea580c] mt-2 text-center leading-tight">
                     Volunteer En<br />Route
                   </span>
                 </div>
@@ -199,7 +199,7 @@ export default function LiveRescues() {
                   <div className="w-6 h-6 rounded-full bg-slate-50 border border-slate-200 text-slate-400 flex items-center justify-center">
                     <ShoppingBag size={12} className="stroke-[2]" />
                   </div>
-                  <span className="text-[10.5px] font-semibold text-slate-400 mt-1.5">
+                  <span className="text-[10.5px] font-semibold text-slate-400 mt-2">
                     Picked Up
                   </span>
                 </div>
@@ -209,7 +209,7 @@ export default function LiveRescues() {
                   <div className="w-6 h-6 rounded-full bg-slate-50 border border-slate-200 text-slate-400 flex items-center justify-center">
                     <Flag size={12} className="stroke-[2]" />
                   </div>
-                  <span className="text-[10.5px] font-semibold text-slate-400 mt-1.5">
+                  <span className="text-[10.5px] font-semibold text-slate-400 mt-2">
                     Completed
                   </span>
                 </div>
@@ -220,7 +220,7 @@ export default function LiveRescues() {
             <div className="pt-2 flex justify-end">
               <button 
                 onClick={() => alert('Opening live GPS tracker...')}
-                className="px-5 py-2.5 bg-[#064e3b] hover:bg-[#085a44] text-white font-bold rounded-xl text-xs sm:text-sm flex items-center gap-2 shadow-sm transition-all duration-200 active:scale-[0.99] cursor-pointer"
+                className="px-5 py-3 bg-[#064e3b] hover:bg-[#085a44] text-white font-bold rounded-xl text-xs sm:text-sm flex items-center gap-2 shadow-sm transition-all duration-200 active:scale-[0.99] cursor-pointer"
               >
                 <span>View Live Tracking</span>
                 <ArrowRight size={15} />
@@ -249,12 +249,12 @@ export default function LiveRescues() {
             <h4 className="text-sm sm:text-base font-bold text-slate-900 truncate">
               Mixed Salad <span className="text-slate-500 font-semibold text-xs sm:text-sm">(20 meals)</span>
             </h4>
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1.5 text-xs text-slate-500 font-medium">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-2 text-xs text-slate-500 font-medium">
               <span className="flex items-center gap-1">
                 <Clock size={13} className="text-slate-400" />
                 <span>Posted 30 mins ago</span>
               </span>
-              <span className="text-slate-300">•</span>
+              <span className="text-slate-300">â€¢</span>
               <span className="flex items-center gap-1 text-orange-600 font-semibold">
                 <Clock size={13} />
                 <span>Expires in 3.5h</span>
@@ -294,12 +294,12 @@ export default function LiveRescues() {
             <h4 className="text-sm sm:text-base font-bold text-slate-900 truncate">
               Artisan Breads <span className="text-slate-500 font-semibold text-xs sm:text-sm">(15 items)</span>
             </h4>
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1.5 text-xs text-slate-500 font-medium">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-2 text-xs text-slate-500 font-medium">
               <span className="flex items-center gap-1 text-slate-700">
                 <Building2 size={13} className="text-slate-400" />
                 <span>City Mission</span>
               </span>
-              <span className="text-slate-300">•</span>
+              <span className="text-slate-300">â€¢</span>
               <span className="flex items-center gap-1 text-slate-600 font-medium">
                 <span>Arriving in 15 mins</span>
               </span>
@@ -338,7 +338,7 @@ export default function LiveRescues() {
         <div className="pt-2">
           <Link
             to="/donor/create"
-            className="px-6 py-2.5 rounded-xl bg-[#e6f4ea] hover:bg-emerald-100 text-emerald-800 font-bold text-xs sm:text-sm inline-flex items-center gap-1.5 transition-colors border border-emerald-200/80 cursor-pointer"
+            className="px-6 py-3 rounded-xl bg-[#e6f4ea] hover:bg-emerald-100 text-emerald-800 font-bold text-xs sm:text-sm inline-flex items-center gap-2 transition-colors border border-emerald-200/80 cursor-pointer"
           >
             <Plus size={15} className="stroke-[2.5]" />
             <span>Share More Food</span>
