@@ -16,7 +16,7 @@ const sheltersData = [
   },
   {
     id: 'BEN-02',
-    name: 'North District Childrenâ€™s Home',
+    name: 'North District Children\'s Home',
     category: 'Orphanage & Youth Center',
     capacity: '65 Children',
     mealsServedToday: 130,
@@ -87,7 +87,7 @@ export default function Beneficiaries() {
         <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs">
           <p className="text-xs font-bold text-gray-500 uppercase">People Served Today</p>
           <p className="text-3xl font-black text-gray-900 mt-2">8,420</p>
-          <p className="text-xs text-emerald-600 font-semibold mt-1">â†— 16.8% increase vs last month</p>
+          <p className="text-xs text-emerald-600 font-semibold mt-1">↗ 16.8% increase vs last month</p>
         </div>
         <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs">
           <p className="text-xs font-bold text-gray-500 uppercase">Emergency Hotspots</p>

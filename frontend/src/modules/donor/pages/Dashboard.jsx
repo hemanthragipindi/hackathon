@@ -76,7 +76,7 @@ export default function DonorDashboard({ onMenuClick }) {
       </div>
 
       {/* Hero Banner with textured plus grid pattern */}
-      <div className="relative rounded-3xl bg-gradient-to-r from-emerald-600 via-emerald-700 to-emerald-900 p-8 sm:p-10 text-white shadow-sm overflow-hidden">
+      <div className="relative rounded-3xl bg-gradient-to-r from-emerald-600 to-emerald-500 p-8 sm:p-10 text-white shadow-sm overflow-hidden">
         {/* Subtle Decorative Pattern Background */}
         <div 
           className="absolute inset-0 opacity-[0.07] pointer-events-none"

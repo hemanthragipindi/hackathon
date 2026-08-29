@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Calendar, Clock, MapPin, Package } from 'lucide-react';
 import StatusBadge from '../../common/components/StatusBadge';
 
@@ -17,7 +17,7 @@ export default function DonationCard({ donation }) {
           <h3 className="font-semibold text-gray-900 text-lg">{donation.name}</h3>
           <p className="text-sm text-gray-500 mt-1 flex items-center gap-2">
             <span className="font-medium text-gray-700">{donation.category}</span>
-            <span>â€¢</span>
+            <span>•</span>
             <span className="text-gray-500">{donation.id}</span>
           </p>
         </div>

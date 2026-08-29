@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { 
   User, Bell, Settings as SettingsIcon, Shield, Lock, 
   Smartphone, MapPin, Mail, Upload, Save
@@ -289,14 +289,14 @@ export default function Settings() {
                   <div className="border border-gray-200 rounded-lg divide-y divide-gray-100">
                     <div className="p-3 flex items-center justify-between bg-gray-50">
                       <div>
-                        <p className="text-sm font-medium text-gray-900">Windows â€¢ Chrome</p>
+                        <p className="text-sm font-medium text-gray-900">Windows • Chrome</p>
                         <p className="text-xs text-gray-500">Mumbai, India (Current session)</p>
                       </div>
                       <span className="text-xs font-medium text-green-600 bg-green-100 px-2 py-1 rounded">Active Now</span>
                     </div>
                     <div className="p-3 flex items-center justify-between">
                       <div>
-                        <p className="text-sm font-medium text-gray-900">MacBook Pro â€¢ Safari</p>
+                        <p className="text-sm font-medium text-gray-900">MacBook Pro • Safari</p>
                         <p className="text-xs text-gray-500">Delhi, India (Last active: 2 hours ago)</p>
                       </div>
                       <button onClick={() => addToast('Session revoked', 'success')} className="text-sm text-red-600 hover:text-red-700 font-medium">Revoke</button>

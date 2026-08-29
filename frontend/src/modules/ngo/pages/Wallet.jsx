@@ -3,10 +3,10 @@ import { Wallet as WalletIcon, ArrowDownLeft, ArrowUpRight, Plus, Download, Shie
 
 export default function Wallet() {
   const transactions = [
-    { id: 'TX-901', description: 'Logistics Fuel Grant - Municipal Subsidy', type: 'Credit', amount: '+ â‚¹15,000', date: 'Oct 24, 2023', status: 'Completed' },
-    { id: 'TX-902', description: 'Volunteer Fuel Reimbursement - PK-1024', type: 'Debit', amount: '- â‚¹850', date: 'Oct 23, 2023', status: 'Completed' },
-    { id: 'TX-903', description: 'Food Storage & Insulated Crates Purchase', type: 'Debit', amount: '- â‚¹4,200', date: 'Oct 20, 2023', status: 'Completed' },
-    { id: 'TX-904', description: 'Corporate CSR FoodRescue Support', type: 'Credit', amount: '+ â‚¹50,000', date: 'Oct 15, 2023', status: 'Completed' },
+    { id: 'TX-901', description: 'Logistics Fuel Grant - Municipal Subsidy', type: 'Credit', amount: '+ ₹15,000', date: 'Oct 24, 2023', status: 'Completed' },
+    { id: 'TX-902', description: 'Volunteer Fuel Reimbursement - PK-1024', type: 'Debit', amount: '- ₹850', date: 'Oct 23, 2023', status: 'Completed' },
+    { id: 'TX-903', description: 'Food Storage & Insulated Crates Purchase', type: 'Debit', amount: '- ₹4,200', date: 'Oct 20, 2023', status: 'Completed' },
+    { id: 'TX-904', description: 'Corporate CSR FoodRescue Support', type: 'Credit', amount: '+ ₹50,000', date: 'Oct 15, 2023', status: 'Completed' },
   ];
 
   return (
@@ -32,7 +32,7 @@ export default function Wallet() {
               <span>Operational Balance</span>
               <WalletIcon size={18} />
             </div>
-            <p className="text-3xl font-black mt-3">â‚¹59,950.00</p>
+            <p className="text-3xl font-black mt-3">₹59,950.00</p>
             <p className="text-xs text-green-200 mt-1">Available for fleet fuel & volunteer allowances</p>
           </div>
           <div className="mt-6 flex items-center gap-2">
@@ -59,11 +59,11 @@ export default function Wallet() {
         <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-xs flex flex-col justify-between">
           <div>
             <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">Pending Reimbursals</span>
-            <p className="text-3xl font-black text-amber-600 mt-3">â‚¹2,450.00</p>
+            <p className="text-3xl font-black text-amber-600 mt-3">₹2,450.00</p>
             <p className="text-xs text-gray-500 mt-1">3 driver receipts submitted for verification</p>
           </div>
           <button className="text-left text-xs font-bold text-[#064e3b] hover:underline">
-            Review volunteer receipts â†’
+            Review volunteer receipts →
           </button>
         </div>
       </div>

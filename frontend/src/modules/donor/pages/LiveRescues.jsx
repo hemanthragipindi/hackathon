@@ -322,7 +322,7 @@ export default function LiveRescues() {
       </div>
 
       {/* Bottom Banner: Keep the good going */}
-      <div className="bg-gradient-to-r from-[#f0fdf4] via-[#f8fafc] to-[#f0fdf9] border border-emerald-100/70 rounded-3xl p-8 sm:p-9 text-center space-y-3.5 shadow-xs">
+      <div className="bg-gradient-to-br from-emerald-50 to-slate-50 border border-emerald-100/70 rounded-3xl p-8 sm:p-9 text-center space-y-3.5 shadow-xs">
         {/* Leaf Icon Circle */}
         <div className="w-11 h-11 rounded-full bg-white shadow-xs text-emerald-600 flex items-center justify-center mx-auto border border-emerald-100/60">
           <Leaf size={22} className="stroke-[2.2]" />

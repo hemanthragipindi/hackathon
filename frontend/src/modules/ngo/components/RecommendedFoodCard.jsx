@@ -25,7 +25,7 @@ export default function RecommendedFoodCard({
     }`}>
       {/* Best Match Indicator */}
       {isBestMatch && (
-        <div className="absolute -top-3.5 left-6 px-4 py-1.5 bg-gradient-to-r from-amber-400 to-amber-500 text-white text-xs font-black uppercase tracking-wider rounded-full shadow-sm shadow-amber-500/30 flex items-center gap-1.5 z-10">
+        <div className="absolute -top-3.5 left-6 px-4 py-1.5 bg-gradient-to-r from-emerald-500 to-emerald-400 text-white text-xs font-black uppercase tracking-wider rounded-full shadow-sm shadow-emerald-500/30 flex items-center gap-1.5 z-10">
           <Trophy size={14} className="stroke-[2.5]" />
           Best Match
         </div>

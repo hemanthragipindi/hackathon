@@ -399,7 +399,7 @@ export default function NgoDashboard() {
         <div className="lg:col-span-5 space-y-6">
           
           {/* Recommended Food Widget */}
-          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-6 border border-amber-100 shadow-sm relative overflow-hidden">
+          <div className="bg-gradient-to-br from-emerald-50 to-slate-50 rounded-3xl p-6 border border-emerald-100 shadow-sm relative overflow-hidden">
             {/* Background pattern */}
             <div className="absolute -right-4 -top-4 text-amber-200/50 pointer-events-none">
               <Target size={120} className="stroke-[1]" />
@@ -418,7 +418,7 @@ export default function NgoDashboard() {
               
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 border border-white mb-4">
                 <div className="flex items-start justify-between gap-2 mb-2">
-                  <div className="px-2 py-1 bg-gradient-to-r from-amber-400 to-amber-500 text-white text-[10px] font-black uppercase tracking-wider rounded-md flex items-center gap-1 shadow-sm shadow-amber-500/20">
+                  <div className="px-2 py-1 bg-gradient-to-r from-emerald-500 to-emerald-400 text-white text-[10px] font-black uppercase tracking-wider rounded-md flex items-center gap-1 shadow-sm shadow-emerald-500/20">
                     <Trophy size={10} className="stroke-[3]" />
                     Best Match
                   </div>

@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { 
   Bell, 
   User, 
@@ -141,7 +141,7 @@ export default function HelpSupport() {
           </div>
 
           {/* Widget 2: Food Sharing Guidelines */}
-          <div className="bg-gradient-to-r from-[#f0f7ff] via-[#f7faff] to-[#f4f9ff] border border-sky-100/90 rounded-2xl p-5 shadow-2xs space-y-2">
+          <div className="bg-gradient-to-br from-emerald-50 to-slate-50 border border-emerald-100/90 rounded-2xl p-5 shadow-2xs space-y-2">
             <div className="flex items-start gap-3">
               <ShieldCheck size={18} className="text-emerald-700 shrink-0 mt-0.5" />
               <div>
@@ -242,7 +242,7 @@ export default function HelpSupport() {
             <div className="space-y-3 text-xs sm:text-sm text-slate-600">
               <div className="p-3 bg-emerald-50/60 rounded-2xl border border-emerald-100/80">
                 <strong className="text-emerald-900 block font-bold mb-0.5">1. Temperature Control</strong>
-                Hot cooked food must be kept above 60Â°C (140Â°F) or rapidly cooled to below 4Â°C (40Â°F) before handover.
+                Hot cooked food must be kept above 60°C (140°F) or rapidly cooled to below 4°C (40°F) before handover.
               </div>
               <div className="p-3 bg-slate-50 rounded-2xl border border-slate-100">
                 <strong className="text-slate-900 block font-bold mb-0.5">2. Packaging & Labeling</strong>

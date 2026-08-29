@@ -36,7 +36,7 @@ export default function Register() {
         <div className="bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[2rem] p-8 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)]">
           
           <div className="text-center mb-8">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-400 to-teal-400 text-white flex items-center justify-center mx-auto mb-4 shadow-lg shadow-emerald-500/30">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-500 to-emerald-400 text-white flex items-center justify-center mx-auto mb-4 shadow-lg shadow-emerald-500/30">
               <Leaf size={32} />
             </div>
             <h2 className="text-3xl font-extrabold text-white tracking-tight">Join FoodRescue</h2>

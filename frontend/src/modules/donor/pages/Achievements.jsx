@@ -193,7 +193,7 @@ export default function Achievements() {
       </div>
 
       {/* Section 3: Latest Achievement Callout */}
-      <div className="bg-gradient-to-r from-[#eef9f3] via-[#f7fbf8] to-[#edf7f2] border border-emerald-100/90 rounded-2xl p-5 shadow-xs flex items-start gap-4">
+      <div className="bg-gradient-to-br from-emerald-50 to-slate-50 border border-emerald-100/90 rounded-2xl p-5 shadow-xs flex items-start gap-4">
         {/* Party Popper Circle Icon */}
         <div className="w-11 h-11 rounded-full bg-[#064e3b] text-white flex items-center justify-center shrink-0 shadow-xs mt-0.5">
           <PartyPopper size={20} className="stroke-[2]" />
