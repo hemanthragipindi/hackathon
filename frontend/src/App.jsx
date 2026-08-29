@@ -41,6 +41,8 @@ import NgoOrganization from './modules/ngo/pages/Organization';
 
 import CommonNotifications from './modules/common/pages/Notifications';
 import CommonSettings from './modules/common/pages/Settings';
+import CommonHub from './modules/common/pages/Hub';
+import CommonFoodDetails from './modules/common/pages/FoodDetails';
 
 // Landing Page
 function Landing() {
@@ -107,6 +109,8 @@ function App() {
         <Route path="organization" element={<NgoOrganization />} />
         <Route path="notifications" element={<CommonNotifications />} />
         <Route path="settings" element={<CommonSettings />} />
+        <Route path="hub" element={<CommonHub />} />
+        <Route path="hub/:id" element={<CommonFoodDetails />} />
       </Route>
       
       {/* Donor Routes */}
@@ -124,6 +128,8 @@ function App() {
         <Route path="my-donations" element={<MyDonations />} />
         <Route path="donation-history" element={<MyDonations />} />
         <Route path="notifications" element={<CommonNotifications />} />
+        <Route path="hub" element={<CommonHub />} />
+        <Route path="hub/:id" element={<CommonFoodDetails />} />
       </Route>
 
       {/* Admin Routes */}

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { 
   LayoutGrid, 
@@ -9,7 +9,8 @@ import {
   Trophy, 
   Settings,
   HelpCircle,
-  X
+  X,
+  Globe
 } from 'lucide-react';
 
 const mainNavItems = [
@@ -22,6 +23,7 @@ const mainNavItems = [
 ];
 
 const secondaryNavItems = [
+  { name: 'Community Hub', icon: Globe, path: '/donor/hub' },
   { name: 'Settings', icon: Settings, path: '/donor/settings' },
   { name: 'Help & Support', icon: HelpCircle, path: '/donor/help' },
 ];

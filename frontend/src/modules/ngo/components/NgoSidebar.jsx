@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import {
   LayoutGrid,
@@ -8,7 +8,8 @@ import {
   BarChart3,
   Wallet,
   Building2,
-  X
+  X,
+  Globe
 } from 'lucide-react';
 
 const navItems = [
@@ -17,6 +18,7 @@ const navItems = [
   { name: 'Pickup', icon: Truck, path: '/ngo/operations' },
   { name: 'Beneficiaries', icon: Users, path: '/ngo/beneficiaries' },
   { name: 'Impact', icon: BarChart3, path: '/ngo/impact' },
+  { name: 'Community Hub', icon: Globe, path: '/ngo/hub' },
   { name: 'Wallet', icon: Wallet, path: '/ngo/wallet' },
   { name: 'Organization', icon: Building2, path: '/ngo/organization' },
 ];
