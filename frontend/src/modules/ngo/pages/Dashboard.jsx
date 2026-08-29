@@ -10,6 +10,8 @@ import {
   AlertTriangle,
   ChevronRight,
   Sparkles,
+  Trophy,
+  Target,
   Check
 } from 'lucide-react';
 import ClaimFoodModal from '../components/ClaimFoodModal';
@@ -395,6 +397,50 @@ export default function NgoDashboard() {
 
         {/* Right Column (5 cols on lg, 42%) */}
         <div className="lg:col-span-5 space-y-6">
+          
+          {/* Recommended Food Widget */}
+          <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-6 border border-amber-100 shadow-sm relative overflow-hidden">
+            {/* Background pattern */}
+            <div className="absolute -right-4 -top-4 text-amber-200/50 pointer-events-none">
+              <Target size={120} className="stroke-[1]" />
+            </div>
+            
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center">
+                  <Target size={20} className="stroke-[2.5]" />
+                </div>
+                <h2 className="text-lg font-bold text-gray-900 tracking-tight">Recommended Food</h2>
+              </div>
+              <p className="text-sm font-medium text-amber-900/70 mb-5">
+                4 donations match your organization's needs.
+              </p>
+              
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 border border-white mb-4">
+                <div className="flex items-start justify-between gap-2 mb-2">
+                  <div className="px-2 py-1 bg-gradient-to-r from-amber-400 to-amber-500 text-white text-[10px] font-black uppercase tracking-wider rounded-md flex items-center gap-1 shadow-sm shadow-amber-500/20">
+                    <Trophy size={10} className="stroke-[3]" />
+                    Best Match
+                  </div>
+                  <span className="text-xs font-bold text-gray-500">95% Match</span>
+                </div>
+                <h3 className="font-bold text-gray-900 text-sm">Vegetable Biryani</h3>
+                <div className="flex items-center gap-2 mt-1.5 text-xs font-semibold text-gray-600">
+                  <span>2.1 km away</span>
+                  <span className="w-1 h-1 rounded-full bg-gray-300"></span>
+                  <span className="text-red-600 flex items-center gap-1"><span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>Urgent</span>
+                </div>
+              </div>
+
+              <button
+                onClick={() => navigate('/ngo/recommended-food')}
+                className="w-full py-2.5 px-4 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-xl transition shadow-xs shadow-amber-500/20 flex items-center justify-center gap-2"
+              >
+                View Recommended Food
+              </button>
+            </div>
+          </div>
+
           {/* Available Food Near You Card */}
           <div className="bg-white rounded-3xl p-6 border border-slate-100/90 shadow-xs">
             <div className="flex items-center justify-between mb-4">

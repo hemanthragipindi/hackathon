@@ -3,6 +3,7 @@ import { Target, Search, Clock, Info, CheckCircle2, MapPin, Package } from 'luci
 import { foodData } from '../../common/data/foodData';
 import { mockSmartMatchNGOs } from '../../common/data/mockSmartMatchData';
 import { calculateMatchScore } from '../../common/utils/smartMatchUtils';
+import MatchScoreBadge from '../../common/components/MatchScoreBadge';
 import NGOMatchCard from '../components/NGOMatchCard';
 import NGODetailsModal from '../components/NGODetailsModal';
 

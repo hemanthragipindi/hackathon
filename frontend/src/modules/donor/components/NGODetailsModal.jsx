@@ -1,6 +1,6 @@
 import React from 'react';
 import { X, MapPin, Package, ShieldCheck, Star, Activity, Check, Info } from 'lucide-react';
-import MatchScoreBadge from './MatchScoreBadge';
+import MatchScoreBadge from '../../common/components/MatchScoreBadge';
 
 export default function NGODetailsModal({ 
   ngo, 

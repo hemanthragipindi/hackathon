@@ -72,3 +72,17 @@ export const mockSmartMatchNGOs = [
     completedPickups: 12
   }
 ];
+
+// Profile for the logged in NGO to use in Recommended Food algorithm
+export const mockNgoProfile = {
+  id: 'NGO-1',
+  name: 'Helping Hands NGO',
+  location: { latitude: 19.1136, longitude: 72.8697 }, // e.g., Andheri, Mumbai
+  capacity: 100, // Maximum meals they can handle
+  foodNeeds: ['Vegetarian', 'Prepared Meal', 'Rice', 'Bakery', 'Fresh Produce'],
+  trustScore: 92,
+  verification: {
+    verified: true,
+    verifiedAt: '2023-01-15T00:00:00Z'
+  }
+};

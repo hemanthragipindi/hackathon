@@ -46,6 +46,7 @@ import NgoImpact from './modules/ngo/pages/Impact';
 import NgoWallet from './modules/ngo/pages/Wallet';
 import NgoOrganization from './modules/ngo/pages/Organization';
 import NgoReputation from './modules/ngo/pages/Reputation';
+import RecommendedFood from './modules/ngo/pages/RecommendedFood';
 
 import CommonNotifications from './modules/common/pages/Notifications';
 import CommonSettings from './modules/common/pages/Settings';
@@ -112,6 +113,7 @@ function App() {
         <Route index element={<Navigate to="/ngo/dashboard" replace />} />
         <Route path="dashboard" element={<NgoDashboard />} />
         <Route path="food" element={<NgoFood />} />
+        <Route path="recommended-food" element={<RecommendedFood />} />
         <Route path="operations" element={<NgoOperations />} />
         <Route path="beneficiaries" element={<NgoBeneficiaries />} />
         <Route path="impact" element={<NgoImpact />} />

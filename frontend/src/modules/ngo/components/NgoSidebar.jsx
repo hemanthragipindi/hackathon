@@ -10,12 +10,14 @@ import {
   Building2,
   X,
   Globe,
-  Trophy
+  Trophy,
+  Target
 } from 'lucide-react';
 
 const navItems = [
   { name: 'Overview', icon: LayoutGrid, path: '/ngo/dashboard' },
   { name: 'Food', icon: UtensilsCrossed, path: '/ngo/food' },
+  { name: 'Recommended Food', icon: Target, path: '/ngo/recommended-food' },
   { name: 'Pickup', icon: Truck, path: '/ngo/operations' },
   { name: 'Beneficiaries', icon: Users, path: '/ngo/beneficiaries' },
   { name: 'Impact', icon: BarChart3, path: '/ngo/impact' },
